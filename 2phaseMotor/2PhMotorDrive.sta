@@ -1,0 +1,47 @@
+
+ROM used: 2082 (5%)
+          2082 (5%) including unused fragments
+
+          2 Average locations per line
+          10 Average locations per statement
+
+RAM used: 193 (2%) at main() level
+          188 (2%) worst case
+
+Stack used: 3 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  376   216 100  2PhMotorDrive.c
+  461     0   0  C:\Program Files\PICC\devices\24hj64gp206.h
+----- -----
+  837   216 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     16   0   2             @delay_ms1
+0    360   9   2  2059  4.9  answer
+0     48   1   0   152  1.8  TIMER4_isr
+0     82   2   3   245  2.8  RDA_isr
+0   1064  26   5  9618  9.5  MAIN
+
+Program metrics:
+    Functions               4
+    Statements              216
+    Comments                166
+    Volume (V)              13630
+    Difficilty (D)          19.2
+    Effort to implement (E) 262215
+    Time to implement (T)   4 hours, 3 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   28
+    Maintainability (MI)    36
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0ABFE  1570  41950  
+
+
+

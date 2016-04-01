@@ -1,0 +1,484 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @MULFF.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @SITOF.P3
+W0 -W1  @DIVFF.P4
+W0L     @PUTCHAR_BIU_1.P5
+W0 -W1  @DIV3232B.P6
+W0      @delay_ms1.P7
+W0 -W1  @READ_PROGRAM_MEMORY.P8
+W0      @delay_us1.P9
+W0 -W1  @SFTOI.P10
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2      @READ_PROGRAM_MEMORY.P1
+W2      @READ_ROM_MEMORY.P2
+W2 -W3  @DIV3232B.P3
+W2 -W3  @DIVFF.P4
+W2      @WRITE_PACKED_MEMORY.P5
+W2      @READ_PACKED_MEMORY.P6
+W2 -W3  @MULFF.P7
+W3      @READ_PROGRAM_MEMORY.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3      @READ_ROM_MEMORY.P3
+W3      @READ_PACKED_MEMORY.P4
+220.0   MCU_STSEL
+220     MCU_U1MODE
+220.1   MCU_PDSEL0
+220.2   MCU_PDSEL1
+220.3   MCU_BRGH
+220.4   MCU_URXINV
+220.5   MCU_ABAUD
+220.6   MCU_LPBACK
+220.7   MCU_WAKE
+221.0   MCU_UEN0
+221.1   MCU_UEN1
+221.3   MCU_RTSMD
+221.4   MCU_IREN
+221.5   MCU_USIDL
+221.7   MCU_UARTEN
+222.0   MCU_URXDA
+222     MCU_U1STA
+222.1   MCU_OERR
+222.2   MCU_FERR
+222.3   MCU_PERR
+222.4   MCU_RIDLE
+222.5   MCU_ADDEN
+222.6   MCU_URXISEL0
+222.7   MCU_URXISEL1
+223.0   MCU_TRMT
+223.1   MCU_UTXBF
+223.2   MCU_UTXEN
+223.3   MCU_UTXBRK
+223.5   MCU_UTXISEL0
+223.6   MCU_UTXINV
+223.7   MCU_UTXISEL1
+224.0   MCU_UTXREG0
+224     MCU_U1TXREG
+224.1   MCU_UTXREG1
+224.2   MCU_UTXREG2
+224.3   MCU_UTXREG3
+224.4   MCU_UTXREG4
+224.5   MCU_UTXREG5
+224.6   MCU_UTXREG6
+224.7   MCU_UTXREG7
+225.0   MCU_UTXREG8
+226.0   MCU_URXREG0
+226     MCU_U1RXREG
+226.1   MCU_URXREG1
+226.2   MCU_URXREG2
+226.3   MCU_URXREG3
+226.4   MCU_URXREG4
+226.5   MCU_URXREG5
+226.6   MCU_URXREG6
+226.7   MCU_URXREG7
+227.0   MCU_URXREG8
+228     MCU_U1BRG
+300     MCU_ADC1BUF0
+320.0   MCU_DONE
+320     MCU_AD1CON1
+320.1   MCU_SAMP
+320.2   MCU_ASAM
+320.3   MCU_SIMSAM
+320.5   MCU_SSRC0
+320.6   MCU_SSRC1
+320.7   MCU_SSRC2
+321.0   MCU_FORM0
+321.1   MCU_FORM1
+321.2   MCU_AD12B
+321.4   MCU_ADDMABM
+321.5   MCU_ADSIDL
+321.7   MCU_ADON
+322     MCU_AD1CON2
+322.0   MCU_ALTS
+322.1   MCU_BUFM
+322.2   MCU_SMPI0
+322.3   MCU_SMPI1
+322.4   MCU_SMPI2
+322.5   MCU_SMPI3
+322.7   MCU_BUFS
+323.0   MCU_CHPS0
+323.1   MCU_CHPS1
+323.2   MCU_CSCNA
+323.5   MCU_VCFG0
+323.6   MCU_VCFG1
+323.7   MCU_VCFG2
+324     MCU_AD1CON3
+324.0   MCU_ADCS0
+324.1   MCU_ADCS1
+324.2   MCU_ADCS2
+324.3   MCU_ADCS3
+324.4   MCU_ADCS4
+324.5   MCU_ADCS5
+324.6   MCU_ADCS6
+324.7   MCU_ADCS7
+325.0   MCU_SAMC0
+325.1   MCU_SAMC1
+325.2   MCU_SAMC2
+325.3   MCU_SAMC3
+325.4   MCU_SAMC4
+325.7   MCU_ADRC
+326.0   MCU_CH123SA
+326     MCU_AD1CHS123
+326.1   MCU_CH123NA0
+326.2   MCU_CH123NA1
+327.0   MCU_CH123SB
+327.1   MCU_CH123NB0
+327.2   MCU_CH123NB1
+328     MCU_AD1CHS0
+328.0   MCU_CH0SA0
+328.1   MCU_CH0SA1
+328.2   MCU_CH0SA2
+328.3   MCU_CH0SA3
+328.4   MCU_CH0SA4
+328.7   MCU_CH0NA
+329.0   MCU_CH0SB0
+329.1   MCU_CH0SB1
+329.2   MCU_CH0SB2
+329.3   MCU_CH0SB3
+329.4   MCU_CH0SB4
+329.7   MCU_CH0NB
+32A.0   MCU_PCFG16
+32A     MCU_AD1PCFGH
+32A.1   MCU_PCFG17
+32C.0   MCU_PCFG0
+32C     MCU_AD1PCFGL
+32C.1   MCU_PCFG1
+32C.2   MCU_PCFG2
+32C.3   MCU_PCFG3
+32C.4   MCU_PCFG4
+32C.5   MCU_PCFG5
+32C.6   MCU_PCFG6
+32C.7   MCU_PCFG7
+32D.0   MCU_PCFG8
+32D.1   MCU_PCFG9
+32D.2   MCU_PCFG10
+32D.3   MCU_PCFG11
+32D.4   MCU_PCFG12
+32D.5   MCU_PCFG13
+32D.6   MCU_PCFG14
+32D.7   MCU_PCFG15
+32E.0   MCU_CSS16
+32E     MCU_AD1CSSH
+32E.1   MCU_CSS17
+330     MCU_AD1CSSL
+330.0   MCU_CSS0
+330.1   MCU_CSS1
+330.2   MCU_CSS2
+330.3   MCU_CSS3
+330.4   MCU_CSS4
+330.5   MCU_CSS5
+330.6   MCU_CSS6
+330.7   MCU_CSS7
+331.0   MCU_CSS8
+331.1   MCU_CSS9
+331.2   MCU_CSS10
+331.3   MCU_CSS11
+331.4   MCU_CSS12
+331.5   MCU_CSS13
+331.6   MCU_CSS14
+331.7   MCU_CSS15
+332     MCU_AD1CON4
+386     MCU_DMA0STB
+3E0.0   MCU_XWCOL0
+3E0     MCU_DMACS0
+3E0.1   MCU_XWCOL1
+3E0.2   MCU_XWCOL2
+3E0.3   MCU_XWCOL3
+3E0.4   MCU_XWCOL4
+3E0.5   MCU_XWCOL5
+3E0.6   MCU_XWCOL6
+3E0.7   MCU_XWCOL7
+3E1.0   MCU_PWCOL0
+3E1.1   MCU_PWCOL1
+3E1.2   MCU_PWCOL2
+3E1.3   MCU_PWCOL3
+3E1.4   MCU_PWCOL4
+3E1.5   MCU_PWCOL5
+3E1.6   MCU_PWCOL6
+3E1.7   MCU_PWCOL7
+744     CLKDIV
+744.0   PLLPRE_0
+744.1   PLLPRE_1
+744.2   PLLPRE_2
+744.3   PLLPRE_3
+744.4   PLLPRE_4
+744.6   PLLPOST_0
+744.7   PLLPOST_1
+746.0   PLLDIV_0
+746     PLLFBD
+746.1   PLLDIV_1
+746.2   PLLDIV_2
+746.3   PLLDIV_3
+746.4   PLLDIV_4
+746.5   PLLDIV_5
+746.6   PLLDIV_6
+746.7   PLLDIV_7
+747.0   PLLDIV_8
+800-801 rs232_errors
+802     adress
+803.0   runRedVd
+803.1   runGreenVd
+803.2   periodRed
+803.3   periodGreen
+803.4   dmaAdcFlag
+803.5   enabSendCalibrData
+803.6   debugRS
+803.7   enabRegul
+804-805 valAdc1
+806-807 valAdc2
+808-809 valAdc3
+80A-80B valAdc4
+80C-80D minAdc1
+80E-80F minAdc2
+810-811 minAdc3
+812-813 minAdc4
+814-815 maxAdc1
+816-817 maxAdc2
+818-819 maxAdc3
+81A-81B maxAdc4
+81C-823 tempValADC11
+824-82B tempValADC12
+82C-833 tempValADC13
+834-83B tempValADC14
+83C-83D readValADC11
+83E-83F readValADC12
+840-841 readValADC21
+842-843 readValADC22
+844-845 readValADC31
+846-847 readValADC32
+848-849 readValADC41
+84A-84B readValADC42
+84C     errorRotate
+84D     currentUstr
+84E-84F currentStateAvt
+850-851 oldStateAvt
+852-853 newStateAvt
+854-855 ziklReadCalibr
+856-857 indexDataRead
+858-86B m3
+86C-87F m4
+880-893 m5
+894-8A7 m6
+8A8     currentUind
+8A9     currentPstr
+8AA     currentPind
+8AB     currentUPbln
+8AC     canalPwm
+8AD.0   flag
+8AD.1   dmaBusy
+8AE-8AF dataCanal3
+8B0-8B1 oldValAdc1
+8B2-8B3 oldValAdc2
+8B4-8B5 oldValAdc3
+8B6-8B7 oldValAdc4
+8B8-8B9 difAdc1
+8BA-8BB difAdc2
+8BC-8BD difAdc3
+8BE-8BF difAdc4
+8C0-8C1 indW
+8C2-8CB buffer
+8CC-8CD pause
+8CE-8CF crc
+8D0     testPoAdc.canal
+8D0-8D1 getChecksum.chSum
+8D0-8D1 initMotor.m
+8D0-8D1 obmenRS.d
+8D2     sendRS.msg
+8D2-8D3 getChecksum.temp
+8D2-8D3 sendRS16.msg
+8D2-8D3 testPoAdc.data
+8D2-8D3 runVD.color
+8D2-8D3 setLimitAdcMotor.m
+8D2-8D3 initMotor.cPwm
+8D2-8D3 ansReadCrc.crc
+8D4-8D5 initMotor.tPwm
+8D4-8D7 getChecksum.adr
+8D4-8D5 setLimitAdcMotor.vAdc1
+8D6     ansComSetUgolStr.Ustr
+8D6-8D7 setLimitAdcMotor.vAdc2
+8D6-8D7 initMotor.vAdc1
+8D6     ansComSetPrgStr.Pstr
+8D6     onOffPWMCanal.b
+8D6     ansErrorCom.com
+8D6     ansComRst.com
+8D6     ansComSetUgolInd.Uind
+8D6     ansComSetPrgInd.Pind
+8D6     ansComSetUPBln.Pbln
+8D7     ansComRst.data
+8D8-8D9 setRotate.m
+8D8-8D9 initMotor.vAdc2
+8DA-8DB setRotate.currentData
+8DC-8DD setRotate.newData
+8DE     setAllPwm.uSdata
+8DE-8DF setRotate.n
+8DE     ansComSetAllUi.Ustr
+8DF     setAllPwm.uIdata
+8DF     ansComSetAllUi.Uind
+8E0     ansComSetAllUi.Pstr
+8E0     setAllPwm.pSdata
+8E0-8E3 setRotate.Error
+8E1     setAllPwm.pIdata
+8E1     ansComSetAllUi.Pind
+8E2     setAllPwm.blenk
+8E2     ansComSetAllUi.UPbln
+8E4-8E7 setRotate.ps
+8E8-8EB setRotate.ps
+8E8-8E9 sendInRsDma.len
+8E8     setUind.data
+8E8     setUstr.data
+8E8     setPind.data
+8E8     setPstr.data
+8E8     setUPbln.data
+90C     setRotatePwm.b
+90C.0   waitStop.boll
+90C.1   waitStop.a
+90C.2   waitStop.b
+90C.3   waitStop.c
+90C.4   waitStop.d
+90E     testPWM.n
+90E-90F getFullMasCalibr.a
+90F     testPWM.b
+910-911 getFullMasCalibr.b
+912-913 getFullMasCalibr.c
+914-915 getFullMasCalibr.d
+2000-2007 dmaAdcBuf
+2008-2016 dmaBuffer
+2780-27FF Stack
+
+ROM Allocation:
+000200  timer5_isr
+00025C  readDmaAdc
+000276  DMA2Interrupts
+00029A  @GETCH_BIU_1
+0002A8  pause3_5RS
+0002BC  interruptRS
+0002FC  __timer4_isr__
+000324  DMAInterrupts
+00034A  DmaErrorInterrupt
+00036A  initAvtomat
+0003A4  resetCountZikl
+0003AC  testPWM
+000424  setRotatePwm
+000484  getFullMasCalibr
+0004E0  waitStop
+0005C4  readData1Adc
+0005D6  readData2Adc
+0005E8  sravnData
+000652  stopTimer7
+000658  setEnableSendData
+00065C  setDebugRS
+000660  updateState
+00066A  timer7_isr
+000766  init_PLL
+000788  initRS
+00078C  clearDmaBuf
+0007A0  initDma
+0007B8  @READ_PROGRAM_MEMORY
+0007E6  getChecksum
+00080E  runVD
+000830  initLed
+000850  clearAdcDmaBuf
+00085A  initAdcDma
+000884  initADC
+0008D0  setDisableSD
+0008D6  setEnableSD
+0008DC  onOffPWMCanal
+0008EC  initMotor
+000920  initPWM
+0009C0  startTimer7
+0009D2  startAvtomatCalibr
+0009E0  sendRS
+0009FA  @SITOF
+000A44  setLimitAdcMotor
+000AE8  sendRS16
+000B1C  updateUstr
+000B1E  setUstr
+000B28  updateUind
+000B2A  setUind
+000B34  updatePstr
+000B36  setPstr
+000B40  updatePind
+000B42  setPind
+000B4C  updateBlenker
+000B76  setUPbln
+000B80  setAllPwm
+000BAA  sendInRsDma
+000BC4  ansComSetAllUi
+000C04  ansComSetUgolStr
+000C24  ansComSetUgolInd
+000C44  ansComSetPrgStr
+000C64  ansComSetPrgInd
+000C84  ansComSetUPBln
+000CA4  ansReadCrc
+000CD8  ansComInfo
+000D36  ansComId
+000D6E  ansComRst
+000D8C  ansErrorCom
+000DA2  obmenRS
+00112A  sendDataCalibr
+0011CA  @MULFF
+00128E  @DIVFF
+001358  @SFTOI
+001384  setRotate
+00164C  testPoAdc
+0016AC  MAIN
+0016AC  @cinit1
+00174C  @cinit2
+
+Project Directory:
+    F:\work\UAPP\
+
+Project Files:
+    main.c                                                  [01-апр-16 16:44  CRC=7B43228D]
+    main.h                                                  [01-апр-16 16:39  CRC=993AD441]
+    C:\Program Files (x86)\PICC\devices\24HJ64GP206.h       [22-окт-15 09:32  CRC=ED27F0E7]
+    uart.h                                                  [18-фев-16 13:48  CRC=D89FFA36]
+    Led.c                                                   [22-мар-16 13:57  CRC=335E06A6]
+    PLL.c                                                   [22-мар-16 11:34  CRC=992C063A]
+    PLL.h                                                   [18-фев-16 13:24  CRC=BED6B537]
+    AZP.c                                                   [25-мар-16 16:41  CRC=40A71B1F]
+    AZP.h                                                   [28-мар-16 17:14  CRC=7799C7C0]
+    ADC.h                                                   [22-мар-16 15:06  CRC=64362828]
+    pwmUap.c                                                [01-апр-16 17:04  CRC=D26DA4E5]
+    pwmUap.h                                                [01-апр-16 17:04  CRC=E4C22AE3]
+    CalibrAdcPwm.h                                          [31-мар-16 14:40  CRC=1415FF40]
+    motor.h                                                 [01-апр-16 16:54  CRC=AE84ED21]
+    RS485.c                                                 [24-мар-15 10:31  CRC=830CDC04]
+    RS485.h                                                 [18-мар-16 16:26  CRC=AA63C3CD]
+    DMA_RS.c                                                [22-мар-16 17:25  CRC=72E48C4A]
+    CRC.c                                                   [18-фев-16 14:18  CRC=0EC0FCB1]
+    calibrAdcPwm.c                                          [01-апр-16 17:04  CRC=79E6D91A]
+    calibrAdcPwm.h                                          [31-мар-16 14:40  CRC=1415FF40]
+    motor.c                                                 [01-апр-16 17:01  CRC=2D4BDDDC]
+
+Source signature=93932810
+Program memory checksum=4A99
+Program memory CRC=5813
+Hex file CRC=D5DB
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC24HJ64GP206
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:       CCS5
+    Predefined symbols:
+       #define __PIC24HJ64GP206__ TRUE
+
+Output Files:
+    Errors:      main.err
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

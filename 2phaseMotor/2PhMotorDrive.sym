@@ -1,0 +1,85 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0      @delay_ms1.P1
+W0 -W1  @READ_PROGRAM_MEMORY.P2
+W0 -W1  @DIV3232B.P3
+W0      @delay_us1.P4
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @READ_PROGRAM_MEMORY.P1
+W2 -W3  @DIV3232B.P2
+W2      @READ_PACKED_MEMORY.P3
+W2      @WRITE_PACKED_MEMORY.P4
+W3      @WRITE_PACKED_MEMORY.P1
+W3      @READ_PROGRAM_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+180     OC1RS
+182     OC1R
+186     OC2RS
+188     OC2R
+18C     OC3RS
+18E     OC3R
+192     OC4RS
+194     OC4R
+198     OC5RS
+19A     OC5R
+19E     OC6RS
+1A0     OC6R
+800-813 Dat
+814     Ndat
+815     inchar
+816-817 D
+818-819 outchar
+81A-81B i
+81C-825 Nt
+826-827 E1
+828-829 E2
+82A-82B E3
+82C-82D E4
+82E-837 V
+838-839 ADC
+83A-83B Adr
+1F80-1FFF Stack
+
+ROM Allocation:
+03EA  @delay_ms1
+0200  answer
+0368  TIMER4_isr
+0398  RDA_isr
+03FA  MAIN
+03FA  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    E:\PIC project\2phaseMotor\
+
+Project Files:
+    2PhMotorDrive.c
+    C:\Program Files\PICC\devices\24hj64gp206.h
+
+Units:
+    E:\PIC project\2phaseMotor\2PhMotorDrive (main)
+
+Compiler Settings:
+    Processor:      PIC24HJ64GP206
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      0
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      2PhMotorDrive.err
+    Ext Symbols: 2PhMotorDrive.esym
+    INHX8:       2PhMotorDrive.hex
+    Symbols:     2PhMotorDrive.sym
+    List:        2PhMotorDrive.lst
+    Debug/COFF:  2PhMotorDrive.cof
+    Project:     2PhMotorDrive.PJT
+    Call Tree:   2PhMotorDrive.tre
+    Statistics:  2PhMotorDrive.sta

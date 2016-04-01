@@ -1,0 +1,700 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+ADC_CLOCK::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	447;"	d	line:447
+ADC_CLOCK_DIV_16::0x000F	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	451;"	d	line:451
+ADC_CLOCK_DIV_2::0x0001	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	448;"	d	line:448
+ADC_CLOCK_DIV_32::0x001F	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	452;"	d	line:452
+ADC_CLOCK_DIV_4::0x0003	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	449;"	d	line:449
+ADC_CLOCK_DIV_64::0x003F	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	453;"	d	line:453
+ADC_CLOCK_DIV_8::0x0007	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	450;"	d	line:450
+ADC_CLOCK_INTERNAL::0x8000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	454;"	d	line:454
+ADC_H	F:\work\UAPP\ADC.h	2;"	d	line:2
+ADC_OFF::0x10000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	446;"	d	line:446
+ADC_READ_ONLY::0x06	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	468;"	d	line:468
+ADC_START_AND_READ::0x07	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	466;"	d	line:466
+ADC_START_ONLY::0x01	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	467;"	d	line:467
+ADC_TAD_MUL_0::0x1F00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	458;"	d	line:458
+ADC_TAD_MUL_16::0x0F00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	462;"	d	line:462
+ADC_TAD_MUL_2::0x1D00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	459;"	d	line:459
+ADC_TAD_MUL_31::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	463;"	d	line:463
+ADC_TAD_MUL_4::0x1B00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	460;"	d	line:460
+ADC_TAD_MUL_8::0x1700	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	461;"	d	line:461
+ADRES1::0x85	F:\work\UAPP\main.h	36;"	d	line:36
+ADRES2::0x85	F:\work\UAPP\main.h	37;"	d	line:37
+ALL_ANALOG::0xFFFFFFFF	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	477;"	d	line:477
+BOOLEAN::int1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	149;"	d	line:149
+BYTE::unsignedint8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	148;"	d	line:148
+CAPTURE_CONTINUE_IDLE::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	329;"	d	line:329
+CAPTURE_DIV_16::0x0005	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	314;"	d	line:314
+CAPTURE_DIV_4::0x0004	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	313;"	d	line:313
+CAPTURE_EE::0x0001	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	310;"	d	line:310
+CAPTURE_FE::0x0002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	311;"	d	line:311
+CAPTURE_HALT_IDLE::0x2000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	328;"	d	line:328
+CAPTURE_INTERRUPT_ONLY::0x0007	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	315;"	d	line:315
+CAPTURE_OFF::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	309;"	d	line:309
+CAPTURE_RE::0x0003	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	312;"	d	line:312
+CAPTURE_TIMER2::0x0080	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	324;"	d	line:324
+CAPTURE_TIMER3::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	325;"	d	line:325
+COMPARE_CLR_ON_MATCH::0x0002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	341;"	d	line:341
+COMPARE_CONTINUE_IDLE::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	354;"	d	line:354
+COMPARE_CONT_PULSE::0x0005	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	344;"	d	line:344
+COMPARE_HALT_IDLE::0x2000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	353;"	d	line:353
+COMPARE_OFF::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	339;"	d	line:339
+COMPARE_PWM::0x0006	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	345;"	d	line:345
+COMPARE_PWM_FAULT::0x0007	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	346;"	d	line:346
+COMPARE_SET_ON_MATCH::0x0001	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	340;"	d	line:340
+COMPARE_SINGLE_PULSE::0x0004	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	343;"	d	line:343
+COMPARE_TIMER2::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	349;"	d	line:349
+COMPARE_TIMER3::0x0008	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	350;"	d	line:350
+COMPARE_TOGGEL::0x0003	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	342;"	d	line:342
+COM_INFO::0x48	F:\work\UAPP\main.h	48;"	d	line:48
+COM_READ_CRC::0x47	F:\work\UAPP\main.h	47;"	d	line:47
+COM_READ_ID::0x46	F:\work\UAPP\main.h	49;"	d	line:49
+COM_RESET_MK::0x55	F:\work\UAPP\main.h	50;"	d	line:50
+COM_SET_ALL_UI::0x40	F:\work\UAPP\main.h	40;"	d	line:40
+COM_SET_PRG_IND::0x41	F:\work\UAPP\main.h	44;"	d	line:44
+COM_SET_PRG_STR::0x32	F:\work\UAPP\main.h	43;"	d	line:43
+COM_SET_UGOL_IND::0x3A	F:\work\UAPP\main.h	42;"	d	line:42
+COM_SET_UGOL_STR::0x31	F:\work\UAPP\main.h	41;"	d	line:41
+COM_SET_UP_BLN::0x42	F:\work\UAPP\main.h	45;"	d	line:45
+DMA_BYTE::0x40	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	536;"	d	line:536
+DMA_B_SELECT::0x04	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	550;"	d	line:550
+DMA_CONTINOUS::0x00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	541;"	d	line:541
+DMA_FORCE_NOW::0x100	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	546;"	d	line:546
+DMA_HALF_INT::0x10	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	538;"	d	line:538
+DMA_IC1::0x010000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	525;"	d	line:525
+DMA_IC2::0x050000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	527;"	d	line:527
+DMA_IN::0x00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	533;"	d	line:533
+DMA_INT0::0x000000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	524;"	d	line:524
+DMA_IN_ADC1::(0x0D0000|getenv("sfr:ADC1BUF0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	521;"	d	line:521
+DMA_IN_ECAN1::(0x220000|getenv("sfr:C1RXD"))	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	522;"	d	line:522
+DMA_IN_ERROR::0x01	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	548;"	d	line:548
+DMA_IN_IC1::(0x010000|getenv("sfr:IC1BUF")	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	526;"	d	line:526
+DMA_IN_IC2::(0x050000|getenv("sfr:IC2BUF")	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	528;"	d	line:528
+DMA_IN_SPI1::(0x0A0000|getenv("sfr:SPI1BUF"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	513;"	d	line:513
+DMA_IN_SPI2::(0x210000|getenv("sfr:SPI2BUF"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	515;"	d	line:515
+DMA_IN_UART1::(0x0B0000|getenv("sfr:U1RXREG"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	517;"	d	line:517
+DMA_IN_UART2::(0x1E0000|getenv("sfr:U2RXREG"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	519;"	d	line:519
+DMA_NO_INC::0x10	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	544;"	d	line:544
+DMA_OC1::0x020000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	529;"	d	line:529
+DMA_OC2::0x060000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	530;"	d	line:530
+DMA_ONE_SHOT::0x01	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	542;"	d	line:542
+DMA_OUT::0x800000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	534;"	d	line:534
+DMA_OUT_ECAN1::(0xC60000|getenv("sfr:C1TXD"))	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	523;"	d	line:523
+DMA_OUT_ERROR::0x02	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	549;"	d	line:549
+DMA_OUT_SPI1::(0x8A0000|getenv("sfr:SPI1BUF"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	514;"	d	line:514
+DMA_OUT_SPI2::(0xA10000|getenv("sfr:SPI2BUF"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	516;"	d	line:516
+DMA_OUT_UART1::(0x8C0000|getenv("sfr:U1TXREG"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	518;"	d	line:518
+DMA_OUT_UART2::(0x9F0000|getenv("sfr:U2TXREG"	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	520;"	d	line:520
+DMA_PERIF_ADDR::0x20	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	545;"	d	line:545
+DMA_PING_PONG::0x02	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	543;"	d	line:543
+DMA_TIMER2::0x070000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	531;"	d	line:531
+DMA_TIMER3::0x080000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	532;"	d	line:532
+DMA_WORD::0x00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	537;"	d	line:537
+DMA_WRITE_NULL::0x08	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	539;"	d	line:539
+FALSE::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	145;"	d	line:145
+FREQUENCY::80000000	F:\work\UAPP\main.h	18;"	d	line:18
+GLOBAL::0x400	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	785;"	d	line:785
+H_TO_L::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	781;"	d	line:781
+ID1::0x17	F:\work\UAPP\main.h	30;"	d	line:30
+ID2::0x03	F:\work\UAPP\main.h	31;"	d	line:31
+ID3::0x20	F:\work\UAPP\main.h	32;"	d	line:32
+ID4::0x16	F:\work\UAPP\main.h	33;"	d	line:33
+INTERRUPT_EVERY_CAPTURE::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	318;"	d	line:318
+INTERRUPT_FOURTH_CAPTURE::0x0060	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	321;"	d	line:321
+INTERRUPT_SECOND_CAPTURE::0x0020	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	319;"	d	line:319
+INTERRUPT_THIRD_CAPTURE::0x0040	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	320;"	d	line:320
+INTR_ALTERNATE::0x200	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	787;"	d	line:787
+INTR_CN_PIN::0x8000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	797;"	d	line:797
+INTR_GLOBAL::0x400	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	784;"	d	line:784
+INTR_LEVEL0::0x500	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	788;"	d	line:788
+INTR_LEVEL1::0x501	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	789;"	d	line:789
+INTR_LEVEL2::0x502	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	790;"	d	line:790
+INTR_LEVEL3::0x503	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	791;"	d	line:791
+INTR_LEVEL4::0x504	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	792;"	d	line:792
+INTR_LEVEL5::0x505	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	793;"	d	line:793
+INTR_LEVEL6::0x506	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	794;"	d	line:794
+INTR_LEVEL7::0x507	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	795;"	d	line:795
+INTR_NORMAL::0x100	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	786;"	d	line:786
+INT_ADC1::78	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	817;"	d	line:817
+INT_ADDRERR::2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	800;"	d	line:800
+INT_CNI::84	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	821;"	d	line:821
+INT_DMA0::69	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	808;"	d	line:808
+INT_DMA1::79	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	818;"	d	line:818
+INT_DMA2::89	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	825;"	d	line:825
+INT_DMA3::101	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	835;"	d	line:835
+INT_DMA4::111	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	844;"	d	line:844
+INT_DMA5::126	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	851;"	d	line:851
+INT_DMA6::133	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	854;"	d	line:854
+INT_DMA7::134	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	855;"	d	line:855
+INT_DMAERR::5	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	803;"	d	line:803
+INT_EXT0::6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	804;"	d	line:804
+INT_EXT1::85	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	822;"	d	line:822
+INT_EXT2::94	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	830;"	d	line:830
+INT_EXT3::118	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	849;"	d	line:849
+INT_EXT4::119	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	850;"	d	line:850
+INT_IC1::7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	805;"	d	line:805
+INT_IC2::70	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	809;"	d	line:809
+INT_IC3::102	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	836;"	d	line:836
+INT_IC4::103	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	837;"	d	line:837
+INT_IC5::104	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	838;"	d	line:838
+INT_IC6::105	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	839;"	d	line:839
+INT_IC7::87	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	823;"	d	line:823
+INT_IC8::88	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	824;"	d	line:824
+INT_MATHERR::4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	802;"	d	line:802
+INT_MI2C::82	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	820;"	d	line:820
+INT_OC1::8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	806;"	d	line:806
+INT_OC2::71	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	810;"	d	line:810
+INT_OC3::90	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	826;"	d	line:826
+INT_OC4::91	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	827;"	d	line:827
+INT_OC5::106	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	840;"	d	line:840
+INT_OC6::107	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	841;"	d	line:841
+INT_OC7::108	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	842;"	d	line:842
+INT_OC8::109	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	843;"	d	line:843
+INT_OSCFAIL::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	799;"	d	line:799
+INT_RDA2::95	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	831;"	d	line:831
+INT_RDA::76	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	815;"	d	line:815
+INT_SI2C::81	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	819;"	d	line:819
+INT_SPI1::75	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	814;"	d	line:814
+INT_SPI1E::74	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	813;"	d	line:813
+INT_SPI2::98	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	834;"	d	line:834
+INT_SPI2E::97	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	833;"	d	line:833
+INT_STACKERR::3	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	801;"	d	line:801
+INT_TBE2::96	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	832;"	d	line:832
+INT_TBE::77	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	816;"	d	line:816
+INT_TIMER1::9	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	807;"	d	line:807
+INT_TIMER2::72	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	811;"	d	line:811
+INT_TIMER3::73	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	812;"	d	line:812
+INT_TIMER4::92	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	828;"	d	line:828
+INT_TIMER5::93	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	829;"	d	line:829
+INT_TIMER6::112	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	845;"	d	line:845
+INT_TIMER7::113	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	846;"	d	line:846
+INT_TIMER8::116	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	847;"	d	line:847
+INT_TIMER9::117	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	848;"	d	line:848
+INT_UART1E::130	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	852;"	d	line:852
+INT_UART2E::131	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	853;"	d	line:853
+L_TO_H::0x40	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	780;"	d	line:780
+NO_ANALOGS::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	476;"	d	line:476
+OSC_CLOCK::2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	232;"	d	line:232
+OSC_CRYSTAL::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	231;"	d	line:231
+OSC_INTERNAL::32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	230;"	d	line:230
+OSC_RC::3	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	233;"	d	line:233
+OSC_SECONDARY::16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	234;"	d	line:234
+PIN_B0::5696	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	86;"	d	line:86
+PIN_B10::5706	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	96;"	d	line:96
+PIN_B11::5707	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	97;"	d	line:97
+PIN_B12::5708	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	98;"	d	line:98
+PIN_B13::5709	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	99;"	d	line:99
+PIN_B14::5710	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	100;"	d	line:100
+PIN_B15::5711	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	101;"	d	line:101
+PIN_B1::5697	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	87;"	d	line:87
+PIN_B2::5698	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	88;"	d	line:88
+PIN_B3::5699	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	89;"	d	line:89
+PIN_B4::5700	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	90;"	d	line:90
+PIN_B5::5701	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	91;"	d	line:91
+PIN_B6::5702	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	92;"	d	line:92
+PIN_B7::5703	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	93;"	d	line:93
+PIN_B8::5704	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	94;"	d	line:94
+PIN_B9::5705	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	95;"	d	line:95
+PIN_C12::5756	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	105;"	d	line:105
+PIN_C13::5757	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	106;"	d	line:106
+PIN_C14::5758	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	107;"	d	line:107
+PIN_C15::5759	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	108;"	d	line:108
+PIN_C1::5745	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	103;"	d	line:103
+PIN_C2::5746	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	104;"	d	line:104
+PIN_D0::5792	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	110;"	d	line:110
+PIN_D10::5802	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	120;"	d	line:120
+PIN_D11::5803	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	121;"	d	line:121
+PIN_D1::5793	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	111;"	d	line:111
+PIN_D2::5794	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	112;"	d	line:112
+PIN_D3::5795	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	113;"	d	line:113
+PIN_D4::5796	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	114;"	d	line:114
+PIN_D5::5797	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	115;"	d	line:115
+PIN_D6::5798	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	116;"	d	line:116
+PIN_D7::5799	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	117;"	d	line:117
+PIN_D8::5800	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	118;"	d	line:118
+PIN_D9::5801	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	119;"	d	line:119
+PIN_F0::5888	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	123;"	d	line:123
+PIN_F1::5889	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	124;"	d	line:124
+PIN_F2::5890	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	125;"	d	line:125
+PIN_F3::5891	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	126;"	d	line:126
+PIN_F4::5892	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	127;"	d	line:127
+PIN_F5::5893	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	128;"	d	line:128
+PIN_F6::5894	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	129;"	d	line:129
+PIN_G0::5936	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	131;"	d	line:131
+PIN_G12::5948	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	139;"	d	line:139
+PIN_G13::5949	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	140;"	d	line:140
+PIN_G14::5950	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	141;"	d	line:141
+PIN_G15::5951	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	142;"	d	line:142
+PIN_G1::5937	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	132;"	d	line:132
+PIN_G2::5938	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	133;"	d	line:133
+PIN_G3::5939	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	134;"	d	line:134
+PIN_G6::5942	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	135;"	d	line:135
+PIN_G7::5943	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	136;"	d	line:136
+PIN_G8::5944	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	137;"	d	line:137
+PIN_G9::5945	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	138;"	d	line:138
+RESET_MK_WORD_2::0xAA	F:\work\UAPP\main.h	51;"	d	line:51
+RESTART_BROWNOUT::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	214;"	d	line:214
+RESTART_ILLEGAL_OP::14	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	218;"	d	line:218
+RESTART_MCLR::7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	217;"	d	line:217
+RESTART_POWER_UP::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	213;"	d	line:213
+RESTART_SOFTWARE::6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	216;"	d	line:216
+RESTART_TRAP_CONFLICT::15	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	219;"	d	line:219
+RESTART_WATCHDOG::4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	215;"	d	line:215
+SLEEP_FULL::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	222;"	d	line:222
+SLEEP_IDLE::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	223;"	d	line:223
+SPI_CLK_DIV_112::0x0005	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	418;"	d	line:418
+SPI_CLK_DIV_128::0x0001	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	419;"	d	line:419
+SPI_CLK_DIV_12::0x0016	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	408;"	d	line:408
+SPI_CLK_DIV_16::0x001D	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	409;"	d	line:409
+SPI_CLK_DIV_192::0x0014	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	420;"	d	line:420
+SPI_CLK_DIV_1::0x001F	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	400;"	d	line:400
+SPI_CLK_DIV_20::0x000E	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	410;"	d	line:410
+SPI_CLK_DIV_24::0x000A	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	411;"	d	line:411
+SPI_CLK_DIV_256::0x0010	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	421;"	d	line:421
+SPI_CLK_DIV_28::0x0006	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	412;"	d	line:412
+SPI_CLK_DIV_2::0x001B	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	401;"	d	line:401
+SPI_CLK_DIV_320::0x000C	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	422;"	d	line:422
+SPI_CLK_DIV_32::0x0002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	413;"	d	line:413
+SPI_CLK_DIV_384::0x0008	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	423;"	d	line:423
+SPI_CLK_DIV_3::0x0017	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	402;"	d	line:402
+SPI_CLK_DIV_448::0x0004	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	424;"	d	line:424
+SPI_CLK_DIV_48::0x0015	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	414;"	d	line:414
+SPI_CLK_DIV_4::0x001E	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	403;"	d	line:403
+SPI_CLK_DIV_512::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	425;"	d	line:425
+SPI_CLK_DIV_5::0x000F	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	404;"	d	line:404
+SPI_CLK_DIV_64::0x001C	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	415;"	d	line:415
+SPI_CLK_DIV_6::0x000B	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	405;"	d	line:405
+SPI_CLK_DIV_7::0x0007	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	406;"	d	line:406
+SPI_CLK_DIV_80::0x000D	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	416;"	d	line:416
+SPI_CLK_DIV_8::0x0003	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	407;"	d	line:407
+SPI_CLK_DIV_96::0x0009	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	417;"	d	line:417
+SPI_H_TO_L::SPI_SCK_IDLE_HIGH	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	429;"	d	line:429
+SPI_L_TO_H::SPI_SCK_IDLE_LOW	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	428;"	d	line:428
+SPI_MASTER::0x0020	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	381;"	d	line:381
+SPI_MODE_16B::0x0400	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	390;"	d	line:390
+SPI_MODE_8B::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	391;"	d	line:391
+SPI_SAMPLE_AT_END::0x0200	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	393;"	d	line:393
+SPI_SAMPLE_AT_MIDDLE::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	394;"	d	line:394
+SPI_SCK_IDLE_HIGH::0x0040	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	384;"	d	line:384
+SPI_SCK_IDLE_LOW::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	385;"	d	line:385
+SPI_SLAVE::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	382;"	d	line:382
+SPI_SS_DISABLED::0x0080	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	397;"	d	line:397
+SPI_SS_ENABLED::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	396;"	d	line:396
+SPI_XMIT_H_TO_L::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	388;"	d	line:388
+SPI_XMIT_L_TO_H::0x0100	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	387;"	d	line:387
+T1_EXTERNAL_RTC::0xC002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	301;"	d	line:301
+T1_EXTERNAL_SYNC::0x8006	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	300;"	d	line:300
+TMR_32_BIT::0x0008	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	295;"	d	line:295
+TMR_CONTINUE_IDLE::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	298;"	d	line:298
+TMR_DISABLED::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	286;"	d	line:286
+TMR_DIV_BY_1::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	291;"	d	line:291
+TMR_DIV_BY_256::0x0030	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	294;"	d	line:294
+TMR_DIV_BY_64::0x0020	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	293;"	d	line:293
+TMR_DIV_BY_8::0x0010	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	292;"	d	line:292
+TMR_EXTERNAL::0x8002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	288;"	d	line:288
+TMR_GATE::0x0040	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	289;"	d	line:289
+TMR_HALT_IDLE::0x2000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	297;"	d	line:297
+TMR_INTERNAL::0x8000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	287;"	d	line:287
+TRUE::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	146;"	d	line:146
+UART_ADDRESS::2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	170;"	d	line:170
+UART_AUTODETECT::8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	172;"	d	line:172
+UART_AUTODETECT_NOWAIT::9	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	173;"	d	line:173
+UART_DATA::4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	171;"	d	line:171
+UART_SEND_BREAK::13	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	175;"	d	line:175
+UART_WAKEUP_ON_RDA::10	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	174;"	d	line:174
+VREF_VDD::0x4000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	500;"	d	line:500
+VREF_VREF::0x6000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	499;"	d	line:499
+VSS::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	471;"	d	line:471
+VSS_VDD::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	498;"	d	line:498
+VSS_VREF::0x2000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	501;"	d	line:501
+WDT_128MS::0x009	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	193;"	d	line:193
+WDT_131S::0x031	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	203;"	d	line:203
+WDT_16MS::0x006	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	190;"	d	line:190
+WDT_16S::0x010	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	200;"	d	line:200
+WDT_1MS::0x002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	186;"	d	line:186
+WDT_1S::0x00C	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	196;"	d	line:196
+WDT_256MS::0x00A	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	194;"	d	line:194
+WDT_2MS::0x003	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	187;"	d	line:187
+WDT_2S::0x00D	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	197;"	d	line:197
+WDT_32MS::0x007	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	191;"	d	line:191
+WDT_33S::0x011	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	201;"	d	line:201
+WDT_4MS::0x004	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	188;"	d	line:188
+WDT_4S::0x00E	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	198;"	d	line:198
+WDT_512MS::0x00B	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	195;"	d	line:195
+WDT_64MS::0x008	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	192;"	d	line:192
+WDT_65S::0x030	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	202;"	d	line:202
+WDT_8MS::0x005	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	189;"	d	line:189
+WDT_8S::0x00F	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	199;"	d	line:199
+WDT_OFF::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	184;"	d	line:184
+WDT_ON::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	183;"	d	line:183
+__ADDRESS__::unsignedint32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	755;"	d	line:755
+_bif	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	29;"	d	line:29
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	560;"	p	line:560	signature:(unsigned int8, unsigned int8)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	561;"	p	line:561	signature:(signed int8, signed int8)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	562;"	p	line:562	signature:(unsigned int16, unsigned int16)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	563;"	p	line:563	signature:(signed int16, signed int16)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	568;"	p	line:568	signature:(unsigned int32, unsigned int32)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	569;"	p	line:569	signature:(signed int32, signed int32)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	570;"	p	line:570	signature:(unsigned int48, unsigned int48)
+_mul	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	571;"	p	line:571	signature:(signed int48, signed int48)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	556;"	p	line:556	signature:(signed int8 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	557;"	p	line:557	signature:(signed int16 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	558;"	p	line:558	signature:(signed int32 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	559;"	p	line:559	signature:(float32 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	564;"	p	line:564	signature:(signed int48 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	565;"	p	line:565	signature:(signed int64 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	566;"	p	line:566	signature:(float48 x)
+abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	567;"	p	line:567	signature:(float64 x)
+adc_done	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	442;"	p	line:442	signature:(void)
+adress	F:\work\UAPP\main.h	26;"	v	line:26
+bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	601;"	p	line:601	signature:(unsigned int8 var, unsigned int8 bit)
+bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	602;"	p	line:602	signature:(unsigned int16 var, unsigned int8 bit)
+bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	603;"	p	line:603	signature:(unsigned int32 var, unsigned int8 bit)
+bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	609;"	p	line:609	signature:(unsigned int48 var, unsigned int8 bit)
+bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	610;"	p	line:610	signature:(unsigned int64 var, unsigned int8 bit)
+bit_first	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	613;"	p	line:613	signature:(int1 value, unsigned int16 var)
+bit_last	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	614;"	p	line:614	signature:(int16 var)
+bit_last	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	615;"	p	line:615	signature:(int1 value, int16 var)
+bit_set	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	598;"	p	line:598	signature:(unsigned int8 var, unsigned int8 bit)
+bit_set	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	599;"	p	line:599	signature:(unsigned int16 var, unsigned int8 bit)
+bit_set	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	600;"	p	line:600	signature:(unsigned int32 var, unsigned int8 bit)
+bit_set	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	607;"	p	line:607	signature:(unsigned int48 var, unsigned int8 bit)
+bit_set	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	608;"	p	line:608	signature:(unsigned int64 var, unsigned int8 bit)
+bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	604;"	p	line:604	signature:(unsigned int8 var, unsigned int8 bit)
+bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	605;"	p	line:605	signature:(unsigned int16 var, unsigned int8 bit)
+bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	606;"	p	line:606	signature:(unsigned int32 var, unsigned int8 bit)
+bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	611;"	p	line:611	signature:(unsigned int48 var, unsigned int8 bit)
+bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	612;"	p	line:612	signature:(unsigned int64 var, unsigned int8 bit)
+clear_interrupt	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	774;"	p	line:774	signature:(unsigned int16 interrupt)
+d	F:\work\UAPP\main.c	199;"	l	line:199
+delay_cycles	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	618;"	p	line:618	signature:(unsigned int16 count)
+delay_ms	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	619;"	p	line:619	signature:(unsigned int16 time)
+delay_us	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	620;"	p	line:620	signature:(unsigned int16 time)
+disable_interrupts	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	773;"	p	line:773	signature:(unsigned int16 interrupt)
+dma_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	507;"	p	line:507	signature:(unsigned int8 channel, unsigned int16 mode, unsigned int16 addressa)
+dma_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	508;"	p	line:508	signature:(unsigned int8 channel, unsigned int16 mode, unsigned int16 addressa, unsigned int16 count)
+dma_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	509;"	p	line:509	signature:(unsigned int8 channel, unsigned int16 mode, unsigned int16 addressa, unsigned int16 addressb)
+dma_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	510;"	p	line:510	signature:(unsigned int8 channel, unsigned int16 mode, unsigned int16 addressa, unsigned int16 addressb, unsigned int16 count)
+dma_status	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	511;"	p	line:511	signature:(unsigned int8 channel)
+enable_interrupts	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	772;"	p	line:772	signature:(unsigned int16 interrupt)
+erase_program_memory	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	762;"	p	line:762	signature:(__ADDRESS__ address)
+ext_int_edge	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	777;"	p	line:777	signature:(unsigned int8 source, unsigned int8 edge)
+fgetc::getch	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	152;"	d	line:152
+fgets::gets	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	156;"	d	line:156
+float32::float	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	35;"	d	line:35
+float48::float	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	36;"	d	line:36
+float64::double	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	37;"	d	line:37
+fprintf	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	634;"	p	line:634	signature:(unsigned int8 stream, char* string, ...)
+fputc::putchar	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	155;"	d	line:155
+fputc_send	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	636;"	p	line:636	signature:(unsigned int8 stream)
+fputs::puts	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	157;"	d	line:157
+get_capture	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	306;"	p	line:306	signature:(unsigned int8 module)
+get_capture	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	307;"	p	line:307	signature:(unsigned int8 module, int1 wait)
+get_capture_event	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	747;"	p	line:747	signature:(void)
+get_capture_event	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	748;"	p	line:748	signature:(unsigned int8 stream)
+get_capture_time	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	745;"	p	line:745	signature:(void)
+get_capture_time	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	746;"	p	line:746	signature:(unsigned int8 stream)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	715;"	p	line:715	signature:(void)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	716;"	p	line:716	signature:(void)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	717;"	p	line:717	signature:(void)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	718;"	p	line:718	signature:(void)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	719;"	p	line:719	signature:(unsigned int8 stream)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	720;"	p	line:720	signature:(unsigned int8 stream)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	721;"	p	line:721	signature:(unsigned int8 stream)
+get_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	722;"	p	line:722	signature:(unsigned int8 stream)
+get_timer1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	242;"	p	line:242	signature:(void)
+get_timer2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	246;"	p	line:246	signature:(void)
+get_timer23	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	252;"	p	line:252	signature:(void)
+get_timer3	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	250;"	p	line:250	signature:(void)
+get_timer4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	256;"	p	line:256	signature:(void)
+get_timer45	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	262;"	p	line:262	signature:(void)
+get_timer5	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	260;"	p	line:260	signature:(void)
+get_timer6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	266;"	p	line:266	signature:(void)
+get_timer67	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	272;"	p	line:272	signature:(void)
+get_timer7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	270;"	p	line:270	signature:(void)
+get_timer8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	276;"	p	line:276	signature:(void)
+get_timer89	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	282;"	p	line:282	signature:(void)
+get_timer9	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	280;"	p	line:280	signature:(void)
+get_tris_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	52;"	p	line:52	signature:(void)
+get_tris_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	53;"	p	line:53	signature:(void)
+get_tris_d	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	54;"	p	line:54	signature:(void)
+get_tris_f	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	55;"	p	line:55	signature:(void)
+get_tris_g	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	56;"	p	line:56	signature:(void)
+getc::getch	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	151;"	d	line:151
+getch	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	627;"	p	line:627	signature:(void)
+getch	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	628;"	p	line:628	signature:(unsigned int8 stream)
+getchar::getch	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	153;"	d	line:153
+gets	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	629;"	p	line:629	signature:(char* string)
+gets	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	630;"	p	line:630	signature:(char* string, unsigned int8 stream)
+goto_address	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	757;"	p	line:757	signature:(__ADDRESS__ address)
+i2c_init	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	662;"	p	line:662	signature:(unsigned int32 baud)
+i2c_init	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	663;"	p	line:663	signature:(unsigned int8 stream, unsigned int32 baud)
+i2c_isr_state	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	657;"	p	line:657	signature:(void)
+i2c_poll	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	660;"	p	line:660	signature:(void)
+i2c_poll	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	661;"	p	line:661	signature:(unsigned int8 stream)
+i2c_read	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	647;"	p	line:647	signature:(void)
+i2c_read	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	648;"	p	line:648	signature:(unsigned int8 stream)
+i2c_read	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	649;"	p	line:649	signature:(unsigned int8 stream, int1 ack)
+i2c_slaveaddr	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	658;"	p	line:658	signature:(unsigned int8 addr)
+i2c_slaveaddr	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	659;"	p	line:659	signature:(unsigned int8 stream, unsigned int8 addr)
+i2c_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	652;"	p	line:652	signature:(void)
+i2c_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	653;"	p	line:653	signature:(unsigned int8 stream)
+i2c_start	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	654;"	p	line:654	signature:(unsigned int8 stream, unsigned int8 restart)
+i2c_stop	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	655;"	p	line:655	signature:(void)
+i2c_stop	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	656;"	p	line:656	signature:(unsigned int8 stream)
+i2c_write	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	650;"	p	line:650	signature:(unsigned int8 data)
+i2c_write	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	651;"	p	line:651	signature:(unsigned int8 stream, unsigned int8 data)
+input	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	76;"	p	line:76	signature:(unsigned int16 pin)
+input_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	62;"	p	line:62	signature:(void)
+input_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	63;"	p	line:63	signature:(void)
+input_change_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	67;"	p	line:67	signature:(void)
+input_change_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	68;"	p	line:68	signature:(void)
+input_change_d	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	69;"	p	line:69	signature:(void)
+input_change_f	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	70;"	p	line:70	signature:(void)
+input_change_g	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	71;"	p	line:71	signature:(void)
+input_d	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	64;"	p	line:64	signature:(void)
+input_f	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	65;"	p	line:65	signature:(void)
+input_g	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	66;"	p	line:66	signature:(void)
+input_state	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	77;"	p	line:77	signature:(unsigned int16 pin)
+int16::int	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	31;"	d	line:31
+int1::char	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	38;"	d	line:38
+int32::long	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	32;"	d	line:32
+int48::long	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	33;"	d	line:33
+int64::longlong	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	34;"	d	line:34
+int8::char	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	30;"	d	line:30
+interrupt_active	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	775;"	p	line:775	signature:(unsigned int16 interrupt)
+interrupt_enabled	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	776;"	p	line:776	signature:(unsigned int16 interrupt)
+jump_to_isr	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	778;"	p	line:778	signature:(unsigned int16 address)
+kbhit	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	631;"	p	line:631	signature:(void)
+kbhit	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	632;"	p	line:632	signature:(unsigned int8 stream)
+label_address	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	758;"	p	line:758	signature:(__ADDRESS__ label)
+main	F:\work\UAPP\main.c	3;"	f	line:3
+make16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	586;"	p	line:586	signature:(unsigned int8 varhigh, unsigned int8 varlow)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	587;"	p	line:587	signature:(unsigned int16 var1)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	588;"	p	line:588	signature:(unsigned int16 var1, unsigned int16 var2)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	589;"	p	line:589	signature:(unsigned int16 var1, unsigned int8 var2)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	590;"	p	line:590	signature:(unsigned int16 var1, unsigned int8 var2, unsigned int8 var3)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	591;"	p	line:591	signature:(unsigned int8 var1)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	592;"	p	line:592	signature:(unsigned int8 var1, unsigned int8 var2)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	593;"	p	line:593	signature:(unsigned int8 var1, unsigned int8 var2, unsigned int8 var3)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	594;"	p	line:594	signature:(unsigned int8 var1, unsigned int8 var2, unsigned int8 var3, unsigned int8 var4)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	595;"	p	line:595	signature:(unsigned int8 var1, unsigned int16 var2)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	596;"	p	line:596	signature:(unsigned int8 var1, unsigned int16 var2, unsigned int8 var3)
+make32	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	597;"	p	line:597	signature:(unsigned int8 var1, unsigned int8 var2, unsigned int16 var3)
+make8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	584;"	p	line:584	signature:(unsigned int16 var, unsigned int8 offset)
+make8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	585;"	p	line:585	signature:(unsigned int32 var, unsigned int8 offset)
+memcpy	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	576;"	p	line:576	signature:(unsigned int8* destination, unsigned int8* source, unsigned int16 num)
+memset	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	575;"	p	line:575	signature:(unsigned int8* destination, unsigned int8 value, unsigned int16 num)
+obmenRS	F:\work\UAPP\main.c	39;"	f	line:39
+obmenRS	F:\work\UAPP\main.h	67;"	p	line:67	signature:()
+output_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	57;"	p	line:57	signature:(unsigned int16 value)
+output_bit	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	81;"	p	line:81	signature:(unsigned int16 pin, int1 level)
+output_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	58;"	p	line:58	signature:(unsigned int16 value)
+output_d	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	59;"	p	line:59	signature:(unsigned int16 value)
+output_drive	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	83;"	p	line:83	signature:(unsigned int16 pin)
+output_f	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	60;"	p	line:60	signature:(unsigned int16 value)
+output_float	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	82;"	p	line:82	signature:(unsigned int16 pin)
+output_g	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	61;"	p	line:61	signature:(unsigned int16 value)
+output_high	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	79;"	p	line:79	signature:(unsigned int16 pin)
+output_low	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	78;"	p	line:78	signature:(unsigned int16 pin)
+output_toggle	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	80;"	p	line:80	signature:(unsigned int16 pin)
+printf	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	633;"	p	line:633	signature:(char* string, ...)
+putc::putchar	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	154;"	d	line:154
+putc_send	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	635;"	p	line:635	signature:(void)
+putchar	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	623;"	p	line:623	signature:(char cdata)
+putchar	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	624;"	p	line:624	signature:(char cdata, unsigned int8 stream)
+puts	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	625;"	p	line:625	signature:(char* string)
+puts	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	626;"	p	line:626	signature:(char* string, unsigned int8 stream)
+pwm_off	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	735;"	p	line:735	signature:(void)
+pwm_off	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	736;"	p	line:736	signature:(unsigned int8 stream)
+pwm_on	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	733;"	p	line:733	signature:(void)
+pwm_on	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	734;"	p	line:734	signature:(unsigned int8 stream)
+pwm_set_duty	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	737;"	p	line:737	signature:(unsigned int16 duty)
+pwm_set_duty	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	738;"	p	line:738	signature:(unsigned int8 stream, unsigned int16 duty)
+pwm_set_duty_percent	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	739;"	p	line:739	signature:(unsigned int16 percent)
+pwm_set_duty_percent	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	740;"	p	line:740	signature:(unsigned int8 stream, unsigned int16 percent)
+pwm_set_frequency	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	741;"	p	line:741	signature:(unsigned int32 frequency)
+pwm_set_frequency	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	742;"	p	line:742	signature:(unsigned int8 stream, unsigned int32 frequency)
+rcv_buffer_bytes	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	639;"	p	line:639	signature:(void)
+rcv_buffer_bytes	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	640;"	p	line:640	signature:(unsigned int8 stream)
+rcv_buffer_full	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	637;"	p	line:637	signature:(void)
+rcv_buffer_full	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	638;"	p	line:638	signature:(unsigned int8 stream)
+read_adc	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	440;"	p	line:440	signature:(void)
+read_adc	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	441;"	p	line:441	signature:(unsigned int8 mode)
+read_configuration_memory	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	764;"	p	line:764	signature:(unsigned int8* dataptr, unsigned int8 count)
+read_program_memory	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	761;"	p	line:761	signature:(__ADDRESS__ address, unsigned int8* dataptr, unsigned int16 count)
+reset_cpu	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	209;"	p	line:209	signature:(void)
+restart_cause	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	208;"	p	line:208	signature:(void)
+restart_wdt	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	181;"	p	line:181	signature:(void)
+rotate_left	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	581;"	p	line:581	signature:(unsigned int8* address, unsigned int8 bytes)
+rotate_right	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	582;"	p	line:582	signature:(unsigned int8* address, unsigned int8 bytes)
+rtos_await	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	705;"	p	line:705	signature:(int1 flag)
+rtos_disable	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	703;"	p	line:703	signature:(unsigned int8 task)
+rtos_enable	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	702;"	p	line:702	signature:(unsigned int8 task)
+rtos_msg_poll	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	710;"	p	line:710	signature:(void)
+rtos_msg_read	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	709;"	p	line:709	signature:(void)
+rtos_msg_send	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	708;"	p	line:708	signature:(unsigned int8 task, unsigned int8 msg)
+rtos_overrun	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	711;"	p	line:711	signature:(unsigned int8 task)
+rtos_run	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	700;"	p	line:700	signature:(void)
+rtos_signal	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	707;"	p	line:707	signature:(unsigned int8 sem)
+rtos_stats	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	712;"	p	line:712	signature:(unsigned int8 task, unsigned int8* stat)
+rtos_terminate	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	704;"	p	line:704	signature:(void)
+rtos_wait	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	706;"	p	line:706	signature:(unsigned int8 sem)
+rtos_yield	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	701;"	p	line:701	signature:(void)
+sAN0::0x00000001	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	478;"	d	line:478
+sAN10::0x00000400	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	488;"	d	line:488
+sAN11::0x00000800	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	489;"	d	line:489
+sAN12::0x00001000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	490;"	d	line:490
+sAN13::0x00002000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	491;"	d	line:491
+sAN14::0x00004000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	492;"	d	line:492
+sAN15::0x00008000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	493;"	d	line:493
+sAN16::0x00010000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	494;"	d	line:494
+sAN17::0x00020000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	495;"	d	line:495
+sAN1::0x00000002	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	479;"	d	line:479
+sAN2::0x00000004	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	480;"	d	line:480
+sAN3::0x00000008	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	481;"	d	line:481
+sAN4::0x00000010	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	482;"	d	line:482
+sAN5::0x00000020	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	483;"	d	line:483
+sAN6::0x00000040	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	484;"	d	line:484
+sAN7::0x00000080	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	485;"	d	line:485
+sAN8::0x00000100	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	486;"	d	line:486
+sAN9::0x00000200	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	487;"	d	line:487
+set_adc_channel	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	438;"	p	line:438	signature:(unsigned int8 channel)
+set_adc_channel	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	439;"	p	line:439	signature:(unsigned int8 channel, unsigned int8 neg_channel)
+set_compare_time	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	336;"	p	line:336	signature:(unsigned int8 module, unsigned int16 ocr)
+set_compare_time	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	337;"	p	line:337	signature:(unsigned int8 module, unsigned int16 ocr, unsigned int16 ocrs)
+set_pulldown	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	74;"	p	line:74	signature:(int1 state)
+set_pulldown	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	75;"	p	line:75	signature:(int1 state, unsigned int16 pin)
+set_pullup	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	72;"	p	line:72	signature:(int1 state)
+set_pullup	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	73;"	p	line:73	signature:(int1 state, unsigned int16 pin)
+set_pwm_duty	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	335;"	p	line:335	signature:(unsigned int8 module, unsigned int16 duty)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	723;"	p	line:723	signature:(unsigned int8 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	724;"	p	line:724	signature:(unsigned int16 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	725;"	p	line:725	signature:(unsigned int32 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	726;"	p	line:726	signature:(unsigned int64 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	727;"	p	line:727	signature:(unsigned int8 stream, unsigned int8 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	728;"	p	line:728	signature:(unsigned int8 stream, unsigned int16 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	729;"	p	line:729	signature:(unsigned int8 stream, unsigned int32 value)
+set_ticks	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	730;"	p	line:730	signature:(unsigned int8 stream, unsigned int64 value)
+set_timer1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	243;"	p	line:243	signature:(unsigned int16 value)
+set_timer2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	247;"	p	line:247	signature:(unsigned int16 value)
+set_timer23	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	253;"	p	line:253	signature:(unsigned int32 value)
+set_timer3	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	251;"	p	line:251	signature:(unsigned int16 value)
+set_timer4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	257;"	p	line:257	signature:(unsigned int16 value)
+set_timer45	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	263;"	p	line:263	signature:(unsigned int32 value)
+set_timer5	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	261;"	p	line:261	signature:(unsigned int16 value)
+set_timer6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	267;"	p	line:267	signature:(unsigned int16 value)
+set_timer67	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	273;"	p	line:273	signature:(unsigned int32 value)
+set_timer7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	271;"	p	line:271	signature:(unsigned int16 value)
+set_timer8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	277;"	p	line:277	signature:(unsigned int16 value)
+set_timer89	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	283;"	p	line:283	signature:(unsigned int32 value)
+set_timer9	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	281;"	p	line:281	signature:(unsigned int16 value)
+set_tris_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	47;"	p	line:47	signature:(unsigned int16 value)
+set_tris_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	48;"	p	line:48	signature:(unsigned int16 value)
+set_tris_d	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	49;"	p	line:49	signature:(unsigned int16 value)
+set_tris_f	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	50;"	p	line:50	signature:(unsigned int16 value)
+set_tris_g	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	51;"	p	line:51	signature:(unsigned int16 value)
+set_uart_speed	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	164;"	p	line:164	signature:(unsigned int32 baud)
+set_uart_speed	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	165;"	p	line:165	signature:(unsigned int32 baud, unsigned int8 stream)
+set_uart_speed	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	166;"	p	line:166	signature:(unsigned int32 baud, unsigned int8 stream, unsigned int32 clock)
+setup_adc	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	435;"	p	line:435	signature:(unsigned int32 mode)
+setup_adc_ports	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	436;"	p	line:436	signature:(unsigned int32 pins)
+setup_adc_ports	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	437;"	p	line:437	signature:(unsigned int32 pins, unsigned int16 reference)
+setup_capture	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	305;"	p	line:305	signature:(unsigned int8 module, unsigned int16 mode)
+setup_compare	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	334;"	p	line:334	signature:(unsigned int8 module, unsigned int16 mode)
+setup_dma	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	506;"	p	line:506	signature:(unsigned int8 channel, unsigned int32 pheripheral, unsigned int8 mode)
+setup_oscillator	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	227;"	p	line:227	signature:(unsigned int8 type, unsigned int32 target)
+setup_oscillator	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	228;"	p	line:228	signature:(unsigned int8 type, unsigned int32 target, unsigned int32 source)
+setup_spi	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	359;"	p	line:359	signature:(unsigned int16 mode)
+setup_spi2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	369;"	p	line:369	signature:(unsigned int16 mode)
+setup_timer1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	240;"	p	line:240	signature:(unsigned int16 mode)
+setup_timer1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	241;"	p	line:241	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	244;"	p	line:244	signature:(unsigned int16 mode)
+setup_timer2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	245;"	p	line:245	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer3	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	248;"	p	line:248	signature:(unsigned int16 mode)
+setup_timer3	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	249;"	p	line:249	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	254;"	p	line:254	signature:(unsigned int16 mode)
+setup_timer4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	255;"	p	line:255	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer5	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	258;"	p	line:258	signature:(unsigned int16 mode)
+setup_timer5	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	259;"	p	line:259	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	264;"	p	line:264	signature:(unsigned int16 mode)
+setup_timer6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	265;"	p	line:265	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	268;"	p	line:268	signature:(unsigned int16 mode)
+setup_timer7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	269;"	p	line:269	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	274;"	p	line:274	signature:(unsigned int16 mode)
+setup_timer8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	275;"	p	line:275	signature:(unsigned int16 mode, unsigned int16 period)
+setup_timer9	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	278;"	p	line:278	signature:(unsigned int16 mode)
+setup_timer9	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	279;"	p	line:279	signature:(unsigned int16 mode, unsigned int16 period)
+setup_uart	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	161;"	p	line:161	signature:(unsigned int32 baud)
+setup_uart	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	162;"	p	line:162	signature:(unsigned int32 baud, unsigned int8 stream)
+setup_uart	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	163;"	p	line:163	signature:(unsigned int32 baud, unsigned int8 stream, unsigned int32 clock)
+setup_wdt	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	180;"	p	line:180	signature:(unsigned int8 mode)
+shift_left	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	579;"	p	line:579	signature:(unsigned int8* address, unsigned int8 bytes, int1 value)
+shift_right	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	580;"	p	line:580	signature:(unsigned int8* address, unsigned int8 bytes, int1 value)
+sleep	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	210;"	p	line:210	signature:(void)
+sleep	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	211;"	p	line:211	signature:(unsigned int8 mode)
+spi_data_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	368;"	p	line:368	signature:(void)
+spi_data_in2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	378;"	p	line:378	signature:(void)
+spi_init	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	678;"	p	line:678	signature:(unsigned int32 baud)
+spi_init	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	679;"	p	line:679	signature:(unsigned int8 stream, unsigned int32 baud)
+spi_prewrite	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	683;"	p	line:683	signature:(unsigned int8 data)
+spi_prewrite	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	684;"	p	line:684	signature:(unsigned int16 data)
+spi_prewrite	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	685;"	p	line:685	signature:(unsigned int32 data)
+spi_prewrite	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	686;"	p	line:686	signature:(unsigned int8, unsigned int8 data)
+spi_prewrite	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	687;"	p	line:687	signature:(unsigned int8, unsigned int16 data)
+spi_prewrite	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	688;"	p	line:688	signature:(unsigned int8, unsigned int32 data)
+spi_read	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	364;"	p	line:364	signature:(void)
+spi_read	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	365;"	p	line:365	signature:(unsigned int8 data)
+spi_read2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	374;"	p	line:374	signature:(void)
+spi_read2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	375;"	p	line:375	signature:(unsigned int8 data)
+spi_read2_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	376;"	p	line:376	signature:(void)
+spi_read2_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	377;"	p	line:377	signature:(unsigned int16 data)
+spi_read_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	366;"	p	line:366	signature:(void)
+spi_read_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	367;"	p	line:367	signature:(unsigned int16 data)
+spi_speed	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	680;"	p	line:680	signature:(unsigned int32 baud)
+spi_speed	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	681;"	p	line:681	signature:(unsigned int8 stream, unsigned int32 baud)
+spi_speed	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	682;"	p	line:682	signature:(unsigned int8 stream, unsigned int32 baud, unsigned int32 clock)
+spi_write	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	360;"	p	line:360	signature:(unsigned int8 data)
+spi_write	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	361;"	p	line:361	signature:(int1 wait, unsigned int8 data)
+spi_write2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	370;"	p	line:370	signature:(unsigned int8 data)
+spi_write2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	371;"	p	line:371	signature:(int1 wait, unsigned int8 data)
+spi_write2_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	372;"	p	line:372	signature:(unsigned int16 data)
+spi_write2_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	373;"	p	line:373	signature:(int1 wait, unsigned int16 data)
+spi_write_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	362;"	p	line:362	signature:(unsigned int16 data)
+spi_write_16	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	363;"	p	line:363	signature:(int1 wait, unsigned int16 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	666;"	p	line:666	signature:(void)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	667;"	p	line:667	signature:(void)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	668;"	p	line:668	signature:(void)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	669;"	p	line:669	signature:(unsigned int8 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	670;"	p	line:670	signature:(unsigned int16 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	671;"	p	line:671	signature:(unsigned int32 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	672;"	p	line:672	signature:(unsigned int8 stream, unsigned int8 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	673;"	p	line:673	signature:(unsigned int8 stream, unsigned int16 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	674;"	p	line:674	signature:(unsigned int8 stream, unsigned int32 data)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	675;"	p	line:675	signature:(unsigned int8 stream, unsigned int8 data, unsigned int8 bits)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	676;"	p	line:676	signature:(unsigned int8 stream, unsigned int16 data, unsigned int8 bits)
+spi_xfer	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	677;"	p	line:677	signature:(unsigned int8 stream, unsigned int32 data, unsigned int8 bits)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	689;"	p	line:689	signature:(void)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	690;"	p	line:690	signature:(void)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	691;"	p	line:691	signature:(void)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	692;"	p	line:692	signature:(unsigned int8 bits)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	693;"	p	line:693	signature:(unsigned int8 bits)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	694;"	p	line:694	signature:(unsigned int8 bits)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	695;"	p	line:695	signature:(unsigned int8 stream, unsigned int8 bits)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	696;"	p	line:696	signature:(unsigned int8 stream, unsigned int8 bits)
+spi_xfer_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	697;"	p	line:697	signature:(unsigned int8 stream, unsigned int8 bits)
+strcpy	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	574;"	p	line:574	signature:(char* dest, char* src)
+swap	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	583;"	p	line:583	signature:(unsigned int8 value)
+tx_buffer_bytes	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	643;"	p	line:643	signature:(void)
+tx_buffer_bytes	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	644;"	p	line:644	signature:(unsigned int8 stream)
+tx_buffer_full	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	641;"	p	line:641	signature:(void)
+tx_buffer_full	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	642;"	p	line:642	signature:(unsigned int8 stream)
+write_configuration_memory	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	765;"	p	line:765	signature:(unsigned int8* dataptr, unsigned int8 count)
+write_program_memory	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	763;"	p	line:763	signature:(__ADDRESS__ address, unsigned int8* dataptr, unsigned int16 count)

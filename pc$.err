@@ -1,0 +1,12 @@
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 67(15,22): Undefined identifier   maxAdc1
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 79(16,23): Undefined identifier   maxAdc1
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 102(15,22): Undefined identifier   maxAdc2
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 112(16,23): Undefined identifier   maxAdc2
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 134(15,22): Undefined identifier   maxAdc3
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 145(16,23): Undefined identifier   maxAdc3
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 167(15,22): Undefined identifier   maxAdc4
+*** Error 12 "F:\work\UAPP\pwmUap.c" Line 177(16,23): Undefined identifier   maxAdc4
+*** Error 12 "F:\work\UAPP\motor.c" Line 60(15,22): Undefined identifier   maxAdc1
+*** Error 12 "F:\work\UAPP\motor.c" Line 72(16,23): Undefined identifier   maxAdc1
+      10 Errors,  0 Warnings.
+Build Failed.

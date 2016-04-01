@@ -1,0 +1,36 @@
+[PROJECT]
+Target=2PhMotorDrive.HEX
+Development_Mode=2
+Processor=0x0096
+Processor_Text=PIC24HJ64GP206
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=2PhMotorDrive.c;
+BuildTool=C-COMPILER
+OptionString=+FD
+AdditionalOptionString=
+BuildRequired=1
+
+[2PhMotorDrive.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=2PHMOT~1.C
+
+[Windows]
+0=0000 2PHMOT~1.C 0 0 796 451 3 0
+
+[Units]
+Count=1
+1=2PhMotorDrive (main)

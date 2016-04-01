@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xsi:noNamespaceSchemaLocation="Project.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Version current="1"/>
+	<Format>Project</Format>
+	<Header>
+		<Program name="TopoR" version="6.1"/>
+		<GUID>{69F46AC9-A80B-4F5F-AE1E-F8A48264C297}</GUID>
+		<Annotation>Project file</Annotation>
+	</Header>
+	<Document>
+		<LocalLibrary />
+		<Pcb>
+			<File path=".\Контроллер УУАП.fsx" Folder="-1" isopened="0"/>
+			<File path=".\122х32.fsx" Folder="-1" isopened="0"/>
+			<File path=".\122х32-2.fsx" Folder="-1" isopened="1"/>
+		</Pcb>
+		<Documents path="E:\Общая папка\СУ-30\УВ-30МКР\"/>
+		<Import>
+			<PCAD>
+			<Path name="E:\Общая папка\УУАП\Контроллер УУАП.pcb"/>
+			<Path name="E:\Кузнецов\Навигатор\122х32.pcb"/>
+			<Path name="E:\Кузнецов\Навигатор\122х32-2.pcb"/>
+			</PCAD>
+		</Import>
+		<ARouteSessions>
+			<Session name="Контроллер УУАП" date="2015-08-20 15:04:11" path=".\autoroute_Контроллер УУАП_150820150411\">
+			<File path=".\autoroute_Контроллер УУАП_150820150411\Контроллер УУАП_3749-113s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="Контроллер УУАП" date="2015-08-20 15:10:04" path=".\autoroute_Контроллер УУАП_150820151004\">
+			<File path=".\autoroute_Контроллер УУАП_150820151004\Контроллер УУАП_3966-96s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="Контроллер УУАП" date="2015-08-20 16:54:07" path=".\autoroute_Контроллер УУАП_150820165407\">
+			<File path=".\autoroute_Контроллер УУАП_150820165407\Контроллер УУАП_4010-74s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="Контроллер УУАП" date="2015-08-20 16:59:43" path=".\autoroute_Контроллер УУАП_150820165943\">
+			<File path=".\autoroute_Контроллер УУАП_150820165943\Контроллер УУАП_3906-82s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="Контроллер УУАП" date="2015-08-20 17:06:19" path=".\autoroute_Контроллер УУАП_150820170619\">
+			<File path=".\autoroute_Контроллер УУАП_150820170619\Контроллер УУАП_3888-88s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="Контроллер УУАП" date="2015-08-20 17:10:04" path=".\autoroute_Контроллер УУАП_150820171004\">
+			<File path=".\autoroute_Контроллер УУАП_150820171004\Контроллер УУАП_4176-75s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="Контроллер УУАП" date="2015-08-20 17:15:56" path=".\autoroute_Контроллер УУАП_150820171556\">
+			<File path=".\autoroute_Контроллер УУАП_150820171556\Контроллер УУАП_4371-83s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="122х32" date="2016-02-01 15:15:16" path=".\autoroute_122х32_160201151516\">
+			<File path=".\autoroute_122х32_160201151516\122х32_1032-8s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="122х32" date="2016-02-01 15:20:15" path=".\autoroute_122х32_160201152015\">
+			<File path=".\autoroute_122х32_160201152015\122х32_1205-1s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+			<Session name="122х32" date="2016-02-01 15:22:04" path=".\autoroute_122х32_160201152204\">
+			<File path=".\autoroute_122х32_160201152204\122х32_1288-4s.fsb" Folder="-1" isopened="0"/>
+			</Session>
+		</ARouteSessions>
+	</Document>
+</Project>

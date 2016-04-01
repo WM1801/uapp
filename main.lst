@@ -1,0 +1,5126 @@
+CCS PCD C Compiler, Version 5.051, 43599               01-апр-16 17:04
+
+               Filename:   F:\work\UAPP\main.lst
+
+               ROM used:   6088 bytes (14%)
+                           Largest free fragment is 37944
+               RAM used:   359 (4%) at main() level
+                           429 (5%) worst case
+               Stack used: 80 locations (26 in main + 54 for interrupts)
+               Stack size: 128
+
+*
+0000:  GOTO    16AC
+*
+000E:  DATA    4A,03,00
+*
+001C:  DATA    24,03,00
+*
+002A:  DATA    BC,02,00
+*
+0044:  DATA    76,02,00
+*
+004A:  DATA    FC,02,00
+004C:  DATA    00,02,00
+*
+0074:  DATA    6A,06,00
+.................... #include "main.h" 
+.................... #include "24HJ64GP206.h" 
+.................... //////////// Standard Header file for the PIC24HJ64GP206 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24HJ64GP206 
+*
+07B8:  MOV     W1,32
+07BA:  CP0     W3
+07BC:  BRA     Z,7E4
+07BE:  BTSC.B  0.0
+07C0:  BRA     7CE
+07C2:  TBLRDL.B[W0++],[W2++]
+07C4:  DEC     W3,W3
+07C6:  BRA     Z,7E4
+07C8:  TBLRDL.B[W0],[W2++]
+07CA:  DEC     W3,W3
+07CC:  BRA     Z,7E4
+07CE:  DEC     W0,W0
+07D0:  TBLRDH.B[W0++],[W2++]
+07D2:  DEC     W3,W3
+07D4:  BRA     Z,7E4
+07D6:  CLR.B   [W2++]
+07D8:  DEC     W3,W3
+07DA:  INC     W0,W0
+07DC:  CP0     W0
+07DE:  BTSC.B  42.1
+07E0:  INC     0032
+07E2:  BRA     7BA
+07E4:  RETURN  
+*
+09FA:  MOV     W5,[W15++]
+09FC:  MOV     W6,[W15++]
+09FE:  MOV     #8E,W1
+0A00:  BCLR    W6.0
+0A02:  BTSS    W0.F
+0A04:  BRA     A0C
+0A06:  BSET    W6.0
+0A08:  NEG     W0,W0
+0A0A:  BRA     A0C
+0A0C:  CP0     W0
+0A0E:  BRA     Z,A38
+0A10:  BTSC    W0.F
+0A12:  BRA     A1C
+0A14:  BCLR.B  42.0
+0A16:  RLC     W0,W0
+0A18:  DEC     W1,W1
+0A1A:  BRA     A10
+0A1C:  SWAP    W1
+0A1E:  BCLR.B  42.0
+0A20:  RRC     W1,W1
+0A22:  BCLR    W0.F
+0A24:  SWAP    W0
+0A26:  XOR.B   W0L,W1L,W1L
+0A28:  AND.B   #0,W0L
+0A2A:  BTSC    W6.0
+0A2C:  BSET    W1.F
+0A2E:  BRA     A3E
+0A30:  MOV.B   W1L,W0L
+0A32:  BSET    W1.7
+0A34:  AND.B   #0,W1L
+0A36:  BRA     A3E
+0A38:  CLR     W0
+0A3A:  CLR     W1
+0A3C:  BRA     A3E
+0A3E:  MOV     [--W15],W6
+0A40:  MOV     [--W15],W5
+0A42:  RETURN  
+*
+11CA:  MOV     W5,[W15++]
+11CC:  MOV     #C,W5
+11CE:  REPEAT  #4
+11D0:  MOV     [W5++],[W15++]
+11D2:  MOV     W0,W4
+11D4:  MOV     W1,W5
+11D6:  MOV     W3,W7
+11D8:  MOV     W2,W6
+11DA:  BCLR.B  42.0
+11DC:  BCLR.B  42.1
+11DE:  RLC     W1,W1
+11E0:  SWAP    W1
+11E2:  AND     #FF,W1
+11E4:  CP0     W1
+11E6:  BRA     Z,127E
+11E8:  BCLR.B  42.0
+11EA:  BCLR.B  42.1
+11EC:  RLC     W3,W3
+11EE:  SWAP    W3
+11F0:  AND     #FF,W3
+11F2:  CP0     W3
+11F4:  BRA     Z,127E
+11F6:  ZE      W0,W0
+11F8:  ADD.B   W3L,W1L,W0L
+11FA:  BRA     C,1204
+11FC:  SUB     #7F,W0
+11FE:  BRA     Z,127E
+1200:  BRA     NC,127E
+1202:  BRA     1208
+1204:  ADD.B   #81,W0L
+1206:  BRA     C,127E
+1208:  XOR     W5,W7,W10
+120A:  BCLR.B  42.0
+120C:  BCLR.B  42.1
+120E:  AND     #FF,W5
+1210:  BSET    W5.7
+1212:  BCLR.B  42.0
+1214:  AND     #FF,W7
+1216:  BSET    W7.7
+1218:  MUL.UU  W4,W6,W2
+121A:  MUL.UU  W5,W6,W8
+121C:  ADDC    W8,W3,W3
+121E:  MOV     W9,W1
+1220:  BTSC.B  42.0
+1222:  INC     W1,W1
+1224:  BCLR.B  42.0
+1226:  MUL.UU  W7,W4,W8
+1228:  ADDC    W8,W3,W3
+122A:  ADDC    W9,W1,W1
+122C:  MUL.UU  W5,W7,W8
+122E:  ADDC    W8,W1,W1
+1230:  INC     W0,W0
+1232:  CP0     W1
+1234:  BTSC.B  42.1
+1236:  BRA     123A
+1238:  BRA     1240
+123A:  CP0     W3
+123C:  BTSC.B  42.1
+123E:  BRA     124A
+1240:  BTSC    W1.F
+1242:  BRA     124A
+1244:  RLC     W3,W3
+1246:  RLC     W1,W1
+1248:  DEC     W0,W0
+124A:  MOV     W1,W2
+124C:  BCLR.B  42.0
+124E:  BTSS    W3.7
+1250:  BRA     1264
+1252:  MOV     #FF00,W7
+1254:  AND     W3,W7,W3
+1256:  ADD     #100,W3
+1258:  ADDC    W2,#0,W2
+125A:  CP0     W2
+125C:  BRA     NZ,1264
+125E:  CP0     W3
+1260:  BRA     NZ,1264
+1262:  INC     W0,W0
+1264:  SWAP    W0
+1266:  BCLR.B  42.0
+1268:  BCLR.B  42.1
+126A:  RRC     W0,W1
+126C:  BTSC    W10.F
+126E:  BSET    W1.F
+1270:  BCLR    W2.F
+1272:  SWAP    W2
+1274:  XOR.B   W2L,W1L,W1L
+1276:  SWAP    W3
+1278:  MOV.B   W3L,W2L
+127A:  MOV     W2,W0
+127C:  BRA     1284
+127E:  MOV     #0,W0
+1280:  MOV     #0,W1
+1282:  BRA     1284
+1284:  MOV     #14,W5
+1286:  REPEAT  #4
+1288:  MOV     [--W15],[W5--]
+128A:  MOV     [--W15],W5
+128C:  RETURN  
+128E:  MOV     W5,[W15++]
+1290:  MOV     #C,W5
+1292:  REPEAT  #4
+1294:  MOV     [W5++],[W15++]
+1296:  CLR     W9
+1298:  XOR     W1,W3,W9
+129A:  MOV     W1,W6
+129C:  MOV     W0,W5
+129E:  MOV     W3,W8
+12A0:  MOV     W2,W7
+12A2:  RLC     W1,W1
+12A4:  SWAP    W1
+12A6:  ZE      W1,W1
+12A8:  CP0     W1
+12AA:  BRA     Z,1348
+12AC:  RLC     W3,W3
+12AE:  SWAP    W3
+12B0:  ZE      W3,W3
+12B2:  CP0     W3
+12B4:  BRA     Z,1348
+12B6:  CLR     W0
+12B8:  SUB.B   W1L,W3L,W0L
+12BA:  BRA     NC,12C2
+12BC:  ADD.B   #7F,W0L
+12BE:  BRA     C,1348
+12C0:  BRA     12C8
+12C2:  SUB.B   #81,W0L
+12C4:  BRA     NC,1348
+12C6:  BRA     Z,1348
+12C8:  MOV     W5,W1
+12CA:  MOV     W6,W2
+12CC:  BSET    W2.7
+12CE:  AND     #FF,W2
+12D0:  AND     #FF,W8
+12D2:  BSET    W8.7
+12D4:  MOV     #19,W10
+12D6:  CLR     W3
+12D8:  CLR     W4
+12DA:  SUB     W1,W7,W1
+12DC:  SUBB    W2,W8,W2
+12DE:  BRA     N,12E4
+12E0:  BRA     C,12EA
+12E2:  BRA     NZ,12EC
+12E4:  ADD     W1,W7,W1
+12E6:  ADDC    W2,W8,W2
+12E8:  BRA     12EC
+12EA:  BSET    W4.0
+12EC:  DEC     W10,W10
+12EE:  BRA     Z,12FE
+12F0:  BCLR.B  42.0
+12F2:  RLC     W1,W1
+12F4:  RLC     W2,W2
+12F6:  BCLR.B  42.0
+12F8:  RLC     W4,W4
+12FA:  RLC     W3,W3
+12FC:  BRA     12DA
+12FE:  CLR     W10
+1300:  BTSC    W3.8
+1302:  BRA     1306
+1304:  BRA     1312
+1306:  BCLR.B  42.0
+1308:  RRC     W3,W3
+130A:  BCLR    W3.7
+130C:  RRC     W4,W4
+130E:  RLC     W10,W10
+1310:  BRA     1316
+1312:  DEC     W0,W0
+1314:  BRA     Z,1348
+1316:  BTSC    W10.F
+1318:  BRA     NC,1324
+131A:  RLC     W1,W1
+131C:  RLC     W2,W2
+131E:  SUB     W1,W7,W1
+1320:  SUBB    W2,W8,W2
+1322:  BRA     NC,1336
+1324:  INC     W4,W4
+1326:  BRA     NZ,1336
+1328:  INC     W3,W3
+132A:  BRA     NZ,1336
+132C:  INC     W0,W0
+132E:  BRA     Z,1348
+1330:  BRA     1336
+1332:  DEC     W0,W0
+1334:  BRA     Z,1348
+1336:  SWAP    W0
+1338:  RRC     W0,W1
+133A:  BSET    W1.F
+133C:  BTSS    W9.F
+133E:  BCLR    W1.F
+1340:  BCLR    W3.7
+1342:  XOR.B   W3L,W1L,W1L
+1344:  MOV     W4,W0
+1346:  BRA     134E
+1348:  MOV     #0,W0
+134A:  MOV     #0,W1
+134C:  BRA     134E
+134E:  MOV     #14,W5
+1350:  REPEAT  #4
+1352:  MOV     [--W15],[W5--]
+1354:  MOV     [--W15],W5
+1356:  RETURN  
+1358:  MOV     W0,W2
+135A:  MOV     W1,W3
+135C:  MOV.B   W1L,W0L
+135E:  SWAP    W0
+1360:  BSET    W0.F
+1362:  RLC     W1,W1
+1364:  SWAP    W1
+1366:  ZE      W1,W1
+1368:  MOV     #8E,W4
+136A:  SUB.B   W4L,W1L,W1L
+136C:  BRA     Z,137A
+136E:  CP0     W0
+1370:  BRA     Z,137A
+1372:  BCLR.B  42.0
+1374:  RRC     W0,W0
+1376:  DEC     W1,W1
+1378:  BRA     NZ,136E
+137A:  BTSS    W3.F
+137C:  BRA     1382
+137E:  NEG     W0,W0
+1380:  BRA     1382
+1382:  RETURN  
+....................  
+.................... #list 
+....................  
+.................... #include "uart.h" 
+....................  
+....................  
+.................... #word MCU_U1MODE = 0x220 
+.................... #bit    MCU_STSEL = MCU_U1MODE.0 
+.................... #bit    MCU_PDSEL0 = MCU_U1MODE.1 
+.................... #bit    MCU_PDSEL1 = MCU_U1MODE.2 
+.................... #bit    MCU_BRGH = MCU_U1MODE.3 
+.................... #bit    MCU_URXINV = MCU_U1MODE.4 
+.................... #bit    MCU_ABAUD = MCU_U1MODE.5 
+.................... #bit    MCU_LPBACK = MCU_U1MODE.6 
+.................... #bit    MCU_WAKE = MCU_U1MODE.7 
+.................... #bit    MCU_UEN0 = MCU_U1MODE.8 
+.................... #bit    MCU_UEN1 = MCU_U1MODE.9 
+.................... #bit    MCU_RTSMD = MCU_U1MODE.11 
+.................... #bit    MCU_IREN = MCU_U1MODE.12 
+.................... #bit    MCU_USIDL = MCU_U1MODE.13 
+.................... #bit    MCU_UARTEN = MCU_U1MODE.15 
+.................... #word MCU_U1STA = 0x222 
+.................... #bit    MCU_URXDA = MCU_U1STA.0 
+.................... #bit    MCU_OERR = MCU_U1STA.1 
+.................... #bit    MCU_FERR = MCU_U1STA.2 
+.................... #bit    MCU_PERR = MCU_U1STA.3 
+.................... #bit    MCU_RIDLE = MCU_U1STA.4 
+.................... #bit    MCU_ADDEN = MCU_U1STA.5 
+.................... #bit    MCU_URXISEL0 = MCU_U1STA.6 
+.................... #bit    MCU_URXISEL1 = MCU_U1STA.7 
+.................... #bit    MCU_TRMT = MCU_U1STA.8 
+.................... #bit    MCU_UTXBF = MCU_U1STA.9 
+.................... #bit    MCU_UTXEN = MCU_U1STA.10 
+.................... #bit    MCU_UTXBRK = MCU_U1STA.11 
+.................... #bit    MCU_UTXISEL0 = MCU_U1STA.13 
+.................... #bit    MCU_UTXINV = MCU_U1STA.14 
+.................... #bit    MCU_UTXISEL1 = MCU_U1STA.15 
+.................... #word MCU_U1TXREG = 0x224 
+.................... //#word MCU_U1TXREG = 0x224 
+.................... #bit    MCU_UTXREG0 = MCU_U1TXREG.0 
+.................... #bit    MCU_UTXREG1 = MCU_U1TXREG.1 
+.................... #bit    MCU_UTXREG2 = MCU_U1TXREG.2 
+.................... #bit    MCU_UTXREG3 = MCU_U1TXREG.3 
+.................... #bit    MCU_UTXREG4 = MCU_U1TXREG.4 
+.................... #bit    MCU_UTXREG5 = MCU_U1TXREG.5 
+.................... #bit    MCU_UTXREG6 = MCU_U1TXREG.6 
+.................... #bit    MCU_UTXREG7 = MCU_U1TXREG.7 
+.................... #bit    MCU_UTXREG8 = MCU_U1TXREG.8 
+.................... #word MCU_U1RXREG = 0x226 
+.................... //#word MCU_U1RXREG = 0x226 
+.................... #bit    MCU_URXREG0 = MCU_U1RXREG.0 
+.................... #bit    MCU_URXREG1 = MCU_U1RXREG.1 
+.................... #bit    MCU_URXREG2 = MCU_U1RXREG.2 
+.................... #bit    MCU_URXREG3 = MCU_U1RXREG.3 
+.................... #bit    MCU_URXREG4 = MCU_U1RXREG.4 
+.................... #bit    MCU_URXREG5 = MCU_U1RXREG.5 
+.................... #bit    MCU_URXREG6 = MCU_U1RXREG.6 
+.................... #bit    MCU_URXREG7 = MCU_U1RXREG.7 
+.................... #bit    MCU_URXREG8 = MCU_U1RXREG.8 
+.................... #word MCU_U1BRG = 0x228 
+....................  
+....................  
+....................  
+.................... #ZERO_RAM 
+.................... #DEVICE ADC=12 
+....................  
+.................... #FUSES NOWDT     	  	   		 //No Watch Dog Timer  
+.................... #FUSES HS 
+.................... #FUSES PR_PLL                 //High speed Osc (> 4mhz)  
+.................... #FUSES PUT64                     //Power Up Timer  
+.................... #FUSES NOPROTECT                 //Code not protected from reads  
+.................... #FUSES NODEBUG                   //No Debug mode for ICD  
+.................... #FUSES NOWRT                     //Program memory not write protected 
+....................  
+.................... //*- CRC -*// 
+.................... #rom getenv("PROGRAM_MEMORY")-2 = CHECKSUM 
+....................  
+.................... #define FREQUENCY 80000000  //!!!!PR_PLL 
+.................... #use delay(clock=FREQUENCY, oscilator=FREQUENCY) 
+....................  
+.................... #use rs232(UART1, baud=115200, BITS =8,PARITY=N, STOP=1, ENABLE=PIN_F6, ERRORS, STREAM = RS1) 
+*
+029A:  BTSS.B  222.0
+029C:  BRA     29A
+029E:  PUSH    222
+02A0:  POP     800
+02A2:  MOV     226,W0
+02A4:  BCLR.B  222.1
+02A6:  RETURN  
+....................  
+.................... #use standard_io(All) 
+....................  
+....................  
+.................... int8 adress = 0;  
+....................  
+....................  
+.................... //ID 
+.................... #define ID1 0x17 
+.................... #define ID2 0x03 
+.................... #define ID3 0x20 
+.................... #define ID4 0x16 
+....................  
+.................... //adress 
+.................... #define ADRES1    0x85 
+.................... #define ADRES2    0x85 
+....................  
+.................... //commands  
+.................... #define COM_SET_ALL_UI       0x40 //устанавливает значения всех стрелок, бленкеров, индексов 
+.................... #define COM_SET_UGOL_STR	 0x31 //только стрелка угла атаки 	 
+.................... #define COM_SET_UGOL_IND     0x3A //индекс угла атаки 		 
+.................... #define COM_SET_PRG_STR      0x32 //стрелка перегрузки   
+.................... #define COM_SET_PRG_IND      0x41 //индекс перегрузки  
+.................... #define COM_SET_UP_BLN       0x42 //бленкер угла атаки & блекнкер перегрузки 
+....................  
+.................... #define COM_READ_CRC	     0x47 //чтение контрольной суммы 
+.................... #define COM_INFO			 0x48 //поддерживаемы команды  
+.................... #define COM_READ_ID		     0x46 //идентивикатор 
+.................... #define COM_RESET_MK		 0x55 //программный перезапуск МК	 
+.................... #define RESET_MK_WORD_2      0xAA //2 е -слово используемое в команде перезапуска МК 
+....................  
+....................  
+.................... //add modul  
+....................  
+.................... #include "Led.c"      // timer5 
+.................... // used timer5  
+....................  
+.................... #define LED_GREEN_ON {output_high(PIN_G7); output_low(PIN_G0);} 
+.................... #define LED_GREEN_OFF {output_low(PIN_G7); output_high(PIN_G0);} 
+.................... #define LED_RED_ON {output_high(PIN_G8); output_low(PIN_G1);} 
+.................... #define LED_RED_OFF {output_low(PIN_G8); output_high(PIN_G1);} 
+....................  
+.................... // color vd 
+.................... #define LED_RED   0x5555 
+.................... #define LED_GREEN 0xAAAA 
+....................  
+.................... int1 runRedVd = 0;  
+.................... int1 runGreenVd = 0;  
+.................... int1 periodRed = 0; 
+.................... int1 periodGreen = 0; 
+....................  
+.................... void runVD(int color);  
+.................... void initLed();  
+....................  
+.................... static const int16 time = 15625; //10Hz//23528; // Fcy = Fosc/2; t=Fcy*256 (t.k. (TMR_INTERNAL|TMR_DIV_BY_256) 
+.................... //************************************************************ 
+.................... //* 
+.................... //************************************************************ 
+.................... void initLed() 
+.................... { 
+.................... 	setup_timer5(TMR_INTERNAL|TMR_DIV_BY_256, time ); 
+*
+0830:  CLR     120
+0832:  MOV     #3D09,W4
+0834:  MOV     W4,11C
+0836:  MOV     #8030,W4
+0838:  MOV     W4,120
+.................... 	set_timer5(0); 
+083A:  CLR     118
+.................... 	enable_interrupts(INT_TIMER5); 
+083C:  BSET.B  97.4
+.................... 	runVD(LED_GREEN);  
+083E:  MOV     #AAAA,W4
+0840:  MOV     W4,8D2
+0842:  CALL    80E
+.................... 	runVD(LED_RED);  
+0846:  MOV     #5555,W4
+0848:  MOV     W4,8D2
+084A:  CALL    80E
+084E:  RETURN  
+.................... } 
+.................... //************************************************************ 
+.................... // управление светодиодом 
+.................... //************************************************************ 
+.................... void runVD(int color) 
+.................... { 
+....................  
+.................... 	switch(color) 
+*
+080E:  MOV     8D2,W0
+0810:  MOV     #5555,W4
+0812:  CP      W0,W4
+0814:  BRA     Z,81E
+0816:  MOV     #AAAA,W4
+0818:  CP      W0,W4
+081A:  BRA     Z,826
+081C:  BRA     82E
+.................... 	{ 
+.................... 		case LED_RED:  
+.................... 		{ 
+.................... 			if(!periodRed)  
+081E:  BTSC.B  803.2
+0820:  BRA     824
+.................... 			{ 
+.................... 				runRedVd = 1; 				 
+0822:  BSET.B  803.0
+.................... 			} 		 
+.................... 			break;  
+0824:  BRA     82E
+.................... 		} 
+.................... 		case LED_GREEN:  
+.................... 		{ 
+.................... 			if(!periodGreen) 
+0826:  BTSC.B  803.3
+0828:  BRA     82C
+.................... 			{ 
+.................... 				runGreenVd = 1;  
+082A:  BSET.B  803.1
+.................... 			}  
+.................... 			break;  
+082C:  BRA     82E
+.................... 		} 
+.................... 		default: 
+.................... 		{ 
+....................  
+.................... 		} 
+.................... 	} 
+082E:  RETURN  
+.................... } 
+....................  
+....................  
+....................  
+.................... //*************************************************************** 
+.................... //* 
+.................... //*************************************************************** 
+.................... #int_timer5 
+.................... void timer5_isr(void) 
+*
+0200:  PUSH    42
+0202:  PUSH    36
+0204:  PUSH    32
+0206:  MOV     W0,[W15++]
+0208:  MOV     #2,W0
+020A:  REPEAT  #C
+020C:  MOV     [W0++],[W15++]
+.................... { 
+.................... 	if(runRedVd) 
+020E:  BTSS.B  803.0
+0210:  BRA     220
+.................... 	{ 
+.................... 		LED_RED_ON; 
+0212:  BCLR.B  2E5.0
+0214:  BSET.B  2E9.0
+0216:  BCLR.B  2E4.1
+0218:  BCLR.B  2E8.1
+.................... 		runRedVd = 0; 
+021A:  BCLR.B  803.0
+.................... 		periodRed = 1;  
+021C:  BSET.B  803.2
+.................... 	} 
+021E:  BRA     22A
+.................... 	else  
+.................... 	{	 
+.................... 	 	LED_RED_OFF; 
+0220:  BCLR.B  2E5.0
+0222:  BCLR.B  2E9.0
+0224:  BCLR.B  2E4.1
+0226:  BSET.B  2E8.1
+.................... 		periodRed = 0;  
+0228:  BCLR.B  803.2
+.................... 	 
+.................... 	} 
+.................... 	 
+.................... 	if(runGreenVd) 
+022A:  BTSS.B  803.1
+022C:  BRA     23C
+.................... 	{ 
+.................... 			LED_GREEN_OFF; 
+022E:  BCLR.B  2E4.7
+0230:  BCLR.B  2E8.7
+0232:  BCLR.B  2E4.0
+0234:  BSET.B  2E8.0
+.................... 			runGreenVd = 0;  
+0236:  BCLR.B  803.1
+.................... 			periodGreen = 1;   
+0238:  BSET.B  803.3
+.................... 	} 
+023A:  BRA     246
+.................... 	else 
+.................... 	{ 
+.................... 		LED_GREEN_ON;  
+023C:  BCLR.B  2E4.7
+023E:  BSET.B  2E8.7
+0240:  BCLR.B  2E4.0
+0242:  BCLR.B  2E8.0
+.................... 		periodGreen = 0;  
+0244:  BCLR.B  803.3
+....................  
+.................... 	} 
+.................... 	clear_interrupt(INT_TIMER5); 
+0246:  BCLR.B  87.4
+.................... //	disable_interrupts(INT_TIMER5); 
+.................... 	set_timer5(0); 
+0248:  CLR     118
+....................   
+.................... } 
+....................  
+....................  
+.................... #include "PLL.c" 
+.................... #include "PLL.h" 
+.................... #ifndef PLL_H 
+.................... #define PLL_H 
+....................  
+....................  
+....................  
+.................... // OSCILLATOR CONFIGURATION  
+024A:  BCLR.B  87.4
+024C:  MOV     #1A,W0
+024E:  REPEAT  #C
+0250:  MOV     [--W15],[W0--]
+0252:  MOV     [--W15],W0
+0254:  POP     32
+0256:  POP     36
+0258:  POP     42
+025A:  RETFIE  
+.................... #WORD CLKDIV = 0x0744         //PLLPOST(6,7) - PLLPRE(0,1,2,3,4)  
+....................  
+.................... #BIT PLLPOST_0 = CLKDIV.6  
+.................... #BIT PLLPOST_1 = CLKDIV.7  
+....................  
+.................... #BIT PLLPRE_0 = CLKDIV.0  
+.................... #BIT PLLPRE_1 = CLKDIV.1  
+.................... #BIT PLLPRE_2 = CLKDIV.2  
+.................... #BIT PLLPRE_3 = CLKDIV.3  
+.................... #BIT PLLPRE_4 = CLKDIV.4  
+....................  
+.................... #WORD PLLFBD = 0x0746         //PLLDIV(0,1,2,3,4,5,6,7,8)  
+....................  
+.................... #BIT PLLDIV_0 = PLLFBD.0  
+.................... #BIT PLLDIV_1 = PLLFBD.1  
+.................... #BIT PLLDIV_2 = PLLFBD.2  
+.................... #BIT PLLDIV_3 = PLLFBD.3  
+.................... #BIT PLLDIV_4 = PLLFBD.4  
+.................... #BIT PLLDIV_5 = PLLFBD.5  
+.................... #BIT PLLDIV_6 = PLLFBD.6  
+.................... #BIT PLLDIV_7 = PLLFBD.7  
+.................... #BIT PLLDIV_8 = PLLFBD.8 
+....................  
+....................  
+.................... void init_PLL();  
+....................  
+.................... #endif 
+....................  
+.................... void init_PLL() 
+.................... { 
+.................... 	//********* ”становка рабочей частоты 80 ћvц при кварце 16 ћvц ********* 
+.................... // OSCILLATOR CONFIGURATION 
+.................... // PLLPRE=4  Luego N1=2  
+....................    PLLPRE_0 = 0;  
+*
+0766:  BCLR.B  744.0
+....................    PLLPRE_1 = 1;  
+0768:  BSET.B  744.1
+....................    PLLPRE_2 = 0;  
+076A:  BCLR.B  744.2
+....................    PLLPRE_3 = 0;  
+076C:  BCLR.B  744.3
+....................    PLLPRE_4 = 0;  
+076E:  BCLR.B  744.4
+....................  
+....................    // PLLPOST=0  Luego N2=0 
+....................    PLLPOST_0 = 0;  
+0770:  BCLR.B  744.6
+....................    PLLPOST_1 = 0;  
+0772:  BCLR.B  744.7
+....................  
+....................    // PLLDIV=30  Luego M=26  
+....................    PLLDIV_0 = 0;  
+0774:  BCLR.B  746.0
+....................    PLLDIV_1 = 1;  
+0776:  BSET.B  746.1
+....................    PLLDIV_2 = 1;  
+0778:  BSET.B  746.2
+....................    PLLDIV_3 = 0;  
+077A:  BCLR.B  746.3
+....................    PLLDIV_4 = 0;  
+077C:  BCLR.B  746.4
+....................    PLLDIV_5 = 1;  
+077E:  BSET.B  746.5
+....................    PLLDIV_6 = 0;  
+0780:  BCLR.B  746.6
+....................    PLLDIV_7 = 0;  
+0782:  BCLR.B  746.7
+....................    PLLDIV_8 = 0;  
+0784:  BCLR.B  747.0
+0786:  RETURN  
+.................... //********************************************************************** 
+.................... } 
+....................  
+.................... #include "AZP.c"      // dma1, adc 
+.................... #include "AZP.h" 
+.................... #ifndef AZP_H 
+.................... #define AZP_H 
+....................  
+.................... #include "ADC.h" 
+.................... #ifndef ADC_H 
+.................... #define ADC_H 
+....................  
+.................... #word MCU_ADC1BUF0 = 0x300 
+.................... #word MCU_AD1CON1 = 0x320 
+.................... #bit    MCU_DONE = MCU_AD1CON1.0 
+.................... #bit    MCU_SAMP = MCU_AD1CON1.1 
+.................... #bit    MCU_ASAM = MCU_AD1CON1.2 
+.................... #bit    MCU_SIMSAM = MCU_AD1CON1.3 
+.................... #bit    MCU_SSRC0 = MCU_AD1CON1.5 
+.................... #bit    MCU_SSRC1 = MCU_AD1CON1.6 
+.................... #bit    MCU_SSRC2 = MCU_AD1CON1.7 
+.................... #bit    MCU_FORM0 = MCU_AD1CON1.8 
+.................... #bit    MCU_FORM1 = MCU_AD1CON1.9 
+.................... #bit    MCU_AD12B = MCU_AD1CON1.10 
+.................... #bit    MCU_ADDMABM = MCU_AD1CON1.12 
+.................... #bit    MCU_ADSIDL = MCU_AD1CON1.13 
+.................... #bit    MCU_ADON = MCU_AD1CON1.15 
+.................... #word MCU_AD1CON2 = 0x322 
+.................... #bit    MCU_ALTS = MCU_AD1CON2.0 
+.................... #bit    MCU_BUFM = MCU_AD1CON2.1 
+.................... #bit    MCU_SMPI0 = MCU_AD1CON2.2 
+.................... #bit    MCU_SMPI1 = MCU_AD1CON2.3 
+.................... #bit    MCU_SMPI2 = MCU_AD1CON2.4 
+.................... #bit    MCU_SMPI3 = MCU_AD1CON2.5 
+.................... #bit    MCU_BUFS = MCU_AD1CON2.7 
+.................... #bit    MCU_CHPS0 = MCU_AD1CON2.8 
+.................... #bit    MCU_CHPS1 = MCU_AD1CON2.9 
+.................... #bit    MCU_CSCNA = MCU_AD1CON2.10 
+.................... #bit    MCU_VCFG0 = MCU_AD1CON2.13 
+.................... #bit    MCU_VCFG1 = MCU_AD1CON2.14 
+.................... #bit    MCU_VCFG2 = MCU_AD1CON2.15 
+.................... #word MCU_AD1CON3 = 0x324 
+.................... #bit    MCU_ADCS0 = MCU_AD1CON3.0 
+.................... #bit    MCU_ADCS1 = MCU_AD1CON3.1 
+.................... #bit    MCU_ADCS2 = MCU_AD1CON3.2 
+.................... #bit    MCU_ADCS3 = MCU_AD1CON3.3 
+.................... #bit    MCU_ADCS4 = MCU_AD1CON3.4 
+.................... #bit    MCU_ADCS5 = MCU_AD1CON3.5 
+.................... #bit    MCU_ADCS6 = MCU_AD1CON3.6 
+.................... #bit    MCU_ADCS7 = MCU_AD1CON3.7 
+.................... #bit    MCU_SAMC0 = MCU_AD1CON3.8 
+.................... #bit    MCU_SAMC1 = MCU_AD1CON3.9 
+.................... #bit    MCU_SAMC2 = MCU_AD1CON3.10 
+.................... #bit    MCU_SAMC3 = MCU_AD1CON3.11 
+.................... #bit    MCU_SAMC4 = MCU_AD1CON3.12 
+.................... #bit    MCU_ADRC = MCU_AD1CON3.15 
+.................... #word MCU_AD1CHS123 = 0x326 
+.................... #bit    MCU_CH123SA = MCU_AD1CHS123.0 
+.................... #bit    MCU_CH123NA0 = MCU_AD1CHS123.1 
+.................... #bit    MCU_CH123NA1 = MCU_AD1CHS123.2 
+.................... #bit    MCU_CH123SB = MCU_AD1CHS123.8 
+.................... #bit    MCU_CH123NB0 = MCU_AD1CHS123.9 
+.................... #bit    MCU_CH123NB1 = MCU_AD1CHS123.10 
+.................... #word MCU_AD1CHS0 = 0x328 
+.................... #bit    MCU_CH0SA0 = MCU_AD1CHS0.0 
+.................... #bit    MCU_CH0SA1 = MCU_AD1CHS0.1 
+.................... #bit    MCU_CH0SA2 = MCU_AD1CHS0.2 
+.................... #bit    MCU_CH0SA3 = MCU_AD1CHS0.3 
+.................... #bit    MCU_CH0SA4 = MCU_AD1CHS0.4 
+.................... #bit    MCU_CH0NA = MCU_AD1CHS0.7 
+.................... #bit    MCU_CH0SB0 = MCU_AD1CHS0.8 
+.................... #bit    MCU_CH0SB1 = MCU_AD1CHS0.9 
+.................... #bit    MCU_CH0SB2 = MCU_AD1CHS0.10 
+.................... #bit    MCU_CH0SB3 = MCU_AD1CHS0.11 
+.................... #bit    MCU_CH0SB4 = MCU_AD1CHS0.12 
+.................... #bit    MCU_CH0NB = MCU_AD1CHS0.15 
+.................... //#word MCU_AD1PCFGH = 0x32A 
+.................... #word MCU_AD1PCFGH = 0x32A 
+.................... #bit    MCU_PCFG16 = MCU_AD1PCFGH.0 
+.................... #bit    MCU_PCFG17 = MCU_AD1PCFGH.1 
+.................... #word MCU_AD1PCFGL = 0x32C 
+.................... #bit    MCU_PCFG0 = MCU_AD1PCFGL.0 
+.................... #bit    MCU_PCFG1 = MCU_AD1PCFGL.1 
+.................... #bit    MCU_PCFG2 = MCU_AD1PCFGL.2 
+.................... #bit    MCU_PCFG3 = MCU_AD1PCFGL.3 
+.................... #bit    MCU_PCFG4 = MCU_AD1PCFGL.4 
+.................... #bit    MCU_PCFG5 = MCU_AD1PCFGL.5 
+.................... #bit    MCU_PCFG6 = MCU_AD1PCFGL.6 
+.................... #bit    MCU_PCFG7 = MCU_AD1PCFGL.7 
+.................... #bit    MCU_PCFG8 = MCU_AD1PCFGL.8 
+.................... #bit    MCU_PCFG9 = MCU_AD1PCFGL.9 
+.................... #bit    MCU_PCFG10 = MCU_AD1PCFGL.10 
+.................... #bit    MCU_PCFG11 = MCU_AD1PCFGL.11 
+.................... #bit    MCU_PCFG12 = MCU_AD1PCFGL.12 
+.................... #bit    MCU_PCFG13 = MCU_AD1PCFGL.13 
+.................... #bit    MCU_PCFG14 = MCU_AD1PCFGL.14 
+.................... #bit    MCU_PCFG15 = MCU_AD1PCFGL.15 
+.................... //#word MCU_AD1CSSH = 0x32E 
+.................... #word MCU_AD1CSSH = 0x32E 
+.................... #bit    MCU_CSS16 = MCU_AD1CSSH.0 
+.................... #bit    MCU_CSS17 = MCU_AD1CSSH.1 
+.................... #word MCU_AD1CSSL = 0x330 
+.................... #bit    MCU_CSS0 = MCU_AD1CSSL.0 
+.................... #bit    MCU_CSS1 = MCU_AD1CSSL.1 
+.................... #bit    MCU_CSS2 = MCU_AD1CSSL.2 
+.................... #bit    MCU_CSS3 = MCU_AD1CSSL.3 
+.................... #bit    MCU_CSS4 = MCU_AD1CSSL.4 
+.................... #bit    MCU_CSS5 = MCU_AD1CSSL.5 
+.................... #bit    MCU_CSS6 = MCU_AD1CSSL.6 
+.................... #bit    MCU_CSS7 = MCU_AD1CSSL.7 
+.................... #bit    MCU_CSS8 = MCU_AD1CSSL.8 
+.................... #bit    MCU_CSS9 = MCU_AD1CSSL.9 
+.................... #bit    MCU_CSS10 = MCU_AD1CSSL.10 
+.................... #bit    MCU_CSS11 = MCU_AD1CSSL.11 
+.................... #bit    MCU_CSS12 = MCU_AD1CSSL.12 
+.................... #bit    MCU_CSS13 = MCU_AD1CSSL.13 
+.................... #bit    MCU_CSS14 = MCU_AD1CSSL.14 
+.................... #bit    MCU_CSS15 = MCU_AD1CSSL.15 
+.................... #word MCU_AD1CON4 = 0x332 
+.................... #word MCU_DMA0STB = 0x386 
+.................... #word MCU_DMACS0 = 0x3E0 
+.................... #bit    MCU_XWCOL0 = MCU_DMACS0.0 
+.................... #bit    MCU_XWCOL1 = MCU_DMACS0.1 
+.................... #bit    MCU_XWCOL2 = MCU_DMACS0.2 
+.................... #bit    MCU_XWCOL3 = MCU_DMACS0.3 
+.................... #bit    MCU_XWCOL4 = MCU_DMACS0.4 
+.................... #bit    MCU_XWCOL5 = MCU_DMACS0.5 
+.................... #bit    MCU_XWCOL6 = MCU_DMACS0.6 
+.................... #bit    MCU_XWCOL7 = MCU_DMACS0.7 
+.................... #bit    MCU_PWCOL0 = MCU_DMACS0.8 
+.................... #bit    MCU_PWCOL1 = MCU_DMACS0.9 
+.................... #bit    MCU_PWCOL2 = MCU_DMACS0.10 
+.................... #bit    MCU_PWCOL3 = MCU_DMACS0.11 
+.................... #bit    MCU_PWCOL4 = MCU_DMACS0.12 
+.................... #bit    MCU_PWCOL5 = MCU_DMACS0.13 
+.................... #bit    MCU_PWCOL6 = MCU_DMACS0.14 
+.................... #bit    MCU_PWCOL7 = MCU_DMACS0.15 
+....................  
+....................  
+.................... #endif 
+....................  
+....................  
+.................... //ADC INPUT 
+.................... #define AV1 PIN_B2  //AN2 
+.................... #define AV2 PIN_B3  //AN3 
+.................... #define AV3 PIN_B13 //AN13 
+.................... #define AV4 PIN_B14 //AN14 
+....................  
+.................... #define SIZE_DMA_ADC_BUF 4 
+.................... #BANK_DMA  
+.................... static volatile int16 dmaAdcBuf[SIZE_DMA_ADC_BUF]; 
+....................  
+.................... int1 dmaAdcFlag = 0;   
+....................  
+.................... int16 valAdc1 = 0;  
+.................... int16 valAdc2 = 0;  
+.................... int16 valAdc3 = 0;  
+.................... int16 valAdc4 = 0;  
+....................  
+....................  
+.................... void clearAdcDmaBuf(); 
+.................... void initAdcDma();   
+.................... void initADC();  
+.................... void readDmaAdc(); 
+....................  
+....................  
+....................  
+....................   
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... #endif 
+....................  
+....................  
+.................... void clearAdcDmaBuf()  
+.................... { 
+.................... 	memset(dmaAdcBuf, 0x00, sizeof(dmaAdcBuf));   
+*
+0850:  MOV     #2000,W1
+0852:  MOV     #0,W2
+0854:  REPEAT  #7
+0856:  CLR.B   [W1++]
+0858:  RETURN  
+.................... } 
+....................  
+.................... void initAdcDma() 
+.................... { 
+....................  
+.................... 	clearAdcDmaBuf();  
+085A:  CALL    850
+.................... 	setup_dma(2, DMA_IN_ADC1, DMA_WORD); 
+085E:  CLR.B   399
+0860:  MOV.B   #D,W0L
+0862:  MOV.B   W0L,39A
+0864:  MOV     #300,W4
+0866:  MOV     W4,3A0
+.................... 	dma_start(2,DMA_CONTINOUS, &dmaAdcBuf[0]);  
+0868:  BCLR.B  399.7
+086A:  CLR.B   398
+086C:  MOV     #2000,W4
+086E:  MOV     W4,39C
+0870:  BTSS.B  399.6
+0872:  BRA     87A
+0874:  MOV     #7,W4
+0876:  MOV     W4,3A2
+0878:  BRA     87E
+087A:  MOV     #3,W4
+087C:  MOV     W4,3A2
+087E:  BSET.B  399.7
+.................... 	enable_interrupts(INT_DMA2);	 
+0880:  BSET.B  97.0
+0882:  RETURN  
+.................... } 
+....................  
+.................... #INT_DMA2 
+.................... void DMA2Interrupts() 
+*
+0276:  PUSH    42
+0278:  PUSH    36
+027A:  PUSH    32
+027C:  MOV     W0,[W15++]
+027E:  MOV     #2,W0
+0280:  REPEAT  #C
+0282:  MOV     [W0++],[W15++]
+.................... { 
+.................... 	//dmaAdcFlag = 1;  
+.................... 	readDmaAdc(); 
+0284:  CALL    25C
+.................... 	//runVD(LED_RED);	 
+0288:  BCLR.B  87.0
+028A:  MOV     #1A,W0
+028C:  REPEAT  #C
+028E:  MOV     [--W15],[W0--]
+0290:  MOV     [--W15],W0
+0292:  POP     32
+0294:  POP     36
+0296:  POP     42
+0298:  RETFIE  
+.................... } 
+....................  
+.................... void readDmaAdc() 
+.................... { 
+.................... 	//if(dmaAdcFlag) 
+.................... 	//{ 
+.................... 		valAdc1 = (dmaAdcBuf[0]&0xFFFF); 
+*
+025C:  MOV     2000,W0
+025E:  MOV     W0,W4
+0260:  MOV     W4,804
+.................... 		valAdc2 = (dmaAdcBuf[1]&0xFFFF); 
+0262:  MOV     2002,W0
+0264:  MOV     W0,W4
+0266:  MOV     W4,806
+.................... 		valAdc3 = (dmaAdcBuf[2]&0xFFFF); 
+0268:  MOV     2004,W0
+026A:  MOV     W0,W4
+026C:  MOV     W4,808
+.................... 		valAdc4 = (dmaAdcBuf[3]&0xFFFF);  
+026E:  MOV     2006,W0
+0270:  MOV     W0,W4
+0272:  MOV     W4,80A
+0274:  RETURN  
+.................... 		//dmaAdcFlag = 0;  
+.................... 	  
+.................... 	//} 
+.................... } 
+....................  
+.................... void initADC() 
+.................... { 
+.................... 	//1)set mode 12 bit 
+.................... 	MCU_ADON = 0; 
+*
+0884:  BCLR.B  321.7
+.................... 	MCU_AD12B = 1;  
+0886:  BSET.B  321.2
+.................... 	//2)SET VOLTAGE REFERENSE 	  
+.................... 	MCU_VCFG0 = 0;  
+0888:  BCLR.B  323.5
+.................... 	MCU_VCFG1 = 0;  
+088A:  BCLR.B  323.6
+.................... 	MCU_VCFG2 = 0;  
+088C:  BCLR.B  323.7
+.................... 	//3)SELECT ANALOG CONVERSION CLOCK 
+.................... 	MCU_AD1CON3 = 0x0606; //0000_0100_0000_0100 
+088E:  MOV     #606,W4
+0890:  MOV     W4,324
+.................... 	 					  // AutoSample 4TAD 
+.................... 						  // TAD = 5*Tcy	 
+.................... 						  // Tcy = 1/Fcy  
+.................... 						  // Fcy = Fosc/2 
+.................... 	//4)select port pins 
+.................... 	MCU_PCFG16 = 0x01; 
+0892:  BSET.B  32A.0
+.................... 	MCU_PCFG17 = 0x01;  
+0894:  BSET.B  32A.1
+.................... 	MCU_AD1PCFGL = 0x9FF3; 
+0896:  MOV     #9FF3,W4
+0898:  MOV     W4,32C
+.................... 	//5)determine inputs to channels 
+.................... 	MCU_AD1CHS0 = 0x0006;  
+089A:  MOV     #6,W4
+089C:  MOV     W4,328
+.................... 	//6)DETERMINE how many Sample/Hold channels 
+.................... 	MCU_CHPS0 = 0;  
+089E:  BCLR.B  323.0
+.................... 	MCU_CHPS1 = 0;  
+08A0:  BCLR.B  323.1
+.................... 	//7)Determine how sampling will occur 
+.................... 	 
+.................... 	MCU_SIMSAM = 0; 
+08A2:  BCLR.B  320.3
+.................... 	MCU_CSS16 = 0;  
+08A4:  BCLR.B  32E.0
+.................... 	MCU_CSS17 = 0;  
+08A6:  BCLR.B  32E.1
+.................... 	MCU_AD1CSSL = 0x600C;  
+08A8:  MOV     #600C,W4
+08AA:  MOV     W4,330
+.................... 	//8)Auto sampling  
+.................... 	MCU_ASAM = 1; 
+08AC:  BSET.B  320.2
+.................... 	//Select conversion trigger and sampling time 
+.................... 	MCU_SSRC0 = 1; // internal counter ends sampling and start conversion (auto-convert) 
+08AE:  BSET.B  320.5
+.................... 	MCU_SSRC1 = 1; 
+08B0:  BSET.B  320.6
+.................... 	MCU_SSRC2 = 1;  
+08B2:  BSET.B  320.7
+.................... 	//Select how conversion results 
+.................... 	MCU_FORM0 = 0; 
+08B4:  BCLR.B  321.0
+.................... 	MCU_FORM1 = 0; 
+08B6:  BCLR.B  321.1
+.................... 	//Select interrupt rate or DMA buffer pointer increment rate 
+.................... 	MCU_SMPI0 = 1;  
+08B8:  BSET.B  322.2
+.................... 	MCU_SMPI1 = 1; 
+08BA:  BSET.B  322.3
+.................... 	MCU_SMPI2 = 0; 
+08BC:  BCLR.B  322.4
+.................... 	MCU_SMPI3 = 0; 
+08BE:  BCLR.B  322.5
+.................... 	//Select the number of samples  
+.................... 	//in DMA buffer for each ADC module input 
+.................... 	MCU_AD1CON4 = 0; // 1 WORD   
+08C0:  CLR     332
+.................... 	// Select the data format 
+....................  
+.................... 	//Configure DMA channel (if needed) 
+.................... 	initAdcDma();	 
+08C2:  CALL    85A
+....................  
+.................... 	//Configure ADC interrupt (if required) 
+.................... 	 
+.................... 	MCU_ADDMABM = 0;  
+08C6:  BCLR.B  321.4
+.................... 	MCU_CSCNA = 1; 
+08C8:  BSET.B  323.2
+.................... 	MCU_BUFM = 0; 
+08CA:  BCLR.B  322.1
+.................... 	//Turn on ADC module  
+.................... 	 MCU_ADON = 1;  
+08CC:  BSET.B  321.7
+08CE:  RETURN  
+.................... 	 	 
+.................... } 
+....................  
+....................  
+....................  
+.................... #include "pwmUap.c"   //pwm, timer3 // 
+.................... #include "pwmUap.h" 
+.................... #ifndef PWMUAP_H 
+.................... #define PWMUAP_H 
+....................  
+.................... #include "CalibrAdcPwm.h" 
+.................... #ifndef CALIBRADCPWM_H 
+.................... #define CALIBRADCPWM_H 
+....................  
+.................... #include "pwmUap.h" 
+.................... #ifndef PWMUAP_H 
+.................... #define PWMUAP_H 
+....................  
+.................... #include "CalibrAdcPwm.h" 
+.................... #include "motor.h" 
+....................  
+.................... //PWM OUTPUT 
+.................... #define CANAL1_PWM PIN_D0 
+.................... #define CANAL2_PWM PIN_D1 
+.................... #define CANAL3_PWM PIN_D2 
+.................... #define CANAL4_PWM PIN_D3 
+.................... #define CANAL5_PWM PIN_D4 
+.................... #define CANAL6_PWM PIN_D5 
+....................  
+....................  
+.................... #define PIN_BLENK1 PIN_F0 
+.................... #define PIN_BLENK2 PIN_F1  
+.................... #define BLENK1_ON  output_low(PIN_BLENK1);  
+.................... #define BLENK1_OFF output_high(PIN_BLENK1);  
+.................... #define BLENK2_ON  output_low(PIN_BLENK2);  
+.................... #define BLENK2_OFF output_high(PIN_BLENK2);  
+....................  
+.................... Motor m3;  
+.................... Motor m4;  
+.................... Motor m5;  
+.................... Motor m6;  
+.................... //ENAB POWER PWM 
+.................... #define SD_PIN PIN_G15 // shutdown IR2014S 
+.................... //Time Pwm  
+.................... #define TIME_PWM 12500 
+....................  
+.................... #define POL_PERIOD (TIME_PWM>>1) 
+.................... #define POL_POL_PERIOD (POL_PERIOD>>1) 
+.................... int8 currentUstr = 0;  
+.................... int8 currentUind = 0;  
+.................... int8 currentPstr = 0;  
+.................... int8 currentPind = 0;  
+.................... int8 currentUPbln = 0;  
+....................  
+.................... // начальная настройка  
+.................... void initPWM();  
+.................... void onOffPWMCanal(int1 b);  
+.................... void setAllPwm(int8 uSdata, int8 uIdata, int8 pSdata, int8 pIdata, int8 blenk); 
+.................... void setUstr(int8 data);  
+.................... void setUind(int8 data);  
+.................... void setPstr(int8 data);  
+.................... void setPind(int8 data);  
+.................... void setUPbln(int8 data); 
+....................  
+....................  
+.................... void setEnableSD(); 
+.................... void setDisableSD(); 
+.................... void updateUstr();  
+.................... void updateUind();  
+.................... void updatePstr(); 
+.................... void updatePind();  
+.................... void updateBlenker();  
+....................  
+.................... int8 canalPwm = 0;  
+.................... int16 dataCanal3 = 0;  
+.................... int1 enabRegul = 0;  
+.................... void testPoAdc(int8 canal, int16 data);  
+.................... void setPwm3(int16 data); 
+.................... void setPwm4(int16 data); 
+.................... void setPwm5(int16 data); 
+.................... void setPwm6(int16 data);  
+....................  
+.................... void dif(int16 data);  
+....................  
+.................... int16 oldValAdc1 = 0;  
+.................... int16 oldValAdc2 = 0;  
+.................... int16 oldValAdc3 = 0;  
+.................... int16 oldValAdc4 = 0; 
+....................  
+.................... int16 difAdc1 = 0;  
+.................... int16 difAdc2 = 0;  
+.................... int16 difAdc3 = 0;  
+.................... int16 difAdc4 = 0; 
+.................... /* 
+.................... int16 minAdc1 = 0;  
+.................... int16 minAdc2 = 0;  
+.................... int16 minAdc3 = 0;  
+.................... int16 minAdc4 = 0; 
+.................... int16 maxAdc1 = 0;  
+.................... int16 maxAdc2 = 0;  
+.................... int16 maxAdc3 = 0;  
+.................... int16 maxAdc4 = 0; 
+....................  */ 
+....................   
+....................  
+....................  
+....................  
+....................  
+.................... #endif 
+....................  
+.................... #include "AZP.h" 
+.................... #ifndef AZP_H 
+.................... #define AZP_H 
+....................  
+.................... #include "ADC.h" 
+....................  
+.................... //ADC INPUT 
+.................... #define AV1 PIN_B2  //AN2 
+.................... #define AV2 PIN_B3  //AN3 
+.................... #define AV3 PIN_B13 //AN13 
+.................... #define AV4 PIN_B14 //AN14 
+....................  
+.................... #define SIZE_DMA_ADC_BUF 4 
+.................... #BANK_DMA  
+.................... static volatile int16 dmaAdcBuf[SIZE_DMA_ADC_BUF]; 
+....................  
+.................... int1 dmaAdcFlag = 0;   
+....................  
+.................... int16 valAdc1 = 0;  
+.................... int16 valAdc2 = 0;  
+.................... int16 valAdc3 = 0;  
+.................... int16 valAdc4 = 0;  
+....................  
+....................  
+.................... void clearAdcDmaBuf(); 
+.................... void initAdcDma();   
+.................... void initADC();  
+.................... void readDmaAdc(); 
+....................  
+....................  
+....................  
+....................   
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... #endif 
+....................  
+....................  
+.................... #define TIME_TEST_ADC_PWM 31250  //200ms 
+.................... #define MAX_COUNT_ZIKL_WAIT 800 
+....................  
+.................... #define ERROR_WAIT (1<<4) 
+.................... #define ACCURACY_ADC 0xFFF0 
+....................  
+.................... #define SK_VAL1_UP 250 
+.................... #define SK_VAL2_UP (POL_PERIOD + SK_VAL1_UP) 
+.................... #define SK_VAL1_DW (TIME_PWM-SK_VAL1_UP) 
+.................... #define SK_VAL2_DW (POL_PERIOD-(TIME_PWM-SK_VAL1_DW)) 
+.................... //states  
+.................... #define S0  0x0000 
+.................... #define S1  0x0001 
+.................... #define S2  0x0002 
+.................... #define S3  0x0004 
+.................... #define S4  0x0008 
+.................... #define S5  0x0010 
+.................... #define S6  0x0020 
+.................... #define S7  0x0040 
+.................... #define S8  0x0080 
+.................... #define S9  0x0100 
+.................... #define S10 0x0200 
+....................  
+.................... // граничные значения с АЦП при нахождении указателей 
+.................... // в максимальном и минимальном положени по шкале 
+.................... //min  
+.................... int16 minAdc1 = 0;  
+.................... int16 minAdc2 = 0;  
+.................... int16 minAdc3 = 0;  
+.................... int16 minAdc4 = 0;  
+.................... //max 
+.................... int16 maxAdc1 = 0;  
+.................... int16 maxAdc2 = 0;  
+.................... int16 maxAdc3 = 0;  
+.................... int16 maxAdc4 = 0;  
+....................  
+.................... #define SIZE_TEMP_ADC 4 
+.................... int16 tempValADC11[SIZE_TEMP_ADC] = {0,0,0,0};  
+.................... int16 tempValADC12[SIZE_TEMP_ADC] = {0,0,0,0}; 
+.................... int16 tempValADC13[SIZE_TEMP_ADC] = {0,0,0,0}; 
+.................... int16 tempValADC14[SIZE_TEMP_ADC] = {0,0,0,0}; 
+....................  
+.................... int16 readValADC11 = 0;  
+.................... int16 readValADC12 = 0; 
+.................... int16 readValADC21 = 0; 
+.................... int16 readValADC22 = 0; 
+.................... int16 readValADC31 = 0; 
+.................... int16 readValADC32 = 0; 
+.................... int16 readValADC41 = 0; 
+.................... int16 readValADC42 = 0; 
+....................  
+.................... int8 errorRotate = 0; 
+....................  
+.................... int16 currentStateAvt = 0;  
+.................... int16 oldStateAvt = 0;  
+.................... int16 newStateAvt = 0;  
+.................... int1 enabSendCalibrData = 0;   
+....................  
+.................... void initAvtomat();  
+.................... void startAvtomatCalibr();  
+.................... void startTimer7();  
+.................... void resetCountZikl();  
+.................... void resetAvtomat();  
+.................... void updateState();  
+.................... void readData1Adc();  
+.................... void readData2Adc();  
+.................... void sravnData(); 
+.................... void setEnableSendData();   
+.................... void sendDataCalibr();  
+.................... void stopTimer7(); 
+.................... void setRotatePwm(int1 b);  
+.................... int1 waitStop();  
+.................... void sendState( );  
+....................  
+.................... int16 ziklReadCalibr = 0; 
+.................... int16 indexDataRead = 0;     
+....................  
+....................  
+.................... int1 getFullMasCalibr(int16 a, int16 b, int16 c, int16 d);  
+....................  
+....................  
+.................... int1 debugRS = 0;  
+.................... void setDebugRS(); 
+....................  
+.................... #endif 
+....................  
+.................... #include "motor.h" 
+.................... #ifndef MOTOR_H 
+.................... #define MOTOR_H 
+....................  
+.................... typedef struct MotorAs 
+.................... { 
+.................... 	int canalPwm;  // пин ШИМ 
+.................... 	int1 upValue; //флаг направления движения, вводит относительный верх и  низ у нескольких моторов 
+.................... 	int16 minValAdc; //минимальное значение ацп на одном краю шкалы 
+.................... 	int16 maxValAdc; //максимальное значение ацп на другом краю шкалы 
+.................... 	int16 oldValAdc; // прошлое обработанное значение из АЦП 	 
+.................... 	float dAdc; 	// разность макс и мин значения АЦП 
+....................  
+.................... 	int8 Error;    // хранит ошибки и текущее состояние  
+.................... 	int16 minSpeed; // минимальное значение ШИМ при котором стрелка двигается 
+.................... 	int1 enabRotate; // разрешение вращения   
+.................... } Motor;  
+....................  
+.................... void initMotor(Motor * m, int cPwm, int16 tPwm, int16 vAdc1, int16 vAdc2);  
+.................... void setLimitAdcMotor(Motor *m, int16 vAdc1, int16 vAdc2); 
+.................... void setMinSpeed(Motor *m,int16 data);    
+.................... void setRotate(Motor *m, int16 currentData, int16 newData);  
+....................  
+....................  
+.................... #endif 
+....................  
+....................  
+.................... //PWM OUTPUT 
+.................... #define CANAL1_PWM PIN_D0 
+.................... #define CANAL2_PWM PIN_D1 
+.................... #define CANAL3_PWM PIN_D2 
+.................... #define CANAL4_PWM PIN_D3 
+.................... #define CANAL5_PWM PIN_D4 
+.................... #define CANAL6_PWM PIN_D5 
+....................  
+....................  
+.................... #define PIN_BLENK1 PIN_F0 
+.................... #define PIN_BLENK2 PIN_F1  
+.................... #define BLENK1_ON  output_low(PIN_BLENK1);  
+.................... #define BLENK1_OFF output_high(PIN_BLENK1);  
+.................... #define BLENK2_ON  output_low(PIN_BLENK2);  
+.................... #define BLENK2_OFF output_high(PIN_BLENK2);  
+....................  
+.................... Motor m3;  
+.................... Motor m4;  
+.................... Motor m5;  
+.................... Motor m6;  
+.................... //ENAB POWER PWM 
+.................... #define SD_PIN PIN_G15 // shutdown IR2014S 
+.................... //Time Pwm  
+.................... #define TIME_PWM 12500 
+....................  
+.................... #define POL_PERIOD (TIME_PWM>>1) 
+.................... #define POL_POL_PERIOD (POL_PERIOD>>1) 
+.................... int8 currentUstr = 0;  
+.................... int8 currentUind = 0;  
+.................... int8 currentPstr = 0;  
+.................... int8 currentPind = 0;  
+.................... int8 currentUPbln = 0;  
+....................  
+.................... // начальная настройка  
+.................... void initPWM();  
+.................... void onOffPWMCanal(int1 b);  
+.................... void setAllPwm(int8 uSdata, int8 uIdata, int8 pSdata, int8 pIdata, int8 blenk); 
+.................... void setUstr(int8 data);  
+.................... void setUind(int8 data);  
+.................... void setPstr(int8 data);  
+.................... void setPind(int8 data);  
+.................... void setUPbln(int8 data); 
+....................  
+....................  
+.................... void setEnableSD(); 
+.................... void setDisableSD(); 
+.................... void updateUstr();  
+.................... void updateUind();  
+.................... void updatePstr(); 
+.................... void updatePind();  
+.................... void updateBlenker();  
+....................  
+.................... int8 canalPwm = 0;  
+.................... int16 dataCanal3 = 0;  
+.................... int1 enabRegul = 0;  
+.................... void testPoAdc(int8 canal, int16 data);  
+.................... void setPwm3(int16 data); 
+.................... void setPwm4(int16 data); 
+.................... void setPwm5(int16 data); 
+.................... void setPwm6(int16 data);  
+....................  
+.................... void dif(int16 data);  
+....................  
+.................... int16 oldValAdc1 = 0;  
+.................... int16 oldValAdc2 = 0;  
+.................... int16 oldValAdc3 = 0;  
+.................... int16 oldValAdc4 = 0; 
+....................  
+.................... int16 difAdc1 = 0;  
+.................... int16 difAdc2 = 0;  
+.................... int16 difAdc3 = 0;  
+.................... int16 difAdc4 = 0; 
+.................... /* 
+.................... int16 minAdc1 = 0;  
+.................... int16 minAdc2 = 0;  
+.................... int16 minAdc3 = 0;  
+.................... int16 minAdc4 = 0; 
+.................... int16 maxAdc1 = 0;  
+.................... int16 maxAdc2 = 0;  
+.................... int16 maxAdc3 = 0;  
+.................... int16 maxAdc4 = 0; 
+....................  */ 
+....................   
+....................  
+....................  
+....................  
+....................  
+.................... #endif 
+....................  
+....................  
+.................... void initPWM() 
+.................... { 
+.................... 	onOffPWMCanal(0);  
+*
+0920:  CLR.B   8D6
+0922:  CALL    8DC
+.................... 	setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, TIME_PWM); 
+0926:  CLR     112
+0928:  MOV     #30D4,W4
+092A:  MOV     W4,10E
+092C:  MOV     #8010,W4
+092E:  MOV     W4,112
+.................... 	setup_compare( 1,COMPARE_CONT_PULSE | COMPARE_TIMER3); 
+0930:  MOV     #D,W4
+0932:  MOV     W4,184
+.................... 	setup_compare( 2,COMPARE_CONT_PULSE | COMPARE_TIMER3); 
+0934:  MOV     #D,W4
+0936:  MOV     W4,18A
+.................... 	setup_compare( 3,COMPARE_CONT_PULSE | COMPARE_TIMER3 ); 
+0938:  MOV     #D,W4
+093A:  MOV     W4,190
+.................... 	setup_compare( 4,COMPARE_CONT_PULSE | COMPARE_TIMER3 ); 
+093C:  MOV     #D,W4
+093E:  MOV     W4,196
+.................... 	setup_compare( 5,COMPARE_CONT_PULSE | COMPARE_TIMER3 ); 
+0940:  MOV     #D,W4
+0942:  MOV     W4,19C
+.................... 	setup_compare( 6,COMPARE_CONT_PULSE | COMPARE_TIMER3 ); 
+0944:  MOV     #D,W4
+0946:  MOV     W4,1A2
+.................... 	set_compare_time(1, 0, POL_PERIOD); 
+0948:  CLR     182
+094A:  MOV     #186A,W4
+094C:  MOV     W4,180
+.................... 	set_compare_time(2, POL_PERIOD, 0); 
+094E:  MOV     #186A,W4
+0950:  MOV     W4,188
+0952:  CLR     186
+.................... 	set_compare_time(3, 0,POL_PERIOD); //3125, 9375); 
+0954:  CLR     18E
+0956:  MOV     #186A,W4
+0958:  MOV     W4,18C
+.................... 	set_compare_time(4, 0,POL_PERIOD);//3125, 9375); 
+095A:  CLR     194
+095C:  MOV     #186A,W4
+095E:  MOV     W4,192
+.................... 	set_compare_time(5, 0,POL_PERIOD); //9375, 3125); 
+0960:  CLR     19A
+0962:  MOV     #186A,W4
+0964:  MOV     W4,198
+.................... 	set_compare_time(6, 0,POL_PERIOD);//3125, 9375); 
+0966:  CLR     1A0
+0968:  MOV     #186A,W4
+096A:  MOV     W4,19E
+.................... 	enabRegul = 0;  
+096C:  BCLR.B  803.7
+....................  
+.................... 	initMotor(&m3, 3, TIME_PWM, 0, 0);  
+096E:  MOV     #858,W4
+0970:  MOV     W4,8D0
+0972:  MOV     #3,W4
+0974:  MOV     W4,8D2
+0976:  MOV     #30D4,W4
+0978:  MOV     W4,8D4
+097A:  CLR     8D6
+097C:  CLR     8D8
+097E:  CALL    8EC
+.................... 	initMotor(&m4, 4, TIME_PWM, 0, 0);  
+0982:  MOV     #86C,W4
+0984:  MOV     W4,8D0
+0986:  MOV     #4,W4
+0988:  MOV     W4,8D2
+098A:  MOV     #30D4,W4
+098C:  MOV     W4,8D4
+098E:  CLR     8D6
+0990:  CLR     8D8
+0992:  CALL    8EC
+.................... 	initMotor(&m5, 5, TIME_PWM, 0, 0);  
+0996:  MOV     #880,W4
+0998:  MOV     W4,8D0
+099A:  MOV     #5,W4
+099C:  MOV     W4,8D2
+099E:  MOV     #30D4,W4
+09A0:  MOV     W4,8D4
+09A2:  CLR     8D6
+09A4:  CLR     8D8
+09A6:  CALL    8EC
+.................... 	initMotor(&m6, 6, TIME_PWM, 0, 0);  
+09AA:  MOV     #894,W4
+09AC:  MOV     W4,8D0
+09AE:  MOV     #6,W4
+09B0:  MOV     W4,8D2
+09B2:  MOV     #30D4,W4
+09B4:  MOV     W4,8D4
+09B6:  CLR     8D6
+09B8:  CLR     8D8
+09BA:  CALL    8EC
+09BE:  RETURN  
+.................... 	 
+....................  
+.................... } 
+....................  
+.................... void testPoAdc(int8 canal, int16 data) 
+.................... { 
+.................... 	switch(canal) 
+*
+164C:  MOV.B   8D0,W0L
+164E:  SE      W0,W0
+1650:  XOR     #3,W0
+1652:  BRA     Z,1662
+1654:  XOR     #7,W0
+1656:  BRA     Z,1674
+1658:  XOR     #1,W0
+165A:  BRA     Z,1686
+165C:  XOR     #3,W0
+165E:  BRA     Z,1698
+1660:  BRA     16AA
+.................... 	{ 
+.................... 		case 3: {setRotate(&m3, valAdc1, data); break;} 
+1662:  MOV     #858,W4
+1664:  MOV     W4,8D8
+1666:  PUSH    804
+1668:  POP     8DA
+166A:  PUSH    8D2
+166C:  POP     8DC
+166E:  CALL    1384
+1672:  BRA     16AA
+.................... 		case 4: {setRotate(&m4, valAdc2, data); break;} 
+1674:  MOV     #86C,W4
+1676:  MOV     W4,8D8
+1678:  PUSH    806
+167A:  POP     8DA
+167C:  PUSH    8D2
+167E:  POP     8DC
+1680:  CALL    1384
+1684:  BRA     16AA
+.................... 		case 5: {setRotate(&m5, valAdc3, data); break;} 
+1686:  MOV     #880,W4
+1688:  MOV     W4,8D8
+168A:  PUSH    808
+168C:  POP     8DA
+168E:  PUSH    8D2
+1690:  POP     8DC
+1692:  CALL    1384
+1696:  BRA     16AA
+.................... 		case 6: {setRotate(&m6, valAdc4, data); break;} 
+1698:  MOV     #894,W4
+169A:  MOV     W4,8D8
+169C:  PUSH    80A
+169E:  POP     8DA
+16A0:  PUSH    8D2
+16A2:  POP     8DC
+16A4:  CALL    1384
+16A8:  BRA     16AA
+.................... 		default: {} 
+.................... 	} 
+16AA:  RETURN  
+....................  
+.................... } 
+....................  
+....................  
+.................... void dif(int16 data) 
+.................... { 
+.................... 	if(oldValAdc1>valAdc1) 
+.................... 	{ 
+.................... 		difAdc1 = oldValAdc1 - valAdc1;   
+.................... 	} 
+.................... 	else 
+.................... 	{ 
+.................... 		difAdc1 = valAdc1 - oldValAdc1;  
+.................... 	} 
+.................... 	 
+.................... } 
+....................  
+.................... void setPwm3(int16 data) 
+.................... { 
+.................... 	if(enabRegul) 
+.................... 	{ 
+.................... 		if(oldValAdc1>difAdc1) 
+.................... 		{ 
+.................... 		 
+.................... 		} 
+.................... 		int16 n = 0;  
+.................... 		float d = 0;  
+.................... 		if(valAdc1>data) 
+.................... 		{//niz 
+.................... 			d = valAdc1 - data;			  
+....................  
+.................... 			float dAdc = (maxAdc1-minAdc1);  
+.................... 			float ds =((((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 		 
+.................... 	   
+.................... 			n = ((int16)ds);  
+.................... 			set_compare_time(3, n,(n+POL_PERIOD));	 
+.................... 		} 
+.................... 		else 
+.................... 		{ 
+.................... 			if(valAdc1<data) 
+.................... 			{//vverx 
+.................... 				d = data - valAdc1;			 
+.................... 		 		float dAdc = (maxAdc1-minAdc1);  
+.................... 		        float ds =((((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 				n = ((int16)ds); 
+.................... 				set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n))));			 
+.................... 			} 
+.................... 			else 
+.................... 			{ 
+.................... 				set_compare_time(3, 0,POL_PERIOD);		 
+.................... 			} 
+.................... 		} 
+.................... 			 
+.................... 	} 
+.................... 	 
+.................... } 
+.................... void setPwm4(int16 data) 
+.................... { 
+.................... 	if(enabRegul) 
+.................... 	{ 
+.................... 		int16 n = 0;  
+.................... 		float d = 0;  
+.................... 		if(valAdc2>data) 
+.................... 		{//niz 
+.................... 			d = valAdc2 - data;			  
+.................... 			float dAdc = (maxAdc2-minAdc2);  
+.................... 			float ds =((((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 			n = ((int16)ds);  
+.................... 			set_compare_time(4,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n))));	 
+.................... 		} 
+.................... 		else 
+.................... 		{ 
+.................... 			if(valAdc2<data) 
+.................... 			{//vverx 
+.................... 				d = data - valAdc2;			 
+.................... 		 		float dAdc = (maxAdc2-minAdc2);  
+.................... 		        float ds =((((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 				n = ((int16)ds); 
+.................... 				set_compare_time(4, n,(n+POL_PERIOD));		 
+.................... 			} 
+.................... 			else 
+.................... 			{ 
+.................... 				set_compare_time(4, 0,POL_PERIOD);		 
+.................... 			} 
+.................... 		} 
+.................... 			 
+.................... 	} 
+.................... } 
+.................... void setPwm5(int16 data) 
+.................... { 
+.................... 	if(enabRegul) 
+.................... 	{ 
+.................... 		int16 n = 0;  
+.................... 		float d = 0;  
+.................... 		if(valAdc3>data) 
+.................... 		{//niz 
+.................... 			d = valAdc3 - data;			  
+.................... 			float dAdc = (maxAdc3-minAdc3);  
+.................... 			float ds =( (((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 			n = ((int16)ds);  
+.................... 			set_compare_time(5,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n))));	 
+.................... 				 
+.................... 		} 
+.................... 		else 
+.................... 		{ 
+.................... 			if(valAdc3<data) 
+.................... 			{//vverx 
+.................... 				d = data - valAdc3;			 
+.................... 		 		float dAdc = (maxAdc3-minAdc3);  
+.................... 		        float ds = ( (((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 				n = ((int16)ds); 
+.................... 				set_compare_time(5, n,(n+POL_PERIOD));		 
+.................... 			} 
+.................... 			else 
+.................... 			{ 
+.................... 				set_compare_time(5, 0,POL_PERIOD);		 
+.................... 			} 
+.................... 		} 
+.................... 			 
+.................... 	} 
+.................... } 
+.................... void setPwm6(int16 data) 
+.................... { 
+.................... 	if(enabRegul) 
+.................... 	{ 
+.................... 		int16 n = 0;  
+.................... 		float d = 0;  
+.................... 		if(valAdc4>data) 
+.................... 		{//niz 
+.................... 			d = valAdc4 - data;			  
+.................... 			float dAdc = (maxAdc4-minAdc4);  
+.................... 			float ds =((((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 			n = ((int16)ds);  
+.................... 			set_compare_time(6, n,(n+POL_PERIOD));	 
+.................... 		} 
+.................... 		else 
+.................... 		{ 
+.................... 			if(valAdc4<data) 
+.................... 			{//vverx 
+.................... 				d = data - valAdc4;			 
+.................... 		 		float dAdc = (maxAdc4-minAdc4);  
+.................... 		        float ds = ((((float)(d*POL_POL_PERIOD))/dAdc)); 
+.................... 				n = ((int16)ds); 
+.................... 				set_compare_time(6,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n))));			 
+.................... 			} 
+.................... 			else 
+.................... 			{ 
+.................... 				set_compare_time(6, 0,POL_PERIOD);		 
+.................... 			} 
+.................... 		} 
+.................... 			 
+.................... 	} 
+.................... } 
+....................  
+.................... void onOffPWMCanal(int1 b) 
+.................... { 
+.................... 	if(b==0) 
+*
+08DC:  CP0.B   8D6
+08DE:  BRA     NZ,8E6
+.................... 	{ 
+.................... 		setDisableSD(); 
+08E0:  CALL    8D0
+.................... 	} 
+08E4:  BRA     8EA
+.................... 	else 
+.................... 	{ 
+.................... 		setEnableSD();  
+08E6:  CALL    8D6
+.................... 	}  
+08EA:  RETURN  
+.................... 	 
+.................... } 
+....................  
+.................... void setEnableSD() 
+.................... { 
+.................... 	output_high(SD_PIN);  
+*
+08D6:  BCLR.B  2E5.7
+08D8:  BSET.B  2E9.7
+08DA:  RETURN  
+.................... } 
+....................  
+.................... void setDisableSD() 
+.................... { 
+.................... 	output_low(SD_PIN); 
+*
+08D0:  BCLR.B  2E5.7
+08D2:  BCLR.B  2E9.7
+08D4:  RETURN  
+.................... } 
+....................  
+....................   
+.................... void setAllPwm(int8 uSdata, int8 uIdata, int8 pSdata, int8 pIdata, int8 blenk) 
+.................... { 
+.................... 	 setUstr(uSdata);   
+*
+0B80:  MOV.B   8DE,W0L
+0B82:  MOV.B   W0L,8E8
+0B84:  CALL    B1E
+.................... 	 setUind(uIdata);  
+0B88:  MOV.B   8DF,W0L
+0B8A:  MOV.B   W0L,8E8
+0B8C:  CALL    B2A
+....................      setPstr(pSdata);  
+0B90:  MOV.B   8E0,W0L
+0B92:  MOV.B   W0L,8E8
+0B94:  CALL    B36
+....................      setPind(pIdata);  
+0B98:  MOV.B   8E1,W0L
+0B9A:  MOV.B   W0L,8E8
+0B9C:  CALL    B42
+....................      setUPbln(blenk);  
+0BA0:  MOV.B   8E2,W0L
+0BA2:  MOV.B   W0L,8E8
+0BA4:  CALL    B76
+0BA8:  RETURN  
+.................... } 
+....................  
+.................... void setUstr(int8 data) 
+.................... { 
+.................... 	currentUstr = data;  
+*
+0B1E:  MOV.B   8E8,W0L
+0B20:  MOV.B   W0L,84D
+.................... 	updateUstr();  
+0B22:  CALL    B1C
+0B26:  RETURN  
+.................... }  
+.................... void setUind(int8 data)  
+.................... { 
+.................... 	currentUind = data;  
+*
+0B2A:  MOV.B   8E8,W0L
+0B2C:  MOV.B   W0L,8A8
+.................... 	updateUind();  
+0B2E:  CALL    B28
+0B32:  RETURN  
+.................... }  
+.................... void setPstr(int8 data) 
+.................... { 
+.................... 	currentPstr = data;  
+*
+0B36:  MOV.B   8E8,W0L
+0B38:  MOV.B   W0L,8A9
+.................... 	updatePstr();  
+0B3A:  CALL    B34
+0B3E:  RETURN  
+.................... }  
+.................... void setPind(int8 data) 
+.................... { 
+.................... 	currentPind = data;  
+*
+0B42:  MOV.B   8E8,W0L
+0B44:  MOV.B   W0L,8AA
+.................... 	updatePind();  
+0B46:  CALL    B40
+0B4A:  RETURN  
+.................... }  
+.................... void setUPbln(int8 data) 
+.................... { 
+.................... 	currentUPbln = data; 
+*
+0B76:  MOV.B   8E8,W0L
+0B78:  MOV.B   W0L,8AB
+.................... 	updateBlenker();    
+0B7A:  CALL    B4C
+0B7E:  RETURN  
+.................... } 
+....................  
+.................... void updateUstr() 
+.................... { 
+*
+0B1C:  RETURN  
+....................  
+.................... } 
+.................... void updateUind() 
+.................... { 
+*
+0B28:  RETURN  
+....................  
+.................... }  
+.................... void updatePstr() 
+.................... { 
+*
+0B34:  RETURN  
+....................  
+.................... } 
+.................... void updatePind() 
+.................... { 
+*
+0B40:  RETURN  
+....................  
+.................... } 
+....................  
+.................... void updateBlenker() 
+.................... { 
+.................... 	if((currentUPbln&0x01)) 
+*
+0B4C:  MOV.B   8AB,W0L
+0B4E:  SE      W0,W0
+0B50:  AND     W0,#1,W0
+0B52:  CP0     W0
+0B54:  BRA     Z,B5C
+.................... 	{ 
+.................... 		BLENK2_ON;  
+0B56:  BCLR.B  2DE.1
+0B58:  BCLR.B  2E2.1
+.................... 	} 
+0B5A:  BRA     B60
+.................... 	else 
+.................... 	{ 
+.................... 		BLENK2_OFF;  
+0B5C:  BCLR.B  2DE.1
+0B5E:  BSET.B  2E2.1
+.................... 	} 
+.................... 	 
+.................... 	if((currentUPbln&0x10)) 
+0B60:  MOV.B   8AB,W0L
+0B62:  SE      W0,W0
+0B64:  AND     W0,#10,W0
+0B66:  CP0     W0
+0B68:  BRA     Z,B70
+.................... 	{ 
+.................... 		BLENK1_ON;  
+0B6A:  BCLR.B  2DE.0
+0B6C:  BCLR.B  2E2.0
+.................... 	} 
+0B6E:  BRA     B74
+.................... 	else 
+.................... 	{ 
+.................... 		BLENK1_OFF;  
+0B70:  BCLR.B  2DE.0
+0B72:  BSET.B  2E2.0
+.................... 	} 
+0B74:  RETURN  
+.................... 	 
+.................... } 
+....................  
+....................  
+.................... #include "RS485.c"    //timer4, uart1 
+.................... #include "RS485.h"  
+.................... #ifndef RS485_H 
+.................... #define RS485_H 
+....................  
+....................  
+....................  
+.................... #define ENABLE PIN_F6 
+....................  
+.................... int indW = 0;  
+....................  
+.................... #define SIZE_RS_BUFFER 10 
+.................... #define RELOAD_INDW  9// SIZE_RS_BUFFER - 2   
+....................  
+.................... int8  buffer[SIZE_RS_BUFFER] = {0,0,0,0,0,0,0,0,0,0.}; 
+....................  
+.................... int1 FLAG = 0;  
+.................... int16 pause = 47;/*115200/80MHZ*/ //35;/*115200/60MHz*/  
+....................  
+....................  
+.................... void pause3_5RS();  
+.................... void sendRS( int8 msg);  
+.................... void sendRS16( int8 msg); 
+.................... void initRS();  
+....................  
+.................... #endif 
+....................  
+....................  
+....................  
+....................  
+.................... //***************************************************************** 
+.................... //* инициализация  
+.................... //***************************************************************** 
+.................... void initRS() 
+.................... { 
+.................... 	enable_interrupts(INT_RDA); 
+*
+0788:  BSET.B  95.3
+078A:  RETURN  
+.................... } 
+....................  
+.................... #INT_RDA 
+.................... void interruptRS() 
+*
+02BC:  PUSH    42
+02BE:  PUSH    36
+02C0:  PUSH    32
+02C2:  MOV     W0,[W15++]
+02C4:  MOV     #2,W0
+02C6:  REPEAT  #C
+02C8:  MOV     [W0++],[W15++]
+.................... { 
+.................... 	buffer[indW] = getc(); 
+02CA:  MOV     #8C2,W4
+02CC:  MOV     8C0,W3
+02CE:  ADD     W3,W4,W5
+02D0:  CALL    29A
+02D4:  MOV.B   W0L,[W5]
+.................... 	 
+.................... 	indW++; 
+02D6:  INC     08C0
+.................... 	 
+.................... 	if(indW>RELOAD_INDW) 
+02D8:  MOV     8C0,W4
+02DA:  CP      W4,#9
+02DC:  BRA     LE,2E0
+.................... 	{ 
+.................... 		indW = 0;  
+02DE:  CLR     8C0
+.................... 	} 
+.................... 	clear_interrupt(INT_RDA); 
+02E0:  REPEAT  #3
+02E2:  MOV     226,W0
+02E4:  BCLR.B  85.3
+.................... 	 
+.................... 	pause3_5RS(); 
+02E6:  CALL    2A8
+.................... 	 
+.................... 	 
+02EA:  BCLR.B  85.3
+02EC:  MOV     #1A,W0
+02EE:  REPEAT  #C
+02F0:  MOV     [--W15],[W0--]
+02F2:  MOV     [--W15],W0
+02F4:  POP     32
+02F6:  POP     36
+02F8:  POP     42
+02FA:  RETFIE  
+.................... } 
+....................  
+.................... //***************************************************************** 
+.................... //* пауза в 3,5 символа  
+.................... //***************************************************************** 
+....................  
+.................... void pause3_5RS() 
+.................... { 
+.................... 	setup_timer4(TMR_DISABLED); 
+*
+02A8:  CLR     11E
+....................     clear_interrupt(INT_TIMER4); 
+02AA:  BCLR.B  87.3
+.................... 	set_timer4(0); 	  
+02AC:  CLR     114
+.................... 	setup_timer4(TMR_INTERNAL|TMR_DIV_BY_256, pause );/// 
+02AE:  CLR     11E
+02B0:  PUSH    8CC
+02B2:  POP     11A
+02B4:  MOV     #8030,W4
+02B6:  MOV     W4,11E
+.................... 	enable_interrupts(int_timer4); 
+02B8:  BSET.B  97.3
+02BA:  RETURN  
+.................... //	output_high(PIN_G13); 
+.................... 	//3.8mS 
+....................  
+.................... } 
+.................... //**************************************************************** 
+.................... // таймер расчета паузы в 3.5 символа  
+.................... //**************************************************************** 
+....................  
+.................... #int_timer4 //  
+.................... void __timer4_isr__(void) 
+*
+02FC:  PUSH    42
+02FE:  PUSH    36
+0300:  PUSH    32
+0302:  MOV     W0,[W15++]
+0304:  MOV     #2,W0
+0306:  REPEAT  #C
+0308:  MOV     [W0++],[W15++]
+.................... { 
+.................... 	 //1.6ms 
+.................... //	output_low(PIN_G13); 
+.................... 	setup_timer4(TMR_DISABLED); 
+030A:  CLR     11E
+.................... 	clear_interrupt(INT_TIMER4); 
+030C:  BCLR.B  87.3
+.................... 	FLAG = TRUE;  
+030E:  BSET.B  8AD.0
+....................     set_timer4(0);  
+0310:  CLR     114
+.................... 	//1.6ms 
+.................... 	 
+0312:  BCLR.B  87.3
+0314:  MOV     #1A,W0
+0316:  REPEAT  #C
+0318:  MOV     [--W15],[W0--]
+031A:  MOV     [--W15],W0
+031C:  POP     32
+031E:  POP     36
+0320:  POP     42
+0322:  RETFIE  
+.................... } 
+....................  
+.................... //**************************************************************** 
+.................... // вывод  RS 
+.................... //*************************************************************** 
+....................  
+.................... void sendRS( int8 msg) 
+.................... { 
+....................  
+.................... 	output_high(ENABLE); 
+*
+09E0:  BCLR.B  2DE.6
+09E2:  BSET.B  2E2.6
+.................... 	while(MCU_UTXBF);  
+09E4:  BTSC.B  223.1
+09E6:  BRA     9E4
+.................... 	MCU_U1TXREG = msg;   
+09E8:  MOV.B   8D2,W0L
+09EA:  SE      W0,W0
+09EC:  MOV     W0,224
+.................... 	#asm nop #endasm 
+09EE:  NOP     
+.................... 	while(!MCU_TRMT);  
+09F0:  BTSS.B  223.0
+09F2:  BRA     9F0
+.................... 	output_low(ENABLE);  
+09F4:  BCLR.B  2DE.6
+09F6:  BCLR.B  2E2.6
+09F8:  RETURN  
+.................... } 
+....................  
+....................  
+.................... void sendRS16( int16 msg) 
+*
+0AE8:  MOV     W5,[W15++]
+.................... { 
+....................  
+.................... 	output_high(ENABLE); 
+0AEA:  BCLR.B  2DE.6
+0AEC:  BSET.B  2E2.6
+.................... 	while(MCU_UTXBF);  
+0AEE:  BTSC.B  223.1
+0AF0:  BRA     AEE
+.................... 	MCU_U1TXREG = ((msg>>8)&0xFF);   
+0AF2:  MOV.B   8D3,W0L
+0AF4:  MOV.B   W0L,W5L
+0AF6:  CLR.B   B
+0AF8:  MOV     W5,W4
+0AFA:  AND     #FF,W4
+0AFC:  MOV     W4,224
+.................... 	#asm nop #endasm 
+0AFE:  NOP     
+.................... 	while(!MCU_TRMT);  
+0B00:  BTSS.B  223.0
+0B02:  BRA     B00
+....................  
+.................... 	while(MCU_UTXBF);  
+0B04:  BTSC.B  223.1
+0B06:  BRA     B04
+.................... 	MCU_U1TXREG = (msg&0xFF);   
+0B08:  MOV     8D2,W0
+0B0A:  AND     #FF,W0
+0B0C:  MOV     W0,224
+.................... 	#asm nop #endasm 
+0B0E:  NOP     
+.................... 	while(!MCU_TRMT);  
+0B10:  BTSS.B  223.0
+0B12:  BRA     B10
+.................... 	output_low(ENABLE);  
+0B14:  BCLR.B  2DE.6
+0B16:  BCLR.B  2E2.6
+0B18:  MOV     [--W15],W5
+0B1A:  RETURN  
+.................... } 
+....................  
+....................  
+.................... #include "DMA_RS.c"   // DMA0 
+.................... #define SIZE_DMA_BUF 15 
+.................... #define PIN_RS_SEND PIN_F6 
+.................... int1 dmaBusy = 0;  
+.................... // ответы по RS 
+.................... void ansComSetAllUi(int8 Ustr, int8 Uind, int8 Pstr, int8 Pind, int8 UPbln);  
+.................... void ansComSetUgolStr(int8 Ustr);   
+.................... void ansComSetUgolInd(int8 Uind);   
+.................... void ansComSetPrgStr(int8 Pstr);   
+.................... void ansComSetPrgInd(int8 Pind);   
+.................... void ansComSetUPBln(int8 Pbln);  
+....................  
+.................... void ansReadCrc(int16 crc);  
+.................... void ansComInfo();  
+.................... void ansComId();  
+.................... void ansComRst(int8 com, int8 data);  
+.................... void ansErrorCom(int8 com);  
+....................  
+.................... #BANK_DMA 
+.................... static volatile byte dmaBuffer[SIZE_DMA_BUF];  
+....................  
+.................... void clearDmaBuf()  
+.................... { 
+.................... 	memset(dmaBuffer, 0x00, sizeof(dmaBuffer));  
+*
+078C:  MOV     #2008,W1
+078E:  MOV     #0,W2
+0790:  REPEAT  #E
+0792:  CLR.B   [W1++]
+.................... 	dmaBusy = 0;  
+0794:  BCLR.B  8AD.1
+.................... 	dmaBuffer[0] = adress; 
+0796:  MOV.B   802,W0L
+0798:  PUSH    2008
+079A:  MOV.B   W0L,[W15-#2]
+079C:  POP     2008
+079E:  RETURN  
+.................... } 
+....................  
+.................... void initDma() 
+.................... { 
+.................... 	clearDmaBuf();  
+07A0:  CALL    78C
+.................... 	enable_interrupts(INT_DMA0); 
+07A4:  BSET.B  94.4
+.................... 	setup_dma(0, DMA_OUT_UART1, DMA_BYTE); 
+07A6:  MOV.B   #60,W0L
+07A8:  MOV.B   W0L,381
+07AA:  MOV.B   #C,W0L
+07AC:  MOV.B   W0L,382
+07AE:  MOV     #224,W4
+07B0:  MOV     W4,388
+.................... 	output_low(PIN_RS_SEND); 
+07B2:  BCLR.B  2DE.6
+07B4:  BCLR.B  2E2.6
+07B6:  RETURN  
+.................... } 
+....................  
+.................... void sendInRsDma(int len) 
+.................... { 
+.................... 	dmaBusy = 1;  
+*
+0BAA:  BSET.B  8AD.1
+.................... 	output_high(PIN_RS_SEND); 
+0BAC:  BCLR.B  2DE.6
+0BAE:  BSET.B  2E2.6
+.................... 	dma_start(0, DMA_ONE_SHOT|DMA_FORCE_NOW, dmaBuffer, len );  
+0BB0:  BCLR.B  381.7
+0BB2:  MOV.B   #1,W0L
+0BB4:  MOV.B   W0L,380
+0BB6:  MOV     #2008,W4
+0BB8:  MOV     W4,384
+0BBA:  PUSH    8E8
+0BBC:  POP     38A
+0BBE:  BSET.B  381.7
+0BC0:  BSET.B  383.7
+0BC2:  RETURN  
+.................... } 
+....................  
+.................... #INT_DMA0 
+.................... void DMAInterrupts() 
+*
+0324:  PUSH    42
+0326:  PUSH    36
+0328:  PUSH    32
+032A:  MOV     W0,[W15++]
+032C:  MOV     #2,W0
+032E:  REPEAT  #C
+0330:  MOV     [W0++],[W15++]
+.................... { 
+.................... 	dmaBusy = 0;  
+0332:  BCLR.B  8AD.1
+.................... 	output_low(PIN_RS_SEND); 
+0334:  BCLR.B  2DE.6
+0336:  BCLR.B  2E2.6
+.................... } 
+....................  
+....................  
+0338:  BCLR.B  84.4
+033A:  MOV     #1A,W0
+033C:  REPEAT  #C
+033E:  MOV     [--W15],[W0--]
+0340:  MOV     [--W15],W0
+0342:  POP     32
+0344:  POP     36
+0346:  POP     42
+0348:  RETFIE  
+.................... #INT_DMAERR 
+.................... void DmaErrorInterrupt() 
+034A:  PUSH    42
+034C:  PUSH    36
+034E:  PUSH    32
+0350:  MOV     W0,[W15++]
+0352:  MOV     #2,W0
+0354:  REPEAT  #C
+0356:  MOV     [W0++],[W15++]
+.................... { 
+....................     
+0358:  BCLR.B  80.5
+035A:  MOV     #1A,W0
+035C:  REPEAT  #C
+035E:  MOV     [--W15],[W0--]
+0360:  MOV     [--W15],W0
+0362:  POP     32
+0364:  POP     36
+0366:  POP     42
+0368:  RETFIE  
+.................... } 
+....................  
+....................  
+.................... void ansComSetAllUi(int8 Ustr, int8 Uind, int8 Pstr, int8 Pind, int8 UPbln) 
+.................... { 
+.................... 	clearDmaBuf();  
+*
+0BC4:  CALL    78C
+.................... 	dmaBuffer[1]=COM_SET_ALL_UI;  
+0BC8:  MOV     2008,W0
+0BCA:  SWAP    W0
+0BCC:  MOV.B   #40,W0L
+0BCE:  SWAP    W0
+0BD0:  MOV     W0,2008
+.................... 	dmaBuffer[2]=Ustr;  
+0BD2:  MOV.B   8DE,W0L
+0BD4:  PUSH    200A
+0BD6:  MOV.B   W0L,[W15-#2]
+0BD8:  POP     200A
+.................... 	dmaBuffer[3]=Uind; 
+0BDA:  MOV.B   8DF,W0L
+0BDC:  PUSH    200A
+0BDE:  MOV.B   W0L,[W15-#1]
+0BE0:  POP     200A
+.................... 	dmaBuffer[4]=Pstr; 
+0BE2:  MOV.B   8E0,W0L
+0BE4:  PUSH    200C
+0BE6:  MOV.B   W0L,[W15-#2]
+0BE8:  POP     200C
+.................... 	dmaBuffer[5]=Pind; 
+0BEA:  MOV.B   8E1,W0L
+0BEC:  PUSH    200C
+0BEE:  MOV.B   W0L,[W15-#1]
+0BF0:  POP     200C
+.................... 	dmaBuffer[6]=UPbln; 
+0BF2:  MOV.B   8E2,W0L
+0BF4:  PUSH    200E
+0BF6:  MOV.B   W0L,[W15-#2]
+0BF8:  POP     200E
+.................... 	sendInRsDma(8); 
+0BFA:  MOV     #8,W4
+0BFC:  MOV     W4,8E8
+0BFE:  CALL    BAA
+0C02:  RETURN  
+.................... }  
+.................... void ansComSetUgolStr(int8 Ustr) 
+.................... { 
+.................... 	clearDmaBuf();  
+0C04:  CALL    78C
+.................... 	dmaBuffer[1]=COM_SET_UGOL_STR;  
+0C08:  MOV     2008,W0
+0C0A:  SWAP    W0
+0C0C:  MOV.B   #31,W0L
+0C0E:  SWAP    W0
+0C10:  MOV     W0,2008
+.................... 	dmaBuffer[2]=Ustr;  
+0C12:  MOV.B   8D6,W0L
+0C14:  PUSH    200A
+0C16:  MOV.B   W0L,[W15-#2]
+0C18:  POP     200A
+.................... 	sendInRsDma(4); 
+0C1A:  MOV     #4,W4
+0C1C:  MOV     W4,8E8
+0C1E:  CALL    BAA
+0C22:  RETURN  
+.................... }   
+.................... void ansComSetUgolInd(int8 Uind) 
+.................... { 
+.................... 	clearDmaBuf();  
+0C24:  CALL    78C
+.................... 	dmaBuffer[1]=COM_SET_UGOL_IND;  
+0C28:  MOV     2008,W0
+0C2A:  SWAP    W0
+0C2C:  MOV.B   #3A,W0L
+0C2E:  SWAP    W0
+0C30:  MOV     W0,2008
+.................... 	dmaBuffer[2]=Uind;  
+0C32:  MOV.B   8D6,W0L
+0C34:  PUSH    200A
+0C36:  MOV.B   W0L,[W15-#2]
+0C38:  POP     200A
+.................... 	sendInRsDma(4); 
+0C3A:  MOV     #4,W4
+0C3C:  MOV     W4,8E8
+0C3E:  CALL    BAA
+0C42:  RETURN  
+.................... }   
+.................... void ansComSetPrgStr(int8 Pstr) 
+.................... { 
+.................... 	clearDmaBuf();  
+0C44:  CALL    78C
+.................... 	dmaBuffer[1]=COM_SET_PRG_STR;  
+0C48:  MOV     2008,W0
+0C4A:  SWAP    W0
+0C4C:  MOV.B   #32,W0L
+0C4E:  SWAP    W0
+0C50:  MOV     W0,2008
+.................... 	dmaBuffer[2]=Pstr;  
+0C52:  MOV.B   8D6,W0L
+0C54:  PUSH    200A
+0C56:  MOV.B   W0L,[W15-#2]
+0C58:  POP     200A
+.................... 	sendInRsDma(4); 
+0C5A:  MOV     #4,W4
+0C5C:  MOV     W4,8E8
+0C5E:  CALL    BAA
+0C62:  RETURN  
+.................... }   
+.................... void ansComSetPrgInd(int8 Pind) 
+.................... { 
+.................... 	clearDmaBuf();  
+0C64:  CALL    78C
+.................... 	dmaBuffer[1]=COM_SET_PRG_IND;  
+0C68:  MOV     2008,W0
+0C6A:  SWAP    W0
+0C6C:  MOV.B   #41,W0L
+0C6E:  SWAP    W0
+0C70:  MOV     W0,2008
+.................... 	dmaBuffer[2]=Pind;  
+0C72:  MOV.B   8D6,W0L
+0C74:  PUSH    200A
+0C76:  MOV.B   W0L,[W15-#2]
+0C78:  POP     200A
+.................... 	sendInRsDma(4); 
+0C7A:  MOV     #4,W4
+0C7C:  MOV     W4,8E8
+0C7E:  CALL    BAA
+0C82:  RETURN  
+.................... }   
+.................... void ansComSetUPBln(int8 Pbln) 
+.................... { 
+.................... 	clearDmaBuf();  
+0C84:  CALL    78C
+.................... 	dmaBuffer[1]=COM_SET_UP_BLN;  
+0C88:  MOV     2008,W0
+0C8A:  SWAP    W0
+0C8C:  MOV.B   #42,W0L
+0C8E:  SWAP    W0
+0C90:  MOV     W0,2008
+.................... 	dmaBuffer[2]=Pbln;  
+0C92:  MOV.B   8D6,W0L
+0C94:  PUSH    200A
+0C96:  MOV.B   W0L,[W15-#2]
+0C98:  POP     200A
+.................... 	sendInRsDma(4); 
+0C9A:  MOV     #4,W4
+0C9C:  MOV     W4,8E8
+0C9E:  CALL    BAA
+0CA2:  RETURN  
+.................... }  
+....................  
+....................  
+.................... void ansReadCrc(int16 crc) 
+0CA4:  MOV     W5,[W15++]
+.................... { 
+.................... 	clearDmaBuf();  
+0CA6:  CALL    78C
+.................... 	dmaBuffer[1]=COM_READ_CRC;  
+0CAA:  MOV     2008,W0
+0CAC:  SWAP    W0
+0CAE:  MOV.B   #47,W0L
+0CB0:  SWAP    W0
+0CB2:  MOV     W0,2008
+.................... 	dmaBuffer[2]=((crc>>8)&0xFF);  
+0CB4:  MOV.B   8D3,W0L
+0CB6:  MOV.B   W0L,W5L
+0CB8:  CLR.B   B
+0CBA:  MOV     W5,W0
+0CBC:  PUSH    200A
+0CBE:  MOV.B   W0L,[W15-#2]
+0CC0:  POP     200A
+.................... 	dmaBuffer[3]= (crc&0xFF);  
+0CC2:  MOV     8D2,W0
+0CC4:  AND     #FF,W0
+0CC6:  PUSH    200A
+0CC8:  MOV.B   W0L,[W15-#1]
+0CCA:  POP     200A
+.................... 	sendInRsDma(5); 
+0CCC:  MOV     #5,W4
+0CCE:  MOV     W4,8E8
+0CD0:  CALL    BAA
+0CD4:  MOV     [--W15],W5
+0CD6:  RETURN  
+.................... }  
+.................... void ansComInfo() 
+.................... { 
+.................... 	clearDmaBuf();  
+0CD8:  CALL    78C
+.................... 	dmaBuffer[1]= COM_INFO; 
+0CDC:  MOV     2008,W0
+0CDE:  SWAP    W0
+0CE0:  MOV.B   #48,W0L
+0CE2:  SWAP    W0
+0CE4:  MOV     W0,2008
+.................... 	dmaBuffer[2]= COM_SET_ALL_UI; 
+0CE6:  MOV     200A,W0
+0CE8:  MOV.B   #40,W0L
+0CEA:  MOV     W0,200A
+.................... 	dmaBuffer[3]= COM_SET_UGOL_STR; 
+0CEC:  MOV     200A,W0
+0CEE:  SWAP    W0
+0CF0:  MOV.B   #31,W0L
+0CF2:  SWAP    W0
+0CF4:  MOV     W0,200A
+.................... 	dmaBuffer[4]= COM_SET_UGOL_IND; 
+0CF6:  MOV     200C,W0
+0CF8:  MOV.B   #3A,W0L
+0CFA:  MOV     W0,200C
+.................... 	dmaBuffer[5]= COM_SET_PRG_STR; 
+0CFC:  MOV     200C,W0
+0CFE:  SWAP    W0
+0D00:  MOV.B   #32,W0L
+0D02:  SWAP    W0
+0D04:  MOV     W0,200C
+.................... 	dmaBuffer[6]= COM_SET_PRG_IND; 
+0D06:  MOV     200E,W0
+0D08:  MOV.B   #41,W0L
+0D0A:  MOV     W0,200E
+.................... 	dmaBuffer[7]= COM_SET_UP_BLN; 
+0D0C:  MOV     200E,W0
+0D0E:  SWAP    W0
+0D10:  MOV.B   #42,W0L
+0D12:  SWAP    W0
+0D14:  MOV     W0,200E
+....................  
+.................... 	dmaBuffer[8]= COM_READ_CRC; 
+0D16:  MOV     2010,W0
+0D18:  MOV.B   #47,W0L
+0D1A:  MOV     W0,2010
+.................... 	dmaBuffer[9]= COM_READ_ID; 
+0D1C:  MOV     2010,W0
+0D1E:  SWAP    W0
+0D20:  MOV.B   #46,W0L
+0D22:  SWAP    W0
+0D24:  MOV     W0,2010
+.................... 	dmaBuffer[10]= COM_RESET_MK; 
+0D26:  MOV     2012,W0
+0D28:  MOV.B   #55,W0L
+0D2A:  MOV     W0,2012
+.................... 	sendInRsDma(12); 
+0D2C:  MOV     #C,W4
+0D2E:  MOV     W4,8E8
+0D30:  CALL    BAA
+0D34:  RETURN  
+....................  
+.................... } 
+.................... void ansComId() 
+.................... { 
+.................... 	clearDmaBuf();  
+0D36:  CALL    78C
+.................... 	dmaBuffer[1]= COM_READ_ID; 
+0D3A:  MOV     2008,W0
+0D3C:  SWAP    W0
+0D3E:  MOV.B   #46,W0L
+0D40:  SWAP    W0
+0D42:  MOV     W0,2008
+.................... 	dmaBuffer[2]= ID1; 
+0D44:  MOV     200A,W0
+0D46:  MOV.B   #17,W0L
+0D48:  MOV     W0,200A
+.................... 	dmaBuffer[3]= ID2; 
+0D4A:  MOV     200A,W0
+0D4C:  SWAP    W0
+0D4E:  MOV.B   #3,W0L
+0D50:  SWAP    W0
+0D52:  MOV     W0,200A
+.................... 	dmaBuffer[4]= ID3; 
+0D54:  MOV     200C,W0
+0D56:  MOV.B   #20,W0L
+0D58:  MOV     W0,200C
+.................... 	dmaBuffer[5]= ID4;  
+0D5A:  MOV     200C,W0
+0D5C:  SWAP    W0
+0D5E:  MOV.B   #16,W0L
+0D60:  SWAP    W0
+0D62:  MOV     W0,200C
+.................... 	sendInRsDma(7); 
+0D64:  MOV     #7,W4
+0D66:  MOV     W4,8E8
+0D68:  CALL    BAA
+0D6C:  RETURN  
+.................... }  
+.................... void ansComRst(int8 com, int8 data) 
+.................... { 
+.................... 	clearDmaBuf();  
+0D6E:  CALL    78C
+.................... 	dmaBuffer[1]= com; 
+0D72:  MOV.B   8D6,W0L
+0D74:  PUSH    2008
+0D76:  MOV.B   W0L,[W15-#1]
+0D78:  POP     2008
+.................... 	dmaBuffer[2]= data;  
+0D7A:  MOV.B   8D7,W0L
+0D7C:  PUSH    200A
+0D7E:  MOV.B   W0L,[W15-#2]
+0D80:  POP     200A
+.................... 	sendInRsDma(4);	 
+0D82:  MOV     #4,W4
+0D84:  MOV     W4,8E8
+0D86:  CALL    BAA
+0D8A:  RETURN  
+.................... } 
+.................... void ansErrorCom(int8 com) 
+.................... { 
+.................... 	clearDmaBuf();   
+0D8C:  CALL    78C
+.................... 	dmaBuffer[1]= (~com);  
+0D90:  COM.B   08D6,W0L
+0D92:  PUSH    2008
+0D94:  MOV.B   W0L,[W15-#1]
+0D96:  POP     2008
+.................... 	sendInRsDma(3);	 
+0D98:  MOV     #3,W4
+0D9A:  MOV     W4,8E8
+0D9C:  CALL    BAA
+0DA0:  RETURN  
+.................... } 
+....................  
+.................... #include "CRC.c" 
+.................... //*********************************************************** 
+.................... //контрольная сумма  
+.................... //*********************************************************** 
+.................... int16 crc = 0;  
+.................... int16 getChecksum() 
+*
+07E6:  MOV     W5,[W15++]
+07E8:  CLR     8D0
+*
+07EC:  MOV     #ABFE,W4
+07EE:  MOV     W4,8D4
+07F0:  CLR     8D6
+.................... 	{ 
+.................... 		int16 chSum = 0;  
+.................... 		int8 temp[2] = {0, 0};  
+*
+07EA:  CLR     8D2
+.................... 		int32 adr = (getenv("Program_memory")-2 );  
+.................... 		//sendRS(0x33); 
+.................... 		read_program_memory(adr, temp, 2); 
+*
+07F2:  MOV     8D4,W0
+07F4:  MOV     8D6,W1
+07F6:  MOV     #8D2,W2
+07F8:  MOV     #2,W3
+07FA:  CALL    7B8
+.................... 		//sendRS(temp[1]); 
+.................... 		//sendRS(temp[0]);  
+.................... 		chSum = make16(temp[1], temp[0]); 
+07FE:  MOV.B   8D2,W0L
+0800:  MOV.B   W0L,8D0
+0802:  MOV.B   8D3,W0L
+0804:  MOV.B   W0L,8D1
+.................... 		return chSum;  
+0806:  PUSH    8D0
+0808:  POP     0
+080A:  MOV     [--W15],W5
+080C:  RETURN  
+.................... 	} 
+.................... //*********************************************************** 
+....................  
+.................... #include "calibrAdcPwm.c" // timer7 
+.................... #include "calibrAdcPwm.h" 
+.................... #ifndef CALIBRADCPWM_H 
+.................... #define CALIBRADCPWM_H 
+....................  
+.................... #include "pwmUap.h" 
+.................... #include "AZP.h" 
+....................  
+.................... #define TIME_TEST_ADC_PWM 31250  //200ms 
+.................... #define MAX_COUNT_ZIKL_WAIT 800 
+....................  
+.................... #define ERROR_WAIT (1<<4) 
+.................... #define ACCURACY_ADC 0xFFF0 
+....................  
+.................... #define SK_VAL1_UP 250 
+.................... #define SK_VAL2_UP (POL_PERIOD + SK_VAL1_UP) 
+.................... #define SK_VAL1_DW (TIME_PWM-SK_VAL1_UP) 
+.................... #define SK_VAL2_DW (POL_PERIOD-(TIME_PWM-SK_VAL1_DW)) 
+.................... //states  
+.................... #define S0  0x0000 
+.................... #define S1  0x0001 
+.................... #define S2  0x0002 
+.................... #define S3  0x0004 
+.................... #define S4  0x0008 
+.................... #define S5  0x0010 
+.................... #define S6  0x0020 
+.................... #define S7  0x0040 
+.................... #define S8  0x0080 
+.................... #define S9  0x0100 
+.................... #define S10 0x0200 
+....................  
+.................... // граничные значения с АЦП при нахождении указателей 
+.................... // в максимальном и минимальном положени по шкале 
+.................... //min  
+.................... int16 minAdc1 = 0;  
+.................... int16 minAdc2 = 0;  
+.................... int16 minAdc3 = 0;  
+.................... int16 minAdc4 = 0;  
+.................... //max 
+.................... int16 maxAdc1 = 0;  
+.................... int16 maxAdc2 = 0;  
+.................... int16 maxAdc3 = 0;  
+.................... int16 maxAdc4 = 0;  
+....................  
+.................... #define SIZE_TEMP_ADC 4 
+.................... int16 tempValADC11[SIZE_TEMP_ADC] = {0,0,0,0};  
+.................... int16 tempValADC12[SIZE_TEMP_ADC] = {0,0,0,0}; 
+.................... int16 tempValADC13[SIZE_TEMP_ADC] = {0,0,0,0}; 
+.................... int16 tempValADC14[SIZE_TEMP_ADC] = {0,0,0,0}; 
+....................  
+.................... int16 readValADC11 = 0;  
+.................... int16 readValADC12 = 0; 
+.................... int16 readValADC21 = 0; 
+.................... int16 readValADC22 = 0; 
+.................... int16 readValADC31 = 0; 
+.................... int16 readValADC32 = 0; 
+.................... int16 readValADC41 = 0; 
+.................... int16 readValADC42 = 0; 
+....................  
+.................... int8 errorRotate = 0; 
+....................  
+.................... int16 currentStateAvt = 0;  
+.................... int16 oldStateAvt = 0;  
+.................... int16 newStateAvt = 0;  
+.................... int1 enabSendCalibrData = 0;   
+....................  
+.................... void initAvtomat();  
+.................... void startAvtomatCalibr();  
+.................... void startTimer7();  
+.................... void resetCountZikl();  
+.................... void resetAvtomat();  
+.................... void updateState();  
+.................... void readData1Adc();  
+.................... void readData2Adc();  
+.................... void sravnData(); 
+.................... void setEnableSendData();   
+.................... void sendDataCalibr();  
+.................... void stopTimer7(); 
+.................... void setRotatePwm(int1 b);  
+.................... int1 waitStop();  
+.................... void sendState( );  
+....................  
+.................... int16 ziklReadCalibr = 0; 
+.................... int16 indexDataRead = 0;     
+....................  
+....................  
+.................... int1 getFullMasCalibr(int16 a, int16 b, int16 c, int16 d);  
+....................  
+....................  
+.................... int1 debugRS = 0;  
+.................... void setDebugRS(); 
+....................  
+.................... #endif 
+....................  
+....................  
+....................  
+.................... void initAvtomat() 
+.................... { 
+.................... 	minAdc1 = 0x0000; 
+*
+036A:  CLR     80C
+.................... 	minAdc2 = 0x0000; 
+036C:  CLR     80E
+.................... 	minAdc3 = 0x0000; 
+036E:  CLR     810
+.................... 	minAdc4 = 0x0000; 
+0370:  CLR     812
+.................... 	maxAdc1 = 0x0000; 
+0372:  CLR     814
+.................... 	maxAdc2 = 0x0000; 
+0374:  CLR     816
+.................... 	maxAdc3 = 0x0000; 
+0376:  CLR     818
+.................... 	maxAdc4 = 0x0000; 
+0378:  CLR     81A
+.................... 	 
+.................... 	memset(tempValADC11, 0, (SIZE_TEMP_ADC<<1));  
+037A:  MOV     #81C,W1
+037C:  MOV     #0,W2
+037E:  REPEAT  #7
+0380:  CLR.B   [W1++]
+.................... 	memset(tempValADC12, 0, (SIZE_TEMP_ADC<<1));  
+0382:  MOV     #824,W1
+0384:  MOV     #0,W2
+0386:  REPEAT  #7
+0388:  CLR.B   [W1++]
+.................... 	memset(tempValADC13, 0, (SIZE_TEMP_ADC<<1));  
+038A:  MOV     #82C,W1
+038C:  MOV     #0,W2
+038E:  REPEAT  #7
+0390:  CLR.B   [W1++]
+.................... 	memset(tempValADC14, 0, (SIZE_TEMP_ADC<<1));  
+0392:  MOV     #834,W1
+0394:  MOV     #0,W2
+0396:  REPEAT  #7
+0398:  CLR.B   [W1++]
+.................... /*	for(int i= 0; i<SIZE_TEMP_ADC; i++) 
+.................... 	{ 
+.................... 		tempValADC11[i] = 0; 	 
+.................... 		tempValADC12[i] = 0; 
+.................... 		tempValADC13[i] = 0; 
+.................... 		tempValADC14[i] = 0; 
+.................... 	}*/ 
+.................... 	 
+.................... 	currentStateAvt = 0;  
+039A:  CLR     84E
+.................... 	oldStateAvt = 0;  
+039C:  CLR     850
+.................... 	newStateAvt = 0;  
+039E:  CLR     852
+.................... 	enabSendCalibrData = 0;  
+03A0:  BCLR.B  803.5
+03A2:  RETURN  
+.................... //	resetCountZikl();  
+.................... } 
+....................  
+.................... void resetCountZikl() 
+.................... { 
+.................... 	ziklReadCalibr = 0;  
+03A4:  CLR     854
+.................... 	indexDataRead = 0; 
+03A6:  CLR     856
+.................... 	enabSendCalibrData = 0;   
+03A8:  BCLR.B  803.5
+03AA:  RETURN  
+.................... } 
+....................  
+.................... void stopTimer7() 
+.................... { 
+.................... 	disable_interrupts(int_TIMER7);  
+*
+0652:  BCLR.B  9A.0
+.................... 	set_timer7(0);  
+0654:  CLR     126
+0656:  RETURN  
+.................... } 
+....................  
+.................... void startTimer7() 
+.................... { 
+.................... 	 
+.................... 	disable_interrupts(int_TIMER7);  
+*
+09C0:  BCLR.B  9A.0
+.................... 	setup_timer7(TMR_INTERNAL|TMR_DIV_BY_256, TIME_TEST_ADC_PWM);  
+09C2:  CLR     12E
+09C4:  MOV     #7A12,W4
+09C6:  MOV     W4,12A
+09C8:  MOV     #8030,W4
+09CA:  MOV     W4,12E
+.................... 	set_timer7(0);  
+09CC:  CLR     126
+.................... 	enable_interrupts(int_TIMER7); 	 
+09CE:  BSET.B  9A.0
+09D0:  RETURN  
+.................... } 
+....................  
+.................... void startAvtomatCalibr() 
+.................... { 
+.................... 	stopTimer7();  
+09D2:  CALL    652
+.................... 	initAvtomat(); 
+09D6:  CALL    36A
+.................... 	startTimer7();  
+09DA:  CALL    9C0
+09DE:  RETURN  
+.................... 		 
+.................... } 
+....................  
+.................... void updateState() 
+.................... { 
+.................... 	oldStateAvt = currentStateAvt;  
+*
+0660:  PUSH    84E
+0662:  POP     850
+.................... 	currentStateAvt = newStateAvt; 	 
+0664:  PUSH    852
+0666:  POP     84E
+0668:  RETURN  
+.................... } 
+.................... 	 
+....................  
+....................  
+.................... void testPWM(int8 n, int1 b) 
+.................... { 
+.................... 		switch(n) 
+*
+03AC:  MOV.B   90E,W0L
+03AE:  SE      W0,W0
+03B0:  XOR     #3,W0
+03B2:  BRA     Z,3C2
+03B4:  XOR     #7,W0
+03B6:  BRA     Z,3DA
+03B8:  XOR     #1,W0
+03BA:  BRA     Z,3F2
+03BC:  XOR     #3,W0
+03BE:  BRA     Z,40A
+03C0:  BRA     422
+.................... 		{ 
+.................... 			case 3: { 
+.................... 						if(b){set_compare_time(3, SK_VAL1_UP, SK_VAL2_UP);} 
+03C2:  CP0.B   90F
+03C4:  BRA     Z,3D0
+03C6:  MOV     #FA,W4
+03C8:  MOV     W4,18E
+03CA:  MOV     #1964,W4
+03CC:  MOV     W4,18C
+03CE:  BRA     3D8
+.................... 						else{set_compare_time(3, SK_VAL1_DW, SK_VAL2_DW);} 
+03D0:  MOV     #2FDA,W4
+03D2:  MOV     W4,18E
+03D4:  MOV     #1770,W4
+03D6:  MOV     W4,18C
+.................... 						break; 
+03D8:  BRA     422
+.................... 					} 
+.................... 			case 4: { 
+.................... 						if(b){set_compare_time(4, SK_VAL1_UP, SK_VAL2_UP);} 
+03DA:  CP0.B   90F
+03DC:  BRA     Z,3E8
+03DE:  MOV     #FA,W4
+03E0:  MOV     W4,194
+03E2:  MOV     #1964,W4
+03E4:  MOV     W4,192
+03E6:  BRA     3F0
+.................... 						else{set_compare_time(4, SK_VAL1_DW, SK_VAL2_DW);} 
+03E8:  MOV     #2FDA,W4
+03EA:  MOV     W4,194
+03EC:  MOV     #1770,W4
+03EE:  MOV     W4,192
+.................... 						break; 
+03F0:  BRA     422
+.................... 					} 
+.................... 			case 5: { 
+.................... 						if(b){set_compare_time(5, SK_VAL1_UP, SK_VAL2_UP);} 
+03F2:  CP0.B   90F
+03F4:  BRA     Z,400
+03F6:  MOV     #FA,W4
+03F8:  MOV     W4,19A
+03FA:  MOV     #1964,W4
+03FC:  MOV     W4,198
+03FE:  BRA     408
+.................... 						else{set_compare_time(5, SK_VAL1_DW, SK_VAL2_DW);} 
+0400:  MOV     #2FDA,W4
+0402:  MOV     W4,19A
+0404:  MOV     #1770,W4
+0406:  MOV     W4,198
+.................... 						break; 
+0408:  BRA     422
+.................... 					} 
+.................... 			case 6: { 
+.................... 						if(b){set_compare_time(6, SK_VAL1_UP, SK_VAL2_UP);} 
+040A:  CP0.B   90F
+040C:  BRA     Z,418
+040E:  MOV     #FA,W4
+0410:  MOV     W4,1A0
+0412:  MOV     #1964,W4
+0414:  MOV     W4,19E
+0416:  BRA     420
+.................... 						else{set_compare_time(6, SK_VAL1_DW, SK_VAL2_DW);} 
+0418:  MOV     #2FDA,W4
+041A:  MOV     W4,1A0
+041C:  MOV     #1770,W4
+041E:  MOV     W4,19E
+.................... 						break; 
+0420:  BRA     422
+.................... 					} 
+.................... 			default:{}	 
+....................  
+.................... 		} 
+0422:  RETURN  
+.................... } 
+....................  
+....................  
+.................... #int_timer7  
+.................... void timer7_isr(void) 
+*
+066A:  PUSH    42
+066C:  PUSH    36
+066E:  PUSH    32
+0670:  MOV     W0,[W15++]
+0672:  MOV     #2,W0
+0674:  REPEAT  #C
+0676:  MOV     [W0++],[W15++]
+.................... {	 
+.................... 	ziklReadCalibr++; 
+0678:  INC     0854
+.................... 	if(ziklREadCalibr>=MAX_COUNT_ZIKL_WAIT) 
+067A:  MOV     854,W4
+067C:  MOV     #320,W3
+067E:  CP      W3,W4
+0680:  BRA     GT,68A
+.................... 	{ 
+.................... 		errorRotate = ERROR_WAIT; 
+0682:  MOV.B   #10,W0L
+0684:  MOV.B   W0L,84C
+.................... 		newStateAvt = S10;  
+0686:  MOV     #200,W4
+0688:  MOV     W4,852
+.................... 	} 
+.................... 	switch(currentStateAvt) 
+068A:  MOV     84E,W0
+068C:  XOR     #0,W0
+068E:  BRA     Z,6BA
+0690:  XOR     #1,W0
+0692:  BRA     Z,6C4
+0694:  XOR     #3,W0
+0696:  BRA     Z,6CE
+0698:  XOR     #6,W0
+069A:  BRA     Z,6DC
+069C:  XOR     #C,W0
+069E:  BRA     Z,6F0
+06A0:  XOR     #18,W0
+06A2:  BRA     Z,6FA
+06A4:  XOR     #30,W0
+06A6:  BRA     Z,704
+06A8:  XOR     #60,W0
+06AA:  BRA     Z,710
+06AC:  XOR     #C0,W0
+06AE:  BRA     Z,724
+06B0:  XOR     #180,W0
+06B2:  BRA     Z,72E
+06B4:  XOR     #300,W0
+06B6:  BRA     Z,738
+06B8:  BRA     742
+.................... 	{ 
+.................... 		case S0 :{ initAvtomat(); newStateAvt = S1;    break;} 
+06BA:  CALL    36A
+06BE:  MOV     #1,W4
+06C0:  MOV     W4,852
+06C2:  BRA     74C
+.................... 		case S1 :{ resetCountZikl(); newStateAvt = S2;  break;} 
+06C4:  CALL    3A4
+06C8:  MOV     #2,W4
+06CA:  MOV     W4,852
+06CC:  BRA     74C
+.................... 		case S2 :{ setRotatePwm(1); newStateAvt = S3;  break;} 
+06CE:  MOV.B   #1,W0L
+06D0:  MOV.B   W0L,90C
+06D2:  CALL    424
+06D6:  MOV     #4,W4
+06D8:  MOV     W4,852
+06DA:  BRA     74C
+.................... 		case S3 :{ if(waitStop()){ newStateAvt = S4;  }else{ newStateAvt = S3;} break;}	 
+06DC:  CALL    4E0
+06E0:  CP0.B   W0L
+06E2:  BRA     Z,6EA
+06E4:  MOV     #8,W4
+06E6:  MOV     W4,852
+06E8:  BRA     6EE
+06EA:  MOV     #4,W4
+06EC:  MOV     W4,852
+06EE:  BRA     74C
+.................... 		case S4 :{ readData1Adc(); newStateAvt = S5; break;} 
+06F0:  CALL    5C4
+06F4:  MOV     #10,W4
+06F6:  MOV     W4,852
+06F8:  BRA     74C
+.................... 		case S5 :{ resetCountZikl(); newStateAvt = S6; break;} 
+06FA:  CALL    3A4
+06FE:  MOV     #20,W4
+0700:  MOV     W4,852
+0702:  BRA     74C
+.................... 		case S6 :{ setRotatePwm(0); newStateAvt = S7; break;} 
+0704:  CLR.B   90C
+0706:  CALL    424
+070A:  MOV     #40,W4
+070C:  MOV     W4,852
+070E:  BRA     74C
+.................... 		case S7 :{ if(waitStop()){ newStateAvt = S8;  }else{ newStateAvt = S7;} break;} 
+0710:  CALL    4E0
+0714:  CP0.B   W0L
+0716:  BRA     Z,71E
+0718:  MOV     #80,W4
+071A:  MOV     W4,852
+071C:  BRA     722
+071E:  MOV     #40,W4
+0720:  MOV     W4,852
+0722:  BRA     74C
+.................... 		case S8 :{ readData2Adc(); newStateAvt = S9; break;}	 
+0724:  CALL    5D6
+0728:  MOV     #100,W4
+072A:  MOV     W4,852
+072C:  BRA     74C
+.................... 		case S9 :{ sravnData(); newStateAvt = S10;  break;} 
+072E:  CALL    5E8
+0732:  MOV     #200,W4
+0734:  MOV     W4,852
+0736:  BRA     74C
+.................... 		case S10:{ stopTimer7(); setEnableSendData();  break;} 
+0738:  CALL    652
+073C:  CALL    658
+0740:  BRA     74C
+.................... 		default :{ stopTimer7(); setEnableSendData();  break;} 
+0742:  CALL    652
+0746:  CALL    658
+074A:  BRA     74C
+.................... 	}	 
+.................... 	setDebugRS(); 
+074C:  CALL    65C
+.................... 	updateState();  
+0750:  CALL    660
+....................  
+0754:  BCLR.B  8A.0
+0756:  MOV     #1A,W0
+0758:  REPEAT  #C
+075A:  MOV     [--W15],[W0--]
+075C:  MOV     [--W15],W0
+075E:  POP     32
+0760:  POP     36
+0762:  POP     42
+0764:  RETFIE  
+.................... } 
+.................... void setDebugRS() 
+.................... { 
+.................... 	debugRS = 1; 
+*
+065C:  BSET.B  803.6
+065E:  RETURN  
+.................... } 
+....................  
+.................... void sendState( ) 
+.................... { 
+.................... 	if(debugRS ) 
+.................... 	{ 
+.................... 		switch(currentStateAvt) 
+.................... 		{ 
+.................... 			case S0 :{ sendRS(0x30); break;} 
+.................... 			case S1 :{ sendRS(0x31); break;} 
+.................... 			case S2 :{ sendRS(0x32); break;} 
+.................... 			case S3 :{ sendRS(0x33); break;}	 
+.................... 			case S4 :{ sendRS(0x34); break;} 
+.................... 			case S5 :{ sendRS(0x35); break;} 
+.................... 			case S6 :{ sendRS(0x36); break;} 
+.................... 			case S7 :{ sendRS(0x37); break;} 
+.................... 			case S8 :{ sendRS(0x38); break;}	 
+.................... 			case S9 :{ sendRS(0x39);  break;} 
+.................... 			case S10:{ sendRS(0x40);  break;} 
+.................... 			default :{ sendRS(0x40);  break;} 
+.................... 		} 
+.................... 		debugRS = 0;  
+.................... 	}	 
+....................  
+.................... } 
+....................  
+.................... //**************** 
+.................... void sendDataCalibr() 
+.................... { 
+.................... 	setLimitAdcMotor(&m3, minAdc1, maxAdc1); 
+*
+112A:  MOV     #858,W4
+112C:  MOV     W4,8D2
+112E:  PUSH    80C
+1130:  POP     8D4
+1132:  PUSH    814
+1134:  POP     8D6
+1136:  CALL    A44
+.................... 	setLimitAdcMotor(&m4, minAdc2, maxAdc2); 
+113A:  MOV     #86C,W4
+113C:  MOV     W4,8D2
+113E:  PUSH    80E
+1140:  POP     8D4
+1142:  PUSH    816
+1144:  POP     8D6
+1146:  CALL    A44
+.................... 	setLimitAdcMotor(&m5, minAdc3, maxAdc3); 
+114A:  MOV     #880,W4
+114C:  MOV     W4,8D2
+114E:  PUSH    810
+1150:  POP     8D4
+1152:  PUSH    818
+1154:  POP     8D6
+1156:  CALL    A44
+.................... 	setLimitAdcMotor(&m6, minAdc4, maxAdc4); 
+115A:  MOV     #894,W4
+115C:  MOV     W4,8D2
+115E:  PUSH    812
+1160:  POP     8D4
+1162:  PUSH    81A
+1164:  POP     8D6
+1166:  CALL    A44
+....................  
+.................... 	if(enabSendCalibrData) 
+116A:  BTSS.B  803.5
+116C:  BRA     11C8
+.................... 	{ 
+.................... 		sendRS(adress);  
+116E:  MOV.B   802,W0L
+1170:  MOV.B   W0L,8D2
+1172:  CALL    9E0
+.................... 		sendRS(0x13); 
+1176:  MOV.B   #13,W0L
+1178:  MOV.B   W0L,8D2
+117A:  CALL    9E0
+.................... 		sendRS16(minADC1); 
+117E:  PUSH    80C
+1180:  POP     8D2
+1182:  CALL    AE8
+.................... 		sendRS16(minADC2); 
+1186:  PUSH    80E
+1188:  POP     8D2
+118A:  CALL    AE8
+.................... 		sendRS16(minADC3); 
+118E:  PUSH    810
+1190:  POP     8D2
+1192:  CALL    AE8
+.................... 		sendRS16(minADC4); 
+1196:  PUSH    812
+1198:  POP     8D2
+119A:  CALL    AE8
+.................... 		sendRS16(maxADC1); 
+119E:  PUSH    814
+11A0:  POP     8D2
+11A2:  CALL    AE8
+.................... 		sendRS16(maxADC2); 
+11A6:  PUSH    816
+11A8:  POP     8D2
+11AA:  CALL    AE8
+.................... 		sendRS16(maxADC3); 
+11AE:  PUSH    818
+11B0:  POP     8D2
+11B2:  CALL    AE8
+.................... 		sendRS16(maxADC4); 
+11B6:  PUSH    81A
+11B8:  POP     8D2
+11BA:  CALL    AE8
+.................... 		sendRS(errorRotate);  
+11BE:  MOV.B   84C,W0L
+11C0:  MOV.B   W0L,8D2
+11C2:  CALL    9E0
+.................... 		enabSendCalibrData = 0;  
+11C6:  BCLR.B  803.5
+.................... 	} 
+11C8:  RETURN  
+.................... 	 
+.................... 	 
+.................... } 
+.................... //**************** 
+.................... void setEnableSendData() 
+.................... { 
+.................... 	enabSendCalibrData = 1;  
+*
+0658:  BSET.B  803.5
+065A:  RETURN  
+.................... } 
+.................... //**************** 
+.................... void readData1Adc() 
+.................... { 
+.................... 	readValADC11 = valAdc1; 
+*
+05C4:  PUSH    804
+05C6:  POP     83C
+.................... 	readValADC21 = valAdc2; 
+05C8:  PUSH    806
+05CA:  POP     840
+.................... 	readValADC31 = valAdc3; 
+05CC:  PUSH    808
+05CE:  POP     844
+.................... 	readValADC41 = valAdc4;  
+05D0:  PUSH    80A
+05D2:  POP     848
+05D4:  RETURN  
+.................... } 
+....................  
+.................... void readData2Adc() 
+.................... { 
+.................... 	readValADC12 = valAdc1; 
+05D6:  PUSH    804
+05D8:  POP     83E
+.................... 	readValADC22 = valAdc2; 
+05DA:  PUSH    806
+05DC:  POP     842
+.................... 	readValADC32 = valAdc3; 
+05DE:  PUSH    808
+05E0:  POP     846
+.................... 	readValADC42 = valAdc4;  
+05E2:  PUSH    80A
+05E4:  POP     84A
+05E6:  RETURN  
+.................... } 
+....................  
+.................... //**************** 
+.................... int1 waitStop() 
+*
+04E0:  MOV     W5,[W15++]
+04E2:  MOV     W6,[W15++]
+04E4:  MOV     W7,[W15++]
+04E6:  MOV     W8,[W15++]
+04E8:  BCLR.B  90C.0
+.................... { 
+.................... 	int1 boll = 0;  
+.................... 	tempValADC11[indexDataRead] = valAdc1; 
+04EA:  MOV     856,W4
+04EC:  MUL.UU  W4,#2,W0
+04EE:  MOV     #81C,W4
+04F0:  ADD     W0,W4,W5
+04F2:  MOV     804,W4
+04F4:  MOV     W4,[W5+#0]
+.................... 	tempValADC12[indexDataRead] = valAdc2; 
+04F6:  MOV     856,W4
+04F8:  MUL.UU  W4,#2,W0
+04FA:  MOV     #824,W4
+04FC:  ADD     W0,W4,W5
+04FE:  MOV     806,W4
+0500:  MOV     W4,[W5+#0]
+.................... 	tempValADC13[indexDataRead] = valAdc3; 
+0502:  MOV     856,W4
+0504:  MUL.UU  W4,#2,W0
+0506:  MOV     #82C,W4
+0508:  ADD     W0,W4,W5
+050A:  MOV     808,W4
+050C:  MOV     W4,[W5+#0]
+.................... 	tempValADC14[indexDataRead] = valAdc4; 
+050E:  MOV     856,W4
+0510:  MUL.UU  W4,#2,W0
+0512:  MOV     #834,W4
+0514:  ADD     W0,W4,W5
+0516:  MOV     80A,W4
+0518:  MOV     W4,[W5+#0]
+.................... 	indexDataRead++;  
+051A:  INC     0856
+.................... 	if(indexDataRead>=SIZE_TEMP_ADC) 
+051C:  MOV     856,W4
+051E:  CP      W4,#4
+0520:  BRA     LT,524
+.................... 	{ 
+.................... 		indexDataRead = 0;  
+0522:  CLR     856
+.................... 	} 
+.................... 	int1 a = getFullMasCalibr(tempValADC11[0], tempValADC11[1], tempValADC11[2], tempValADC11[3]);  
+.................... 	int1 b = getFullMasCalibr(tempValADC12[0], tempValADC12[1], tempValADC12[2], tempValADC12[3]); 
+.................... 	int1 c = getFullMasCalibr(tempValADC13[0], tempValADC13[1], tempValADC13[2], tempValADC13[3]); 
+.................... 	int1 d = getFullMasCalibr(tempValADC14[0], tempValADC14[1], tempValADC14[2], tempValADC14[3]);  
+0524:  PUSH    81C
+0526:  POP     90E
+0528:  PUSH    81E
+052A:  POP     910
+052C:  PUSH    820
+052E:  POP     912
+0530:  PUSH    822
+0532:  POP     914
+0534:  CALL    484
+0538:  BCLR.B  90C.1
+053A:  BTSC.B  0.0
+053C:  BSET.B  90C.1
+053E:  PUSH    824
+0540:  POP     90E
+0542:  PUSH    826
+0544:  POP     910
+0546:  PUSH    828
+0548:  POP     912
+054A:  PUSH    82A
+054C:  POP     914
+054E:  CALL    484
+0552:  BCLR.B  90C.2
+0554:  BTSC.B  0.0
+0556:  BSET.B  90C.2
+0558:  PUSH    82C
+055A:  POP     90E
+055C:  PUSH    82E
+055E:  POP     910
+0560:  PUSH    830
+0562:  POP     912
+0564:  PUSH    832
+0566:  POP     914
+0568:  CALL    484
+056C:  BCLR.B  90C.3
+056E:  BTSC.B  0.0
+0570:  BSET.B  90C.3
+0572:  PUSH    834
+0574:  POP     90E
+0576:  PUSH    836
+0578:  POP     910
+057A:  PUSH    838
+057C:  POP     912
+057E:  PUSH    83A
+0580:  POP     914
+0582:  CALL    484
+0586:  BCLR.B  90C.4
+0588:  BTSC.B  0.0
+058A:  BSET.B  90C.4
+.................... 	if(((a&b)&(c&d))) 
+058C:  CLR     W0
+058E:  BTSC.B  90C.1
+0590:  INC     W0,W0
+0592:  MOV.B   W0L,W6L
+0594:  CLR     W0
+0596:  BTSC.B  90C.2
+0598:  INC     W0,W0
+059A:  AND.B   W6L,W0L,W5L
+059C:  CLR     W0
+059E:  BTSC.B  90C.3
+05A0:  INC     W0,W0
+05A2:  MOV.B   W0L,W8L
+05A4:  CLR     W0
+05A6:  BTSC.B  90C.4
+05A8:  INC     W0,W0
+05AA:  AND.B   W8L,W0L,W0L
+05AC:  AND.B   W5L,W0L,W0L
+05AE:  CP0.B   W0L
+05B0:  BRA     Z,5B4
+.................... 	{ 
+.................... 		boll = 1;  
+05B2:  BSET.B  90C.0
+.................... 	}		 
+.................... 	return boll;  
+05B4:  CLR     W0
+05B6:  BTSC.B  90C.0
+05B8:  INC     W0,W0
+05BA:  MOV     [--W15],W8
+05BC:  MOV     [--W15],W7
+05BE:  MOV     [--W15],W6
+05C0:  MOV     [--W15],W5
+05C2:  RETURN  
+.................... } 
+.................... //****************************** 
+.................... void sravnData() 
+.................... { 
+.................... 	if(readValADC11>=readValADC12)  
+*
+05E8:  MOV     83E,W0
+05EA:  MOV     83C,W4
+05EC:  CP      W4,W0
+05EE:  BRA     LT,5FA
+.................... 	{  
+.................... 		maxAdc1 = readValADC11;  
+05F0:  PUSH    83C
+05F2:  POP     814
+.................... 		minAdc1 = readValADC12; 
+05F4:  PUSH    83E
+05F6:  POP     80C
+.................... 	} 
+05F8:  BRA     602
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc1 = readValADC12;  
+05FA:  PUSH    83E
+05FC:  POP     814
+.................... 		minAdc1 = readValADC11; 
+05FE:  PUSH    83C
+0600:  POP     80C
+.................... 	} 
+....................  
+.................... 	if(readValADC21>=readValADC22)  
+0602:  MOV     842,W0
+0604:  MOV     840,W4
+0606:  CP      W4,W0
+0608:  BRA     LT,614
+.................... 	{  
+.................... 		maxAdc2 = readValADC21;  
+060A:  PUSH    840
+060C:  POP     816
+.................... 		minAdc2 = readValADC22; 
+060E:  PUSH    842
+0610:  POP     80E
+.................... 	} 
+0612:  BRA     61C
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc2 = readValADC22;  
+0614:  PUSH    842
+0616:  POP     816
+.................... 		minAdc2 = readValADC21; 
+0618:  PUSH    840
+061A:  POP     80E
+.................... 	} 
+....................  
+.................... 	if(readValADC31>=readValADC32)  
+061C:  MOV     846,W0
+061E:  MOV     844,W4
+0620:  CP      W4,W0
+0622:  BRA     LT,62E
+.................... 	{  
+.................... 		maxAdc3 = readValADC31;  
+0624:  PUSH    844
+0626:  POP     818
+.................... 		minAdc3 = readValADC32; 
+0628:  PUSH    846
+062A:  POP     810
+.................... 	} 
+062C:  BRA     636
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc3 = readValADC32;  
+062E:  PUSH    846
+0630:  POP     818
+.................... 		minAdc3 = readValADC31; 
+0632:  PUSH    844
+0634:  POP     810
+.................... 	} 
+....................  
+.................... 	if(readValADC41>=readValADC42)  
+0636:  MOV     84A,W0
+0638:  MOV     848,W4
+063A:  CP      W4,W0
+063C:  BRA     LT,648
+.................... 	{  
+.................... 		maxAdc4 = readValADC41;  
+063E:  PUSH    848
+0640:  POP     81A
+.................... 		minAdc4 = readValADC42; 
+0642:  PUSH    84A
+0644:  POP     812
+.................... 	} 
+0646:  BRA     650
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc4 = readValADC42;  
+0648:  PUSH    84A
+064A:  POP     81A
+.................... 		minAdc4 = readValADC41; 
+064C:  PUSH    848
+064E:  POP     812
+.................... 	} 
+0650:  RETURN  
+....................  
+....................  
+....................  
+.................... } 
+....................  
+....................  
+.................... void setRotatePwm(int1 b) 
+.................... { 
+....................  
+.................... 		if(b) 
+*
+0424:  CP0.B   90C
+0426:  BRA     Z,45A
+.................... 		{ 
+.................... 			testPWM(3, 1);  
+0428:  MOV.B   #3,W0L
+042A:  MOV.B   W0L,90E
+042C:  MOV.B   #1,W0L
+042E:  MOV.B   W0L,90F
+0430:  CALL    3AC
+.................... 			testPWM(4, 1); 
+0434:  MOV.B   #4,W0L
+0436:  MOV.B   W0L,90E
+0438:  MOV.B   #1,W0L
+043A:  MOV.B   W0L,90F
+043C:  CALL    3AC
+.................... 			testPWM(5, 1); 
+0440:  MOV.B   #5,W0L
+0442:  MOV.B   W0L,90E
+0444:  MOV.B   #1,W0L
+0446:  MOV.B   W0L,90F
+0448:  CALL    3AC
+.................... 			testPWM(6, 1); 
+044C:  MOV.B   #6,W0L
+044E:  MOV.B   W0L,90E
+0450:  MOV.B   #1,W0L
+0452:  MOV.B   W0L,90F
+0454:  CALL    3AC
+.................... 		} 
+0458:  BRA     482
+.................... 		else 
+.................... 		{ 
+.................... 			testPWM(3, 0);  
+045A:  MOV.B   #3,W0L
+045C:  MOV.B   W0L,90E
+045E:  CLR.B   90F
+0460:  CALL    3AC
+.................... 			testPWM(4, 0); 
+0464:  MOV.B   #4,W0L
+0466:  MOV.B   W0L,90E
+0468:  CLR.B   90F
+046A:  CALL    3AC
+.................... 			testPWM(5, 0); 
+046E:  MOV.B   #5,W0L
+0470:  MOV.B   W0L,90E
+0472:  CLR.B   90F
+0474:  CALL    3AC
+.................... 			testPWM(6, 0); 
+0478:  MOV.B   #6,W0L
+047A:  MOV.B   W0L,90E
+047C:  CLR.B   90F
+047E:  CALL    3AC
+.................... 		} 
+0482:  RETURN  
+....................  
+.................... } 
+....................  
+....................  
+....................  
+....................  
+.................... void readCalibrTwo() 
+.................... { 
+.................... 	if((valAdc1&0xFFF0)<(minAdc1&0xFFF0)) 
+.................... 	{ 
+.................... 		maxAdc1 = minAdc1;  
+.................... 		minAdc1 = valAdc1;  
+.................... 	} 
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc1 = valAdc1;  
+.................... 	} 
+....................  
+.................... 	if((valAdc2&0xFFF0)<(minAdc2&0xFFF0)) 
+.................... 	{ 
+.................... 		maxAdc2 = minAdc2;  
+.................... 		minAdc2 = valAdc2;  
+.................... 	} 
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc2 = valAdc2;  
+.................... 	} 
+....................  
+.................... 	if((valAdc3&0xFFF0)<(minAdc3&0xFFF0)) 
+.................... 	{ 
+.................... 		maxAdc3 = minAdc3;  
+.................... 		minAdc3 = valAdc3;  
+.................... 	} 
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc3 = valAdc3;  
+.................... 	} 
+....................  
+.................... 	if((valAdc4&0xFFF0)<(minAdc4&0xFFF0)) 
+.................... 	{ 
+.................... 		maxAdc4 = minAdc4;  
+.................... 		minAdc4 = valAdc4;  
+.................... 	} 
+.................... 	else 
+.................... 	{ 
+.................... 		maxAdc4 = valAdc4;  
+.................... 	} 
+.................... } 
+....................  
+.................... int1 getFullMasCalibr(int16 a, int16 b, int16 c, int16 d)  
+0484:  MOV     W5,[W15++]
+0486:  MOV     W6,[W15++]
+.................... { 
+....................  
+.................... 	if((((a&ACCURACY_ADC)==(b&ACCURACY_ADC))&((c&ACCURACY_ADC)==(d&ACCURACY_ADC)))&((a&ACCURACY_ADC)==(c&ACCURACY_ADC))) 
+0488:  MOV     #FFF0,W0
+048A:  AND     90E,W0
+048C:  MOV     W0,W5
+048E:  MOV     #FFF0,W0
+0490:  AND     910,W0
+0492:  CP      W5,W0
+0494:  BRA     Z,49A
+0496:  CLR.B   W0
+0498:  BRA     49C
+049A:  MOV.B   #1,W0L
+049C:  MOV.B   W0L,W5L
+049E:  MOV     #FFF0,W0
+04A0:  AND     912,W0
+04A2:  MOV     W0,W6
+04A4:  MOV     #FFF0,W0
+04A6:  AND     914,W0
+04A8:  CP      W6,W0
+04AA:  BRA     Z,4B0
+04AC:  CLR.B   W0
+04AE:  BRA     4B2
+04B0:  MOV.B   #1,W0L
+04B2:  AND.B   W5L,W0L,W5L
+04B4:  MOV     #FFF0,W0
+04B6:  AND     90E,W0
+04B8:  MOV     W0,W6
+04BA:  MOV     #FFF0,W0
+04BC:  AND     912,W0
+04BE:  CP      W6,W0
+04C0:  BRA     Z,4C6
+04C2:  CLR.B   W0
+04C4:  BRA     4C8
+04C6:  MOV.B   #1,W0L
+04C8:  AND.B   W5L,W0L,W0L
+04CA:  CP0.B   W0L
+04CC:  BRA     Z,4D6
+.................... 	{ 
+.................... 		return 1;  
+04CE:  MOV.B   #1,W0L
+04D0:  MOV.B   W0L,0
+04D2:  BRA     4DA
+.................... 	} 
+04D4:  BRA     4DA
+.................... 	else 
+.................... 	{ 
+.................... 		return 0;  
+04D6:  CLR.B   0
+04D8:  BRA     4DA
+.................... 	} 
+04DA:  MOV     [--W15],W6
+04DC:  MOV     [--W15],W5
+04DE:  RETURN  
+....................  
+.................... } 
+....................  
+....................  
+.................... #include "motor.c" 
+.................... #include "motor.h" 
+.................... #ifndef MOTOR_H 
+.................... #define MOTOR_H 
+....................  
+.................... typedef struct MotorAs 
+.................... { 
+.................... 	int canalPwm;  // пин ШИМ 
+.................... 	int1 upValue; //флаг направления движения, вводит относительный верх и  низ у нескольких моторов 
+.................... 	int16 minValAdc; //минимальное значение ацп на одном краю шкалы 
+.................... 	int16 maxValAdc; //максимальное значение ацп на другом краю шкалы 
+.................... 	int16 oldValAdc; // прошлое обработанное значение из АЦП 	 
+.................... 	float dAdc; 	// разность макс и мин значения АЦП 
+....................  
+.................... 	int8 Error;    // хранит ошибки и текущее состояние  
+.................... 	int16 minSpeed; // минимальное значение ШИМ при котором стрелка двигается 
+.................... 	int1 enabRotate; // разрешение вращения   
+.................... } Motor;  
+....................  
+.................... void initMotor(Motor * m, int cPwm, int16 tPwm, int16 vAdc1, int16 vAdc2);  
+.................... void setLimitAdcMotor(Motor *m, int16 vAdc1, int16 vAdc2); 
+.................... void setMinSpeed(Motor *m,int16 data);    
+.................... void setRotate(Motor *m, int16 currentData, int16 newData);  
+....................  
+....................  
+.................... #endif 
+....................  
+....................  
+.................... void initMotor(Motor * m, int cPwm,  int16 tPwm, int16 vAdc1, int16 vAdc2) 
+*
+08EC:  MOV     W5,[W15++]
+.................... { 
+.................... 	m->canalPwm = cPwm;  
+08EE:  MOV     8D0,W5
+08F0:  MOV     8D2,W4
+08F2:  MOV     W4,[W5+#0]
+.................... 	m->upValue = 0;   
+08F4:  MOV     #2,W0
+08F6:  ADD     8D0,W0
+08F8:  MOV     W0,W5
+08FA:  MOV     #FE,W4
+08FC:  AND.B   W4L,[W5],[W5]
+.................... 	m->minSpeed = 0;  
+08FE:  MOV     #10,W0
+0900:  ADD     8D0,W0
+0902:  MOV     W0,W5
+0904:  CLR.B   [W5]
+0906:  MOV.B   #0,W0L
+0908:  MOV.B   W0L,[W5+#1]
+.................... 	m->enabRotate = 1; 
+090A:  MOV     #12,W0
+090C:  ADD     8D0,W0
+090E:  MOV     W0,W5
+0910:  MOV     #1,W4
+0912:  IOR.B    W4L,  [W5],[W5]
+.................... 	m->Error = 0;   
+0914:  MOV     #E,W0
+0916:  ADD     8D0,W0
+0918:  MOV     W0,W5
+091A:  CLR.B   [W5]
+091C:  MOV     [--W15],W5
+091E:  RETURN  
+.................... } 
+....................  
+....................  
+.................... void setLimitAdcMotor(Motor *m, int16 vAdc1, int16 vAdc2) 
+*
+0A44:  MOV     W5,[W15++]
+0A46:  MOV     W6,[W15++]
+.................... { 
+.................... 	if(vAdc1>vAdc2) 
+0A48:  MOV     8D6,W0
+0A4A:  MOV     8D4,W4
+0A4C:  CP      W4,W0
+0A4E:  BRA     LE,A7E
+.................... 	{ 
+.................... 		m->upValue = 0;  
+0A50:  MOV     #2,W0
+0A52:  ADD     8D2,W0
+0A54:  MOV     W0,W5
+0A56:  MOV     #FE,W4
+0A58:  AND.B   W4L,[W5],[W5]
+.................... 		m->minValAdc = vAdc2;  
+0A5A:  MOV     #4,W0
+0A5C:  ADD     8D2,W0
+0A5E:  MOV     W0,W5
+0A60:  MOV     8D6,W4
+0A62:  MOV     W4,[W5+#0]
+.................... 		m->maxValAdc = vAdc1;  
+0A64:  MOV     #6,W0
+0A66:  ADD     8D2,W0
+0A68:  MOV     W0,W5
+0A6A:  MOV     8D4,W4
+0A6C:  MOV     W4,[W5+#0]
+.................... 		m->Error |= 0x02;  
+0A6E:  MOV     #E,W0
+0A70:  ADD     8D2,W0
+0A72:  MOV     W0,W5
+0A74:  MOV.B   [W5],W0L
+0A76:  CLR.B   1
+0A78:  IOR      W0,  #2,W0
+0A7A:  MOV.B   W0L,[W5]
+.................... 	} 
+0A7C:  BRA     AC2
+.................... 	else 
+.................... 	{	 
+.................... 		if(vAdc1<vAdc2) 
+0A7E:  MOV     8D4,W0
+0A80:  MOV     8D6,W4
+0A82:  CP      W4,W0
+0A84:  BRA     LE,AB4
+.................... 		{	 
+.................... 			m->upValue = 1;  
+0A86:  MOV     #2,W0
+0A88:  ADD     8D2,W0
+0A8A:  MOV     W0,W5
+0A8C:  MOV     #1,W4
+0A8E:  IOR.B    W4L,  [W5],[W5]
+.................... 			m->minValAdc = vAdc1;  
+0A90:  MOV     #4,W0
+0A92:  ADD     8D2,W0
+0A94:  MOV     W0,W5
+0A96:  MOV     8D4,W4
+0A98:  MOV     W4,[W5+#0]
+.................... 			m->maxValAdc = vAdc2; 
+0A9A:  MOV     #6,W0
+0A9C:  ADD     8D2,W0
+0A9E:  MOV     W0,W5
+0AA0:  MOV     8D6,W4
+0AA2:  MOV     W4,[W5+#0]
+.................... 			m->Error |= 0x04; 
+0AA4:  MOV     #E,W0
+0AA6:  ADD     8D2,W0
+0AA8:  MOV     W0,W5
+0AAA:  MOV.B   [W5],W0L
+0AAC:  CLR.B   1
+0AAE:  IOR      W0,  #4,W0
+0AB0:  MOV.B   W0L,[W5]
+.................... 		} 
+0AB2:  BRA     AC2
+.................... 		else 
+.................... 		{ 
+.................... 			m->Error |= 0x01;  
+0AB4:  MOV     #E,W0
+0AB6:  ADD     8D2,W0
+0AB8:  MOV     W0,W5
+0ABA:  MOV.B   [W5],W0L
+0ABC:  CLR.B   1
+0ABE:  IOR      W0,  #1,W0
+0AC0:  MOV.B   W0L,[W5]
+.................... 		} 
+.................... 	}  
+.................... 	m->dAdc = ((float)(m->maxValAdc-m->minValAdc));   
+0AC2:  MOV     #A,W0
+0AC4:  ADD     8D2,W0
+0AC6:  MOV     W0,W5
+0AC8:  MOV     #6,W0
+0ACA:  ADD     8D2,W0
+0ACC:  MOV     [W0],W6
+0ACE:  MOV     #4,W0
+0AD0:  ADD     8D2,W0
+0AD2:  MOV     W0,W4
+0AD4:  MOV     [W4],W0
+0AD6:  SUB     W6,W0,W0
+0AD8:  CALL    9FA
+0ADC:  MOV     #0,W4
+0ADE:  MOV     [W4++],[W5++]
+0AE0:  MOV     [W4++],[W5++]
+0AE2:  MOV     [--W15],W6
+0AE4:  MOV     [--W15],W5
+0AE6:  RETURN  
+.................... }   
+....................  
+.................... void setMinSpeed(Motor *m, int16 data) 
+.................... { 
+.................... 	m->minSpeed = data;  
+.................... } 
+....................  
+.................... void setRotate(Motor *m, int16 currentData, int16 neWdata) 
+*
+1384:  MOV     W5,[W15++]
+1386:  MOV     W6,[W15++]
+1388:  MOV     W7,[W15++]
+138A:  MOV     W8,[W15++]
+.................... {	 
+....................  
+.................... if(m->enabRotate) 
+138C:  MOV     #12,W0
+138E:  ADD     8D8,W0
+1390:  MOV.B   [W0],W4L
+1392:  BTSS    W4.0
+1394:  BRA     1642
+.................... 	{ 
+.................... 		if((m->Error&0x02)|(m->Error&0x04)) 
+1396:  MOV     #E,W0
+1398:  ADD     8D8,W0
+139A:  MOV.B   [W0],W5L
+139C:  SE      W5,W5
+139E:  AND     W5,#2,W5
+13A0:  MOV     #E,W0
+13A2:  ADD     8D8,W0
+13A4:  MOV.B   [W0],W7L
+13A6:  SE      W7,W7
+13A8:  AND     W7,#4,W0
+13AA:  IOR      W5,  W0,W0
+13AC:  CP0     W0
+13AE:  BRA     Z,1642
+.................... 		{ 
+.................... 			int16 n = 0;  
+.................... 			float error = 0;  
+13B0:  CLR     8DE
+13B2:  CLR     8E0
+13B4:  CLR     8E2
+.................... 			if(currentData>newData) 
+13B6:  MOV     8DC,W0
+13B8:  MOV     8DA,W4
+13BA:  CP      W4,W0
+13BC:  BRA     LE,14E0
+.................... 			{//niz 
+.................... 				error = currentData - newData;			  
+13BE:  MOV     8DA,W4
+13C0:  MOV     8DC,W3
+13C2:  SUB     W4,W3,W0
+13C4:  CALL    9FA
+13C8:  MOV     W0,8E0
+13CA:  MOV     W1,8E2
+.................... 				float ps =((((float)(error*POL_POL_PERIOD))/m->dAdc)); 
+13CC:  MOV     8E0,W0
+13CE:  MOV     8E2,W1
+13D0:  MOV     #5000,W2
+13D2:  MOV     #4543,W3
+13D4:  CALL    11CA
+13D8:  MOV     W0,W5
+13DA:  MOV     W1,W6
+13DC:  MOV     #A,W0
+13DE:  ADD     8D8,W0
+13E0:  MOV     W0,W4
+13E2:  MOV     #0,W3
+13E4:  MOV     [W4++],[W3++]
+13E6:  MOV     [W4++],[W3++]
+13E8:  MOV     W0,W2
+13EA:  MOV     W1,W3
+13EC:  MOV     W5,W0
+13EE:  MOV     W6,W1
+13F0:  CALL    128E
+13F4:  MOV     W0,8E4
+13F6:  MOV     W1,8E6
+.................... 				n = ((int16)ps); 
+13F8:  MOV     8E4,W0
+13FA:  MOV     8E6,W1
+13FC:  CALL    1358
+1400:  MOV     W0,8DE
+.................... 				  
+.................... 				if(m->upValue) 
+1402:  MOV     #2,W0
+1404:  ADD     8D8,W0
+1406:  MOV.B   [W0],W4L
+1408:  BTSS    W4.0
+140A:  BRA     145E
+.................... 				{ 
+.................... 					switch(m->canalPwm) 
+140C:  MOV     8D8,W5
+140E:  MOV.B   [W5],W0L
+1410:  SE      W0,W0
+1412:  XOR     #3,W0
+1414:  BRA     Z,1424
+1416:  XOR     #7,W0
+1418:  BRA     Z,1432
+141A:  XOR     #1,W0
+141C:  BRA     Z,1440
+141E:  XOR     #3,W0
+1420:  BRA     Z,144E
+1422:  BRA     145C
+.................... 					{ 
+.................... 						case 3: { set_compare_time(3, n,(n+POL_PERIOD)); break; } 
+1424:  MOV     #186A,W4
+1426:  MOV     8DE,W3
+1428:  ADD     W3,W4,W5
+142A:  PUSH    8DE
+142C:  POP     18E
+142E:  MOV     W5,18C
+1430:  BRA     145C
+.................... 						case 4: { set_compare_time(4, n,(n+POL_PERIOD)); break; } 
+1432:  MOV     #186A,W4
+1434:  MOV     8DE,W3
+1436:  ADD     W3,W4,W5
+1438:  PUSH    8DE
+143A:  POP     194
+143C:  MOV     W5,192
+143E:  BRA     145C
+.................... 						case 5: { set_compare_time(5, n,(n+POL_PERIOD)); break; } 
+1440:  MOV     #186A,W4
+1442:  MOV     8DE,W3
+1444:  ADD     W3,W4,W5
+1446:  PUSH    8DE
+1448:  POP     19A
+144A:  MOV     W5,198
+144C:  BRA     145C
+.................... 						case 6: { set_compare_time(6, n,(n+POL_PERIOD)); break; } 
+144E:  MOV     #186A,W4
+1450:  MOV     8DE,W3
+1452:  ADD     W3,W4,W5
+1454:  PUSH    8DE
+1456:  POP     1A0
+1458:  MOV     W5,19E
+145A:  BRA     145C
+.................... 						default: {};  
+.................... 					} 
+.................... 				} 
+145C:  BRA     14DE
+.................... 				else 
+.................... 				{ 
+.................... 					switch(m->canalPwm) 
+145E:  MOV     8D8,W5
+1460:  MOV.B   [W5],W0L
+1462:  SE      W0,W0
+1464:  XOR     #3,W0
+1466:  BRA     Z,1476
+1468:  XOR     #7,W0
+146A:  BRA     Z,1490
+146C:  XOR     #1,W0
+146E:  BRA     Z,14AA
+1470:  XOR     #3,W0
+1472:  BRA     Z,14C4
+1474:  BRA     14DE
+.................... 					{ 
+.................... 						case 3: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+1476:  MOV     #30D4,W4
+1478:  MOV     8DE,W3
+147A:  SUB     W4,W3,W5
+147C:  MOV     #30D4,W4
+147E:  MOV     8DE,W3
+1480:  SUB     W4,W3,W0
+1482:  MOV     #30D4,W4
+1484:  SUB     W4,W0,W0
+1486:  MOV     #186A,W4
+1488:  SUB     W4,W0,W6
+148A:  MOV     W5,18E
+148C:  MOV     W6,18C
+148E:  BRA     14DE
+.................... 						case 4: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+1490:  MOV     #30D4,W4
+1492:  MOV     8DE,W3
+1494:  SUB     W4,W3,W5
+1496:  MOV     #30D4,W4
+1498:  MOV     8DE,W3
+149A:  SUB     W4,W3,W0
+149C:  MOV     #30D4,W4
+149E:  SUB     W4,W0,W0
+14A0:  MOV     #186A,W4
+14A2:  SUB     W4,W0,W6
+14A4:  MOV     W5,18E
+14A6:  MOV     W6,18C
+14A8:  BRA     14DE
+.................... 						case 5: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+14AA:  MOV     #30D4,W4
+14AC:  MOV     8DE,W3
+14AE:  SUB     W4,W3,W5
+14B0:  MOV     #30D4,W4
+14B2:  MOV     8DE,W3
+14B4:  SUB     W4,W3,W0
+14B6:  MOV     #30D4,W4
+14B8:  SUB     W4,W0,W0
+14BA:  MOV     #186A,W4
+14BC:  SUB     W4,W0,W6
+14BE:  MOV     W5,18E
+14C0:  MOV     W6,18C
+14C2:  BRA     14DE
+.................... 						case 6: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+14C4:  MOV     #30D4,W4
+14C6:  MOV     8DE,W3
+14C8:  SUB     W4,W3,W5
+14CA:  MOV     #30D4,W4
+14CC:  MOV     8DE,W3
+14CE:  SUB     W4,W3,W0
+14D0:  MOV     #30D4,W4
+14D2:  SUB     W4,W0,W0
+14D4:  MOV     #186A,W4
+14D6:  SUB     W4,W0,W6
+14D8:  MOV     W5,18E
+14DA:  MOV     W6,18C
+14DC:  BRA     14DE
+.................... 						default: {};  
+.................... 					} 
+.................... 				} 
+.................... 					 
+.................... 			} 
+14DE:  BRA     1642
+.................... 			else 
+.................... 			{ 
+.................... 				if(currentData<newData) 
+14E0:  MOV     8DA,W0
+14E2:  MOV     8DC,W4
+14E4:  CP      W4,W0
+14E6:  BRA     LE,160A
+.................... 				{//vverx 
+.................... 					error = newData -currentData;			 
+14E8:  MOV     8DC,W4
+14EA:  MOV     8DA,W3
+14EC:  SUB     W4,W3,W0
+14EE:  CALL    9FA
+14F2:  MOV     W0,8E0
+14F4:  MOV     W1,8E2
+.................... 			        float ps =((((float)(error*POL_POL_PERIOD))/m->dAdc)); 
+14F6:  MOV     8E0,W0
+14F8:  MOV     8E2,W1
+14FA:  MOV     #5000,W2
+14FC:  MOV     #4543,W3
+14FE:  CALL    11CA
+1502:  MOV     W0,W5
+1504:  MOV     W1,W6
+1506:  MOV     #A,W0
+1508:  ADD     8D8,W0
+150A:  MOV     W0,W4
+150C:  MOV     #0,W3
+150E:  MOV     [W4++],[W3++]
+1510:  MOV     [W4++],[W3++]
+1512:  MOV     W0,W2
+1514:  MOV     W1,W3
+1516:  MOV     W5,W0
+1518:  MOV     W6,W1
+151A:  CALL    128E
+151E:  MOV     W0,8E8
+1520:  MOV     W1,8EA
+.................... 					n = ((int16)ps); 
+1522:  MOV     8E8,W0
+1524:  MOV     8EA,W1
+1526:  CALL    1358
+152A:  MOV     W0,8DE
+.................... 					if(m->upValue) 
+152C:  MOV     #2,W0
+152E:  ADD     8D8,W0
+1530:  MOV.B   [W0],W4L
+1532:  BTSS    W4.0
+1534:  BRA     15B8
+.................... 					{ 
+.................... 						switch(m->canalPwm) 
+1536:  MOV     8D8,W5
+1538:  MOV.B   [W5],W0L
+153A:  SE      W0,W0
+153C:  XOR     #3,W0
+153E:  BRA     Z,154E
+1540:  XOR     #7,W0
+1542:  BRA     Z,1568
+1544:  XOR     #1,W0
+1546:  BRA     Z,1582
+1548:  XOR     #3,W0
+154A:  BRA     Z,159C
+154C:  BRA     15B6
+.................... 						{ 
+.................... 							case 3: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+154E:  MOV     #30D4,W4
+1550:  MOV     8DE,W3
+1552:  SUB     W4,W3,W5
+1554:  MOV     #30D4,W4
+1556:  MOV     8DE,W3
+1558:  SUB     W4,W3,W0
+155A:  MOV     #30D4,W4
+155C:  SUB     W4,W0,W0
+155E:  MOV     #186A,W4
+1560:  SUB     W4,W0,W6
+1562:  MOV     W5,18E
+1564:  MOV     W6,18C
+1566:  BRA     15B6
+.................... 							case 4: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+1568:  MOV     #30D4,W4
+156A:  MOV     8DE,W3
+156C:  SUB     W4,W3,W5
+156E:  MOV     #30D4,W4
+1570:  MOV     8DE,W3
+1572:  SUB     W4,W3,W0
+1574:  MOV     #30D4,W4
+1576:  SUB     W4,W0,W0
+1578:  MOV     #186A,W4
+157A:  SUB     W4,W0,W6
+157C:  MOV     W5,18E
+157E:  MOV     W6,18C
+1580:  BRA     15B6
+.................... 							case 5: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+1582:  MOV     #30D4,W4
+1584:  MOV     8DE,W3
+1586:  SUB     W4,W3,W5
+1588:  MOV     #30D4,W4
+158A:  MOV     8DE,W3
+158C:  SUB     W4,W3,W0
+158E:  MOV     #30D4,W4
+1590:  SUB     W4,W0,W0
+1592:  MOV     #186A,W4
+1594:  SUB     W4,W0,W6
+1596:  MOV     W5,18E
+1598:  MOV     W6,18C
+159A:  BRA     15B6
+.................... 							case 6: { set_compare_time(3,(TIME_PWM-n),(POL_PERIOD-(TIME_PWM-(TIME_PWM-n)))); break; } 
+159C:  MOV     #30D4,W4
+159E:  MOV     8DE,W3
+15A0:  SUB     W4,W3,W5
+15A2:  MOV     #30D4,W4
+15A4:  MOV     8DE,W3
+15A6:  SUB     W4,W3,W0
+15A8:  MOV     #30D4,W4
+15AA:  SUB     W4,W0,W0
+15AC:  MOV     #186A,W4
+15AE:  SUB     W4,W0,W6
+15B0:  MOV     W5,18E
+15B2:  MOV     W6,18C
+15B4:  BRA     15B6
+.................... 							default: {};  
+.................... 						} 
+.................... 					} 
+15B6:  BRA     1608
+.................... 					else 
+.................... 					{ 
+.................... 						switch(m->canalPwm) 
+15B8:  MOV     8D8,W5
+15BA:  MOV.B   [W5],W0L
+15BC:  SE      W0,W0
+15BE:  XOR     #3,W0
+15C0:  BRA     Z,15D0
+15C2:  XOR     #7,W0
+15C4:  BRA     Z,15DE
+15C6:  XOR     #1,W0
+15C8:  BRA     Z,15EC
+15CA:  XOR     #3,W0
+15CC:  BRA     Z,15FA
+15CE:  BRA     1608
+.................... 						{ 
+.................... 							case 3: { set_compare_time(3, n,(n+POL_PERIOD)); break; } 
+15D0:  MOV     #186A,W4
+15D2:  MOV     8DE,W3
+15D4:  ADD     W3,W4,W5
+15D6:  PUSH    8DE
+15D8:  POP     18E
+15DA:  MOV     W5,18C
+15DC:  BRA     1608
+.................... 							case 4: { set_compare_time(4, n,(n+POL_PERIOD)); break; } 
+15DE:  MOV     #186A,W4
+15E0:  MOV     8DE,W3
+15E2:  ADD     W3,W4,W5
+15E4:  PUSH    8DE
+15E6:  POP     194
+15E8:  MOV     W5,192
+15EA:  BRA     1608
+.................... 							case 5: { set_compare_time(5, n,(n+POL_PERIOD)); break; } 
+15EC:  MOV     #186A,W4
+15EE:  MOV     8DE,W3
+15F0:  ADD     W3,W4,W5
+15F2:  PUSH    8DE
+15F4:  POP     19A
+15F6:  MOV     W5,198
+15F8:  BRA     1608
+.................... 							case 6: { set_compare_time(6, n,(n+POL_PERIOD)); break; } 
+15FA:  MOV     #186A,W4
+15FC:  MOV     8DE,W3
+15FE:  ADD     W3,W4,W5
+1600:  PUSH    8DE
+1602:  POP     1A0
+1604:  MOV     W5,19E
+1606:  BRA     1608
+.................... 							default: {};  
+.................... 						} 
+.................... 						 
+.................... 					} 
+.................... 								 
+.................... 				} 
+1608:  BRA     1642
+.................... 				else 
+.................... 				{ 
+.................... 					switch(m->canalPwm) 
+160A:  MOV     8D8,W5
+160C:  MOV.B   [W5],W0L
+160E:  SE      W0,W0
+1610:  XOR     #3,W0
+1612:  BRA     Z,1622
+1614:  XOR     #7,W0
+1616:  BRA     Z,162A
+1618:  XOR     #1,W0
+161A:  BRA     Z,1632
+161C:  XOR     #3,W0
+161E:  BRA     Z,163A
+1620:  BRA     1642
+.................... 					{ 
+.................... 						case 3: { set_compare_time(3,0,POL_PERIOD); break; } 
+1622:  CLR     18E
+1624:  MOV     #186A,W4
+1626:  MOV     W4,18C
+1628:  BRA     1642
+.................... 						case 4: { set_compare_time(4,0,POL_PERIOD); break; } 
+162A:  CLR     194
+162C:  MOV     #186A,W4
+162E:  MOV     W4,192
+1630:  BRA     1642
+.................... 						case 5: { set_compare_time(5,0,POL_PERIOD); break; } 
+1632:  CLR     19A
+1634:  MOV     #186A,W4
+1636:  MOV     W4,198
+1638:  BRA     1642
+.................... 						case 6: { set_compare_time(6,0,POL_PERIOD); break; } 
+163A:  CLR     1A0
+163C:  MOV     #186A,W4
+163E:  MOV     W4,19E
+1640:  BRA     1642
+.................... 						default: {};  
+.................... 					}		 
+.................... 				} 
+.................... 			} 
+....................  
+.................... 		} 
+.................... 			 
+.................... 	} 
+1642:  MOV     [--W15],W8
+1644:  MOV     [--W15],W7
+1646:  MOV     [--W15],W6
+1648:  MOV     [--W15],W5
+164A:  RETURN  
+.................... 	 
+.................... } 
+....................  
+....................  
+....................  
+....................  
+.................... void obmenRS();  
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+*
+16AC:  MOV     #2780,W15
+16AE:  MOV     #27FF,W0
+16B0:  MOV     W0,20
+16B2:  NOP     
+16B4:  MOV     #4444,W0
+16B6:  MOV     W0,A8
+16B8:  MOV     #4444,W0
+16BA:  MOV     W0,B0
+16BC:  BSET.B  81.7
+16BE:  MOV     #800,W0
+16C0:  MOV     #FFE,W1
+16C2:  REPEAT  W1
+16C4:  CLR     [W0++]
+16C6:  BCLR.B  2DE.6
+16C8:  BCLR.B  2E2.6
+16CA:  CLR     800
+16CC:  MOV     #8000,W4
+16CE:  MOV     W4,220
+16D0:  MOV     #400,W4
+16D2:  MOV     W4,222
+16D4:  MOV     #15,W4
+16D6:  MOV     W4,228
+16D8:  CLR.B   802
+16DA:  BCLR.B  803.0
+16DC:  BCLR.B  803.1
+16DE:  BCLR.B  803.2
+16E0:  BCLR.B  803.3
+16E2:  BCLR.B  803.4
+16E4:  CLR     804
+16E6:  CLR     806
+16E8:  CLR     808
+16EA:  CLR     80A
+16EC:  CLR     80C
+16EE:  CLR     80E
+16F0:  CLR     810
+16F2:  CLR     812
+16F4:  CLR     814
+16F6:  CLR     816
+16F8:  CLR     818
+16FA:  CLR     81A
+16FC:  CLR     83C
+16FE:  CLR     83E
+1700:  CLR     840
+1702:  CLR     842
+1704:  CLR     844
+1706:  CLR     846
+1708:  CLR     848
+170A:  CLR     84A
+170C:  CLR.B   84C
+170E:  CLR     84E
+1710:  CLR     850
+1712:  CLR     852
+1714:  BCLR.B  803.5
+1716:  CLR     854
+1718:  CLR     856
+171A:  BCLR.B  803.6
+171C:  CLR.B   84D
+171E:  CLR.B   8A8
+1720:  CLR.B   8A9
+1722:  CLR.B   8AA
+1724:  CLR.B   8AB
+1726:  CLR.B   8AC
+1728:  CLR     8AE
+172A:  BCLR.B  803.7
+172C:  CLR     8B0
+172E:  CLR     8B2
+1730:  CLR     8B4
+1732:  CLR     8B6
+1734:  CLR     8B8
+1736:  CLR     8BA
+1738:  CLR     8BC
+173A:  CLR     8BE
+173C:  CLR     8C0
+173E:  BCLR.B  8AD.0
+1740:  MOV     #2F,W4
+1742:  MOV     W4,8CC
+1744:  BCLR.B  8AD.1
+1746:  CLR     8CE
+1748:  SETM    32C
+174A:  SETM    32A
+174C:  CLR     81C
+174E:  CLR     81E
+1750:  CLR     820
+1752:  CLR     822
+1754:  CLR     824
+1756:  CLR     826
+1758:  CLR     828
+175A:  CLR     82A
+175C:  CLR     82C
+175E:  CLR     82E
+1760:  CLR     830
+1762:  CLR     832
+1764:  CLR     834
+1766:  CLR     836
+1768:  CLR     838
+176A:  CLR     83A
+176C:  CLR     8C2
+176E:  CLR     8C4
+1770:  CLR     8C6
+1772:  CLR     8C8
+1774:  CLR     8CA
+.................... { 
+.................... 	init_PLL();  
+1776:  CALL    766
+.................... 	initRS();  
+177A:  CALL    788
+.................... 	adress = ADRES1;  
+177E:  MOV.B   #85,W0L
+1780:  MOV.B   W0L,802
+.................... 	initDMA();  
+1782:  CALL    7A0
+.................... 	crc = getChecksum();  
+1786:  CALL    7E6
+178A:  MOV     W0,8CE
+.................... 	initLed();  
+178C:  CALL    830
+.................... 	initADC();  
+1790:  CALL    884
+.................... 	initPWM();  
+1794:  CALL    920
+.................... 	 
+.................... 	enable_interrupts(INTR_GLOBAL); 		 
+1798:  BCLR.B  81.7
+179A:  CLR     42
+179C:  BSET.B  81.7
+.................... 	onOffPWMCanal(0x01);  
+179E:  MOV.B   #1,W0L
+17A0:  MOV.B   W0L,8D6
+17A2:  CALL    8DC
+.................... 	startAvtomatCalibr();  
+17A6:  CALL    9D2
+.................... 	 
+....................  
+....................   
+.................... 	 
+.................... 	while(TRUE) 
+.................... 	{ 
+.................... 		readDmaAdc();  
+17AA:  CALL    25C
+.................... 		obmenRS();  
+17AE:  CALL    DA2
+.................... 		sendDataCalibr();  
+17B2:  CALL    112A
+.................... 	//	sendState(); 
+.................... 		testPoAdc(canalPwm, dataCanal3);  
+17B6:  MOV.B   8AC,W0L
+17B8:  MOV.B   W0L,8D0
+17BA:  PUSH    8AE
+17BC:  POP     8D2
+17BE:  CALL    164C
+17C2:  BRA     17AA
+....................  
+.................... 			 
+.................... 		 
+.................... 		 
+....................  
+.................... 	} 
+....................  
+....................  
+.................... } 
+....................  
+17C4:  PWRSAV  #0
+.................... void obmenRS() 
+*
+0DA2:  MOV     W5,[W15++]
+0DA4:  MOV     #C,W5
+0DA6:  REPEAT  #3
+0DA8:  MOV     [W5++],[W15++]
+.................... { 
+.................... 	if(FLAG) 
+0DAA:  BTSS.B  8AD.0
+0DAC:  BRA     1120
+.................... 	{ 
+.................... 		if(buffer[0] == adress) 
+0DAE:  MOV.B   8C2,W0L
+0DB0:  CP.B    802
+0DB2:  BRA     NZ,1100
+.................... 		{			 	 
+.................... 			switch(buffer[1]) 
+0DB4:  MOV.B   8C3,W0L
+0DB6:  SE      W0,W0
+0DB8:  XOR     #14,W0
+0DBA:  BRA     Z,DF2
+0DBC:  XOR     #7,W0
+0DBE:  BRA     Z,E22
+0DC0:  XOR     #1,W0
+0DC2:  BRA     Z,E36
+0DC4:  XOR     #3,W0
+0DC6:  BRA     Z,E5A
+0DC8:  XOR     #51,W0
+0DCA:  BRA     Z,E8E
+0DCC:  XOR     #71,W0
+0DCE:  BRA     Z,F34
+0DD0:  XOR     #B,W0
+0DD2:  BRA     Z,F6A
+0DD4:  XOR     #8,W0
+0DD6:  BRA     Z,FA0
+0DD8:  XOR     #73,W0
+0DDA:  BRA     Z,FD6
+0DDC:  XOR     #3,W0
+0DDE:  BRA     Z,100C
+0DE0:  XOR     #5,W0
+0DE2:  BRA     Z,1042
+0DE4:  XOR     #F,W0
+0DE6:  BRA     Z,1056
+0DE8:  XOR     #E,W0
+0DEA:  BRA     Z,1066
+0DEC:  XOR     #13,W0
+0DEE:  BRA     Z,1076
+0DF0:  BRA     10D8
+.................... 			{		 
+.................... 					case 0x14:  
+.................... 					{ 
+.................... 						enabRegul = buffer[2]&0x01;  
+0DF2:  MOV.B   8C4,W0L
+0DF4:  SE      W0,W0
+0DF6:  AND     W0,#1,W0
+0DF8:  BCLR.B  803.7
+0DFA:  BTSC.B  0.0
+0DFC:  BSET.B  803.7
+.................... 						canalPwm = (buffer[3]&0xFF);  
+0DFE:  MOV.B   8C5,W0L
+0E00:  SE      W0,W0
+0E02:  AND     #FF,W0
+0E04:  MOV.B   W0L,8AC
+.................... 						dataCanal3 = make16(buffer[4], buffer[5]);  
+0E06:  MOV.B   8C7,W0L
+0E08:  MOV.B   W0L,8AE
+0E0A:  MOV.B   8C6,W0L
+0E0C:  MOV.B   W0L,8AF
+.................... 						sendRS(adress);  
+0E0E:  MOV.B   802,W0L
+0E10:  MOV.B   W0L,8D2
+0E12:  CALL    9E0
+.................... 						sendRS(0x14); 
+0E16:  MOV.B   #14,W0L
+0E18:  MOV.B   W0L,8D2
+0E1A:  CALL    9E0
+.................... 						indW = 0;   
+0E1E:  CLR     8C0
+.................... 						break;  
+0E20:  BRA     10F6
+.................... 					} 
+.................... 					case 0x13:  
+.................... 					{ 
+.................... 						setLimitAdcMotor(&m3, minAdc1, maxAdc1); 
+0E22:  MOV     #858,W4
+0E24:  MOV     W4,8D2
+0E26:  PUSH    80C
+0E28:  POP     8D4
+0E2A:  PUSH    814
+0E2C:  POP     8D6
+0E2E:  CALL    A44
+.................... 						//startAvtomatCalibr();  
+.................... 					/*	sendRS(adress);  
+.................... 						sendRS(0x13); 
+.................... 						sendRS16(minADC1); 
+.................... 						sendRS16(minADC2); 
+.................... 						sendRS16(minADC3); 
+.................... 						sendRS16(minADC4); 
+.................... 						sendRS16(maxADC1); 
+.................... 						sendRS16(maxADC2); 
+.................... 						sendRS16(maxADC3); 
+.................... 						sendRS16(maxADC4);*/	 
+.................... 						indW = 0;   
+0E32:  CLR     8C0
+.................... 						break; 
+0E34:  BRA     10F6
+....................  
+.................... 					} 
+.................... 					case 0x12:  
+.................... 					{ 
+.................... 						onOffPWMCanal(buffer[2]&0x01);  
+0E36:  MOV.B   8C4,W0L
+0E38:  SE      W0,W0
+0E3A:  AND     W0,#1,W5
+0E3C:  PUSH    8D6
+0E3E:  MOV.B   W5L,[W15-#2]
+0E40:  POP     8D6
+0E42:  CALL    8DC
+.................... 						sendRS(adress);  
+0E46:  MOV.B   802,W0L
+0E48:  MOV.B   W0L,8D2
+0E4A:  CALL    9E0
+.................... 						sendRS(0x12); 
+0E4E:  MOV.B   #12,W0L
+0E50:  MOV.B   W0L,8D2
+0E52:  CALL    9E0
+.................... 						indW = 0;   
+0E56:  CLR     8C0
+.................... 						break;  
+0E58:  BRA     10F6
+.................... 					} 
+.................... 					case 0x11: 
+.................... 					{ 
+.................... 						sendRS(adress);  
+0E5A:  MOV.B   802,W0L
+0E5C:  MOV.B   W0L,8D2
+0E5E:  CALL    9E0
+.................... 						sendRS(0x11);  
+0E62:  MOV.B   #11,W0L
+0E64:  MOV.B   W0L,8D2
+0E66:  CALL    9E0
+.................... 						sendRS16(valAdc1);  
+0E6A:  PUSH    804
+0E6C:  POP     8D2
+0E6E:  CALL    AE8
+.................... 						sendRS16(valAdc2);  
+0E72:  PUSH    806
+0E74:  POP     8D2
+0E76:  CALL    AE8
+.................... 						sendRS16(valAdc3);  
+0E7A:  PUSH    808
+0E7C:  POP     8D2
+0E7E:  CALL    AE8
+.................... 						sendRS16(valAdc4);  
+0E82:  PUSH    80A
+0E84:  POP     8D2
+0E86:  CALL    AE8
+.................... 						indW = 0;  
+0E8A:  CLR     8C0
+.................... 						break; 
+0E8C:  BRA     10F6
+.................... 					} 
+.................... 					case COM_SET_ALL_UI:  
+.................... 					{ 
+.................... 						if(indW>=6) 
+0E8E:  MOV     8C0,W4
+0E90:  CP      W4,#6
+0E92:  BRA     LT,F32
+.................... 						{ 
+.................... 							//change   uStr	uInd	Pstr		Pind	UPblenk 
+.................... 							setAllPwm((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF));  
+0E94:  MOV.B   8C4,W0L
+0E96:  SE      W0,W0
+0E98:  MOV     W0,W5
+0E9A:  AND     #FF,W5
+0E9C:  MOV.B   8C5,W0L
+0E9E:  SE      W0,W0
+0EA0:  MOV     W0,W6
+0EA2:  AND     #FF,W6
+0EA4:  MOV.B   8C6,W0L
+0EA6:  SE      W0,W0
+0EA8:  MOV     W0,W7
+0EAA:  AND     #FF,W7
+0EAC:  MOV.B   8C7,W0L
+0EAE:  SE      W0,W0
+0EB0:  MOV     W0,W8
+0EB2:  AND     #FF,W8
+0EB4:  MOV.B   8C8,W0L
+0EB6:  SE      W0,W0
+0EB8:  MOV     W0,W9
+0EBA:  AND     #FF,W9
+0EBC:  PUSH    8DE
+0EBE:  MOV.B   W5L,[W15-#2]
+0EC0:  POP     8DE
+0EC2:  PUSH    8DE
+0EC4:  MOV.B   W6L,[W15-#1]
+0EC6:  POP     8DE
+0EC8:  PUSH    8E0
+0ECA:  MOV.B   W7L,[W15-#2]
+0ECC:  POP     8E0
+0ECE:  PUSH    8E0
+0ED0:  MOV.B   W8L,[W15-#1]
+0ED2:  POP     8E0
+0ED4:  PUSH    8E2
+0ED6:  MOV.B   W9L,[W15-#2]
+0ED8:  POP     8E2
+0EDA:  CALL    B80
+.................... 											//uStr	uInd	Pstr		Pind	UPblenk 
+.................... 							ansComSetAllUi((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF));  
+0EDE:  MOV.B   8C4,W0L
+0EE0:  SE      W0,W0
+0EE2:  MOV     W0,W5
+0EE4:  AND     #FF,W5
+0EE6:  MOV.B   8C5,W0L
+0EE8:  SE      W0,W0
+0EEA:  MOV     W0,W6
+0EEC:  AND     #FF,W6
+0EEE:  MOV.B   8C6,W0L
+0EF0:  SE      W0,W0
+0EF2:  MOV     W0,W7
+0EF4:  AND     #FF,W7
+0EF6:  MOV.B   8C7,W0L
+0EF8:  SE      W0,W0
+0EFA:  MOV     W0,W8
+0EFC:  AND     #FF,W8
+0EFE:  MOV.B   8C8,W0L
+0F00:  SE      W0,W0
+0F02:  MOV     W0,W9
+0F04:  AND     #FF,W9
+0F06:  PUSH    8DE
+0F08:  MOV.B   W5L,[W15-#2]
+0F0A:  POP     8DE
+0F0C:  PUSH    8DE
+0F0E:  MOV.B   W6L,[W15-#1]
+0F10:  POP     8DE
+0F12:  PUSH    8E0
+0F14:  MOV.B   W7L,[W15-#2]
+0F16:  POP     8E0
+0F18:  PUSH    8E0
+0F1A:  MOV.B   W8L,[W15-#1]
+0F1C:  POP     8E0
+0F1E:  PUSH    8E2
+0F20:  MOV.B   W9L,[W15-#2]
+0F22:  POP     8E2
+0F24:  CALL    BC4
+.................... 							runVD(LED_GREEN);   
+0F28:  MOV     #AAAA,W4
+0F2A:  MOV     W4,8D2
+0F2C:  CALL    80E
+.................... 							indW = 0; 
+0F30:  CLR     8C0
+.................... 						} 
+.................... 						break;  
+0F32:  BRA     10F6
+.................... 					}  
+.................... 					case COM_SET_UGOL_STR: 
+.................... 					{ 
+.................... 						if(indW>=3)// проверка на полный буффер 
+0F34:  MOV     8C0,W4
+0F36:  CP      W4,#3
+0F38:  BRA     LT,F68
+.................... 						{ 
+.................... 							//change 
+.................... 							setUstr(buffer[2]&0xFF);  
+0F3A:  MOV.B   8C4,W0L
+0F3C:  SE      W0,W0
+0F3E:  MOV     W0,W5
+0F40:  AND     #FF,W5
+0F42:  PUSH    8E8
+0F44:  MOV.B   W5L,[W15-#2]
+0F46:  POP     8E8
+0F48:  CALL    B1E
+.................... 							ansComSetUgolStr(buffer[2]&0xFF); 
+0F4C:  MOV.B   8C4,W0L
+0F4E:  SE      W0,W0
+0F50:  MOV     W0,W5
+0F52:  AND     #FF,W5
+0F54:  PUSH    8D6
+0F56:  MOV.B   W5L,[W15-#2]
+0F58:  POP     8D6
+0F5A:  CALL    C04
+.................... 							runVD(LED_GREEN); 
+0F5E:  MOV     #AAAA,W4
+0F60:  MOV     W4,8D2
+0F62:  CALL    80E
+.................... 							indW = 0;  
+0F66:  CLR     8C0
+.................... 						} 
+.................... 						break;  
+0F68:  BRA     10F6
+.................... 					} 
+.................... 				 
+.................... 				 
+.................... 					case COM_SET_UGOL_IND: 
+.................... 					{ 
+.................... 						if(indW>=3)// проверка на полный буффер 
+0F6A:  MOV     8C0,W4
+0F6C:  CP      W4,#3
+0F6E:  BRA     LT,F9E
+.................... 						{ 
+.................... 							//change 
+.................... 							setUind(buffer[2]&0xFF);  
+0F70:  MOV.B   8C4,W0L
+0F72:  SE      W0,W0
+0F74:  MOV     W0,W5
+0F76:  AND     #FF,W5
+0F78:  PUSH    8E8
+0F7A:  MOV.B   W5L,[W15-#2]
+0F7C:  POP     8E8
+0F7E:  CALL    B2A
+.................... 							ansComSetUgolInd(buffer[2]&0xFF); 
+0F82:  MOV.B   8C4,W0L
+0F84:  SE      W0,W0
+0F86:  MOV     W0,W5
+0F88:  AND     #FF,W5
+0F8A:  PUSH    8D6
+0F8C:  MOV.B   W5L,[W15-#2]
+0F8E:  POP     8D6
+0F90:  CALL    C24
+.................... 							runVD(LED_GREEN); 
+0F94:  MOV     #AAAA,W4
+0F96:  MOV     W4,8D2
+0F98:  CALL    80E
+.................... 							indW = 0;  
+0F9C:  CLR     8C0
+.................... 						} 
+.................... 						break; 
+0F9E:  BRA     10F6
+.................... 					} 
+....................  
+.................... 					case COM_SET_PRG_STR: 
+.................... 					{ 
+.................... 						if(indW>=3)// проверка на полный буффер 
+0FA0:  MOV     8C0,W4
+0FA2:  CP      W4,#3
+0FA4:  BRA     LT,FD4
+.................... 						{ 
+.................... 							//change 
+.................... 							setPstr(buffer[2]&0xFF);  
+0FA6:  MOV.B   8C4,W0L
+0FA8:  SE      W0,W0
+0FAA:  MOV     W0,W5
+0FAC:  AND     #FF,W5
+0FAE:  PUSH    8E8
+0FB0:  MOV.B   W5L,[W15-#2]
+0FB2:  POP     8E8
+0FB4:  CALL    B36
+.................... 							ansComSetPrgStr(buffer[2]&0xFF); 
+0FB8:  MOV.B   8C4,W0L
+0FBA:  SE      W0,W0
+0FBC:  MOV     W0,W5
+0FBE:  AND     #FF,W5
+0FC0:  PUSH    8D6
+0FC2:  MOV.B   W5L,[W15-#2]
+0FC4:  POP     8D6
+0FC6:  CALL    C44
+.................... 							runVD(LED_GREEN); 
+0FCA:  MOV     #AAAA,W4
+0FCC:  MOV     W4,8D2
+0FCE:  CALL    80E
+.................... 							indW = 0;  
+0FD2:  CLR     8C0
+.................... 						} 
+.................... 						break; 
+0FD4:  BRA     10F6
+.................... 					} 
+....................  
+.................... 					case COM_SET_PRG_IND: 
+.................... 					{ 
+.................... 						if(indW>=3)// проверка на полный буффер 
+0FD6:  MOV     8C0,W4
+0FD8:  CP      W4,#3
+0FDA:  BRA     LT,100A
+.................... 						{ 
+.................... 							//change 
+.................... 							setPind(buffer[2]&0xFF);  
+0FDC:  MOV.B   8C4,W0L
+0FDE:  SE      W0,W0
+0FE0:  MOV     W0,W5
+0FE2:  AND     #FF,W5
+0FE4:  PUSH    8E8
+0FE6:  MOV.B   W5L,[W15-#2]
+0FE8:  POP     8E8
+0FEA:  CALL    B42
+.................... 							ansComSetPrgInd(buffer[2]&0xFF); 
+0FEE:  MOV.B   8C4,W0L
+0FF0:  SE      W0,W0
+0FF2:  MOV     W0,W5
+0FF4:  AND     #FF,W5
+0FF6:  PUSH    8D6
+0FF8:  MOV.B   W5L,[W15-#2]
+0FFA:  POP     8D6
+0FFC:  CALL    C64
+.................... 							runVD(LED_GREEN); 
+1000:  MOV     #AAAA,W4
+1002:  MOV     W4,8D2
+1004:  CALL    80E
+.................... 							indW = 0;  
+1008:  CLR     8C0
+.................... 						} 
+.................... 						break; 
+100A:  BRA     10F6
+.................... 					} 
+....................  
+.................... 					case COM_SET_UP_BLN: 
+.................... 					{ 
+.................... 						if(indW>=3)// проверка на полный буффер 
+100C:  MOV     8C0,W4
+100E:  CP      W4,#3
+1010:  BRA     LT,1040
+.................... 						{ 
+.................... 							//change 
+.................... 							setUPbln(buffer[2]&0xFF);  
+1012:  MOV.B   8C4,W0L
+1014:  SE      W0,W0
+1016:  MOV     W0,W5
+1018:  AND     #FF,W5
+101A:  PUSH    8E8
+101C:  MOV.B   W5L,[W15-#2]
+101E:  POP     8E8
+1020:  CALL    B76
+.................... 							ansComSetUPbln(buffer[2]&0xFF); 
+1024:  MOV.B   8C4,W0L
+1026:  SE      W0,W0
+1028:  MOV     W0,W5
+102A:  AND     #FF,W5
+102C:  PUSH    8D6
+102E:  MOV.B   W5L,[W15-#2]
+1030:  POP     8D6
+1032:  CALL    C84
+.................... 							runVD(LED_GREEN); 
+1036:  MOV     #AAAA,W4
+1038:  MOV     W4,8D2
+103A:  CALL    80E
+.................... 							indW = 0;  
+103E:  CLR     8C0
+.................... 						} 
+.................... 						break; 
+1040:  BRA     10F6
+.................... 					} 
+.................... 				//**************************************** 
+.................... 				// CRC 
+.................... 				case COM_READ_CRC: 
+.................... 				{ 
+.................... 						ansReadCrc(crc); 
+1042:  PUSH    8CE
+1044:  POP     8D2
+1046:  CALL    CA4
+.................... 						runVD(LED_GREEN); 
+104A:  MOV     #AAAA,W4
+104C:  MOV     W4,8D2
+104E:  CALL    80E
+.................... 						indW = 0; 
+1052:  CLR     8C0
+.................... 					 
+.................... 					break;  
+1054:  BRA     10F6
+.................... 				} 
+.................... 				case COM_INFO: 
+.................... 				{ 
+.................... 						ansComInfo(); 
+1056:  CALL    CD8
+.................... 						runVD(LED_GREEN); 
+105A:  MOV     #AAAA,W4
+105C:  MOV     W4,8D2
+105E:  CALL    80E
+.................... 						indW = 0; 
+1062:  CLR     8C0
+.................... 					 
+.................... 					break;  
+1064:  BRA     10F6
+.................... 				} 
+.................... 				case COM_READ_ID: 
+.................... 				{ 
+.................... 						ansComId(); 
+1066:  CALL    D36
+.................... 						runVD(LED_GREEN); 
+106A:  MOV     #AAAA,W4
+106C:  MOV     W4,8D2
+106E:  CALL    80E
+.................... 						indW = 0; 
+1072:  CLR     8C0
+.................... 					 
+.................... 					break;  
+1074:  BRA     10F6
+.................... 				} 
+.................... 				case COM_RESET_MK: 
+.................... 				{ 
+.................... 					int d = (buffer[2]&0xFF);  
+1076:  MOV.B   8C4,W0L
+1078:  SE      W0,W0
+107A:  MOV     W0,W4
+107C:  AND     #FF,W4
+107E:  MOV     W4,8D0
+.................... 					switch (d) 
+1080:  MOV     8D0,W0
+1082:  XOR     #AA,W0
+1084:  BRA     Z,1088
+1086:  BRA     10AE
+.................... 					{ 
+.................... 						case 0xAA: 
+.................... 						{ 
+.................... 							sendRS(buffer[0]);  
+1088:  MOV.B   8C2,W0L
+108A:  MOV.B   W0L,8D2
+108C:  CALL    9E0
+.................... 							sendRS(buffer[1]); 
+1090:  MOV.B   8C3,W0L
+1092:  MOV.B   W0L,8D2
+1094:  CALL    9E0
+.................... 							sendRS(buffer[2]); 
+1098:  MOV.B   8C4,W0L
+109A:  MOV.B   W0L,8D2
+109C:  CALL    9E0
+.................... 							runVD(LED_GREEN);  
+10A0:  MOV     #AAAA,W4
+10A2:  MOV     W4,8D2
+10A4:  CALL    80E
+.................... 							reset_cpu();  
+10A8:  RESET   
+.................... 							indW=0; 
+10AA:  CLR     8C0
+.................... 							break;  
+10AC:  BRA     10D4
+.................... 						} 
+.................... 						default:  
+.................... 						{ 
+.................... 							ansComRst(((~buffer[1])&0xFF), buffer[2]);  
+10AE:  COM.B   08C3,W0L
+10B0:  CLR.B   1
+10B2:  MOV.B   W0L,W5L
+10B4:  AND     #FF,W5
+10B6:  PUSH    8D6
+10B8:  MOV.B   W5L,[W15-#2]
+10BA:  POP     8D6
+10BC:  MOV     W0,[W15++]
+10BE:  MOV.B   8C4,W0L
+10C0:  MOV.B   W0L,8D7
+10C2:  MOV     [--W15],W0
+10C4:  CALL    D6E
+.................... 							runVD(LED_RED); 
+10C8:  MOV     #5555,W4
+10CA:  MOV     W4,8D2
+10CC:  CALL    80E
+.................... 							indW=0;  
+10D0:  CLR     8C0
+.................... 							break;  
+10D2:  BRA     10D4
+.................... 						 
+....................  
+.................... 						}  
+.................... 					} 
+.................... 					indW = 0; 
+10D4:  CLR     8C0
+.................... 					 
+.................... 					break;  
+10D6:  BRA     10F6
+.................... 				} 
+.................... 				default: 
+.................... 				{ 
+.................... 					ansErrorCom(buffer[1]&0xFF);  
+10D8:  MOV.B   8C3,W0L
+10DA:  SE      W0,W0
+10DC:  MOV     W0,W5
+10DE:  AND     #FF,W5
+10E0:  PUSH    8D6
+10E2:  MOV.B   W5L,[W15-#2]
+10E4:  POP     8D6
+10E6:  CALL    D8C
+.................... 					runVD(LED_RED); 
+10EA:  MOV     #5555,W4
+10EC:  MOV     W4,8D2
+10EE:  CALL    80E
+.................... 					indW = 0; 
+10F2:  CLR     8C0
+.................... 				 
+.................... 					break; 
+10F4:  BRA     10F6
+.................... 				 
+.................... 				}  
+....................  
+.................... 			} 
+.................... 			 
+.................... 			buffer[0]=0; 
+10F6:  CLR.B   8C2
+.................... 			buffer[1]=0;  
+10F8:  CLR.B   8C3
+.................... 			buffer[2]=0; 
+10FA:  CLR.B   8C4
+.................... 			indW = 0;  
+10FC:  CLR     8C0
+.................... 		} 
+10FE:  BRA     1102
+.................... 		else 
+.................... 		{ 
+.................... 		 
+.................... 			indW = 0;  
+1100:  CLR     8C0
+.................... 	 
+.................... 		} 
+.................... 	 
+.................... 	 
+.................... 	 
+.................... 		 
+.................... 		 
+.................... 		flag = 0;  
+1102:  BCLR.B  8AD.0
+....................  
+.................... 		if(indW>SIZE_RS_BUFFER) 
+1104:  MOV     8C0,W4
+1106:  CP      W4,#A
+1108:  BRA     LE,1120
+.................... 		{ 
+.................... 			indW = 0; 
+110A:  CLR     8C0
+.................... 			buffer[0]=0; 
+110C:  CLR.B   8C2
+.................... 			buffer[1]=0;  
+110E:  CLR.B   8C3
+.................... 			buffer[2]=0; 
+1110:  CLR.B   8C4
+.................... 			buffer[3]=0;  
+1112:  CLR.B   8C5
+.................... 			buffer[4]=0;  
+1114:  CLR.B   8C6
+.................... 			buffer[5]=0;  
+1116:  CLR.B   8C7
+.................... 			buffer[6]=0;  
+1118:  CLR.B   8C8
+.................... 			buffer[7]=0;  
+111A:  CLR.B   8C9
+.................... 			buffer[8]=0; 
+111C:  CLR.B   8CA
+.................... 			buffer[9]=0;    
+111E:  CLR.B   8CB
+.................... 		} 
+.................... 	} 
+1120:  MOV     #12,W5
+1122:  REPEAT  #3
+1124:  MOV     [--W15],[W5--]
+1126:  MOV     [--W15],W5
+1128:  RETURN  
+....................  
+.................... } 
+
+Configuration Fuses:
+   Word  1L: 00CF   NOWRTB NOBSS NORBS
+          H: 0000  
+   Word  2L: 00CF   NOWRTSS NOSSS NORSS
+          H: 0000  
+   Word  3L: 0007   NOWRT NOPROTECT
+          H: 0000  
+   Word  4L: 0083   PR_PLL IESO
+          H: 0000  
+   Word  5L: 00C6   HS NOOSCIO
+          H: 0000  
+   Word  6L: 005F   WPOSTS16 WPRES128 WINDIS NOWDT
+          H: 0000  
+   Word  7L: 00E6   PUT64
+          H: 0000  
+   Word  8L: 00C3   ICSP1 NOJTAG NODEBUG
+          H: 0000  
+
+ROM data:
+00ABFE: C7AF                                       ..

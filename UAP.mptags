@@ -373,7 +373,10 @@ bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	606;"	p	line:606	sign
 bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	611;"	p	line:611	signature:(unsigned int48 var, unsigned int8 bit)
 bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	612;"	p	line:612	signature:(unsigned int64 var, unsigned int8 bit)
 clear_interrupt	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	774;"	p	line:774	signature:(unsigned int16 interrupt)
-d	F:\work\UAPP\main.c	199;"	l	line:199
+d	F:\work\UAPP\main.c	286;"	l	line:286
+data	F:\work\UAPP\main.c	104;"	l	line:104
+data	F:\work\UAPP\main.c	69;"	l	line:69
+data	F:\work\UAPP\main.c	83;"	l	line:83
 delay_cycles	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	618;"	p	line:618	signature:(unsigned int16 count)
 delay_ms	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	619;"	p	line:619	signature:(unsigned int16 time)
 delay_us	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	620;"	p	line:620	signature:(unsigned int16 time)
@@ -492,8 +495,9 @@ make8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	584;"	p	line:584	signatu
 make8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	585;"	p	line:585	signature:(unsigned int32 var, unsigned int8 offset)
 memcpy	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	576;"	p	line:576	signature:(unsigned int8* destination, unsigned int8* source, unsigned int16 num)
 memset	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	575;"	p	line:575	signature:(unsigned int8* destination, unsigned int8 value, unsigned int16 num)
-obmenRS	F:\work\UAPP\main.c	39;"	f	line:39
-obmenRS	F:\work\UAPP\main.h	67;"	p	line:67	signature:()
+obmenRS	F:\work\UAPP\main.c	46;"	f	line:46
+obmenRS	F:\work\UAPP\main.h	68;"	p	line:68	signature:()
+outData	F:\work\UAPP\main.c	56;"	l	line:56
 output_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	57;"	p	line:57	signature:(unsigned int16 value)
 output_bit	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	81;"	p	line:81	signature:(unsigned int16 pin, int1 level)
 output_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	58;"	p	line:58	signature:(unsigned int16 value)

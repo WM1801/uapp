@@ -26,6 +26,8 @@ void initAdcDma();
 void initADC(); 
 void readDmaAdc();
 
+//int1 tempDma = 0; 
+
 
 
  

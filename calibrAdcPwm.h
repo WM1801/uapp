@@ -61,6 +61,9 @@ int16 currentStateAvt = 0;
 int16 oldStateAvt = 0; 
 int16 newStateAvt = 0; 
 int1 enabSendCalibrData = 0;  
+int1 endCalibrMotor = 0; 
+
+void setPositionEndCalibr();
 
 void initAvtomat(); 
 void startAvtomatCalibr(); 

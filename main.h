@@ -62,6 +62,7 @@ int8 adress = 0;
 #include "CRC.c"
 #include "calibrAdcPwm.c" // timer7
 #include "motor.c"
+#include "ioPin.c"
 
 
 void obmenRS(); 

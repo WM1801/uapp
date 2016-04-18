@@ -1,10 +1,4 @@
 >>> Warning 202 "F:\work\UAPP\AZP.h" Line 16(6,16): Variable never used:   dmaAdcFlag
->>> Warning 202 "F:\work\UAPP\pwmUap.h" Line 71(7,17): Variable never used:   oldValAdc2
->>> Warning 202 "F:\work\UAPP\pwmUap.h" Line 72(7,17): Variable never used:   oldValAdc3
->>> Warning 202 "F:\work\UAPP\pwmUap.h" Line 73(7,17): Variable never used:   oldValAdc4
->>> Warning 202 "F:\work\UAPP\pwmUap.h" Line 76(7,14): Variable never used:   difAdc2
->>> Warning 202 "F:\work\UAPP\pwmUap.h" Line 77(7,14): Variable never used:   difAdc3
->>> Warning 202 "F:\work\UAPP\pwmUap.h" Line 78(7,14): Variable never used:   difAdc4
-      Memory usage:   ROM=14%      RAM=4% - 5%
-      0 Errors,  7 Warnings.
+      Memory usage:   ROM=16%      RAM=6% - 7%
+      0 Errors,  1 Warnings.
 Build Successful.

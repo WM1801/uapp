@@ -30,7 +30,12 @@ void readDmaAdc()
 		valAdc2 = (dmaAdcBuf[1]&0xFFFF);
 		valAdc3 = (dmaAdcBuf[2]&0xFFFF);
 		valAdc4 = (dmaAdcBuf[3]&0xFFFF); 
-		//dmaAdcFlag = 0; 
+	//	dmaAdcFlag = 1;
+	/*	tempDma = !tempDma; 
+		if(tempDma)
+		{	output_high(PIN_G1); }
+		else {output_low(PIN_G1); }*/
+			 
 	 
 	//}
 }

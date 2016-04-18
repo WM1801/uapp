@@ -20,14 +20,22 @@ void main()
 	
 	while(TRUE)
 	{
+		// отключение силовой части в случае замыкания
+		if(getStateOutError())
+		{
+			onOffPWMCanal(0x00); 
+		}
 		readDmaAdc(); 
 		obmenRS(); 
 		sendDataCalibr(); 
 	//	sendState();
-		testPoAdc(canalPwm, dataCanal3); 
-
-			
-		
+	//	testPoAdc(canalPwm, dataCanal3); 
+	//	if(dmaAdcFlag)
+		{
+			rotate();
+	//		dmaAdcFlag = 0; 	 
+		}	
+			//rotate(); 	
 		
 
 	}
@@ -42,12 +50,85 @@ void obmenRS()
 		if(buffer[0] == adress)
 		{			 	
 			switch(buffer[1])
-			{		
+			{	
+					case 0x19: 
+					{
+						int8 outData = 0; 
+						if(input(PIN_D8))
+						{outData |= 0x01; }
+						 
+						sendRS(adress); 
+						sendRS(0x19); 
+						sendRS(outData); 
+						indW = 0; 
+						break; 
+						
+					}	
+					case 0x16: 
+					{
+						int16 data = make16(buffer[2], buffer[3]); 
+						setMaxAccel(&m3, data); 
+						setMaxAccel(&m4, data);
+						setMaxAccel(&m5, data);
+						setMaxAccel(&m6, data);
+						indW = 0; 
+					
+						sendRS(adress); 
+						sendRS(0x16); 
+						break; 
+	
+					} 
+					case 0x17: 
+					{
+						int16 data = make16(buffer[3], buffer[4]);
+						switch(buffer[2]&0xFF) 
+						{
+							case 3: {setMinSpeed(&m3, data);  break;}
+							case 4: {setMinSpeed(&m4, data); break;}
+							case 5: {setMinSpeed(&m5, data); break;}
+							case 6: {setMinSpeed(&m6, data); break;}
+						}				
+						
+						
+					
+					
+						indW = 0; 
+					
+						sendRS(adress); 
+						sendRS(0x17); 
+						break; 
+	
+					} 
+					case 0x15: 
+					{
+						int16 data = make16(buffer[2], buffer[3]); 
+						setMaxSpeed(&m3, data); 
+						setMaxSpeed(&m4, data);
+						setMaxSpeed(&m5, data);
+						setMaxSpeed(&m6, data);
+						indW = 0; 
+					
+						sendRS(adress); 
+						sendRS(0x15); 
+						break; 
+	
+					} 
 					case 0x14: 
 					{
 						enabRegul = buffer[2]&0x01; 
 						canalPwm = (buffer[3]&0xFF); 
 						dataCanal3 = make16(buffer[4], buffer[5]); 
+						switch(canalPwm)
+						{
+							case 3: {newValueM3 = dataCanal3; break; }
+							case 4: {newValueM4 = dataCanal3; break; }
+							case 5: {newValueM5 = dataCanal3; break; }
+							case 6: {newValueM6 = dataCanal3; break; }
+							default: {newValueM3 = dataCanal3; 
+									  newValueM4 = dataCanal3; 
+									  newValueM5 = dataCanal3; 
+									  newValueM6 = dataCanal3; } 
+						}
 						sendRS(adress); 
 						sendRS(0x14);
 						indW = 0;  
@@ -55,7 +136,13 @@ void obmenRS()
 					}
 					case 0x13: 
 					{
-						setLimitAdcMotor(&m3, minAdc1, maxAdc1);
+						//setLimitAdcMotor(&m3, minAdc1, maxAdc1);
+						sendRS(adress); 
+						sendRS(0x13); 
+						startAvtomatCalibr(); 
+					//	sendRS16(m3->newValue);
+					
+							
 						//startAvtomatCalibr(); 
 					/*	sendRS(adress); 
 						sendRS(0x13);
@@ -95,7 +182,7 @@ void obmenRS()
 						if(indW>=6)
 						{
 							//change   uStr	uInd	Pstr		Pind	UPblenk
-							setAllPwm((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF)); 
+						//	setPwm((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF)); 
 											//uStr	uInd	Pstr		Pind	UPblenk
 							ansComSetAllUi((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF)); 
 							runVD(LED_GREEN);  
@@ -108,7 +195,7 @@ void obmenRS()
 						if(indW>=3)// проверка на полный буффер
 						{
 							//change
-							setUstr(buffer[2]&0xFF); 
+						//	setUstr(buffer[2]&0xFF); 
 							ansComSetUgolStr(buffer[2]&0xFF);
 							runVD(LED_GREEN);
 							indW = 0; 
@@ -122,7 +209,7 @@ void obmenRS()
 						if(indW>=3)// проверка на полный буффер
 						{
 							//change
-							setUind(buffer[2]&0xFF); 
+					//		setUind(buffer[2]&0xFF); 
 							ansComSetUgolInd(buffer[2]&0xFF);
 							runVD(LED_GREEN);
 							indW = 0; 
@@ -135,7 +222,7 @@ void obmenRS()
 						if(indW>=3)// проверка на полный буффер
 						{
 							//change
-							setPstr(buffer[2]&0xFF); 
+						//	setPstr(buffer[2]&0xFF); 
 							ansComSetPrgStr(buffer[2]&0xFF);
 							runVD(LED_GREEN);
 							indW = 0; 
@@ -148,7 +235,7 @@ void obmenRS()
 						if(indW>=3)// проверка на полный буффер
 						{
 							//change
-							setPind(buffer[2]&0xFF); 
+						//	setPind(buffer[2]&0xFF); 
 							ansComSetPrgInd(buffer[2]&0xFF);
 							runVD(LED_GREEN);
 							indW = 0; 
@@ -161,7 +248,7 @@ void obmenRS()
 						if(indW>=3)// проверка на полный буффер
 						{
 							//change
-							setUPbln(buffer[2]&0xFF); 
+						//	setUPbln(buffer[2]&0xFF); 
 							ansComSetUPbln(buffer[2]&0xFF);
 							runVD(LED_GREEN);
 							indW = 0; 

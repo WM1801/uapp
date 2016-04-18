@@ -1,48 +1,50 @@
 
-ROM used:   6088/44032 (14%)
+ROM used:   7182/44032 (16%)
             44032/44032 (100%) including unused fragments
 
-            2.0 Average locations per line
-            6.7 Average locations per statement
+            2.2 Average locations per line
+            7.4 Average locations per statement
 
-RAM used:   359/8192 (4%) at main() level
-            429/8192 (5%) worst case
+RAM used:   459/8192 (6%) at main() level
+            541/8192 (7%) worst case
 
-Stack used: 80 worst case (26 in main + 54 for interrupts)
+Stack used: 94 worst case (40 in main + 54 for interrupts)
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  273   154  17  main.c
-   70     0   0  main.h
+  360   217  22  main.c
+   71     0   0  main.h
   858     0   0  C:\Program Files (x86)\PICC\devices\24HJ64GP206.h
    58     0   0  uart.h
-  102    47   5  Led.c
+  102    43   4  Led.c
    29    16   2  PLL.c
    34     0   0  PLL.h
-  101    42   5  AZP.c
-   40     0   0  AZP.h
+  106    42   4  AZP.c
+   42     0   0  AZP.h
   132     0   0  ADC.h
-  292   145  16  pwmUap.c
-   95     0   0  pwmUap.h
-   92     0   0  CalibrAdcPwm.h
-   25     0   0  motor.h
+  127    66   7  pwmUap.c
+   85     0   0  pwmUap.h
+   95     0   0  CalibrAdcPwm.h
+   60     0   0  motor.h
    95    39   4  RS485.c
    25     0   0  RS485.h
-  154    71   8  DMA_RS.c
+  154    71   7  DMA_RS.c
    18     3   0  CRC.c
-  362   271  30  calibrAdcPwm.c
-   92     0   0  calibrAdcPwm.h
-  134   119  13  motor.c
+  381   282  29  calibrAdcPwm.c
+   95     0   0  calibrAdcPwm.h
+  313   184  19  motor.c
+   12     4   0  ioPin.c
+    9     0   0  ioPin.h
 ----- -----
- 3081   907 Total
+ 3261   967 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     14   0    0             @GETCH_BIU_1
 0     32   0    0    110  2.1  initLed
 0     34   0    2    188  4.7  runVD
-0     92   1    0    475  2.8  timer5_isr
+0     76   1    0    367  2.7  timer5_isr
 0     34   0    0    351  1.8  init_PLL
 0     10   0    0     42  1.7  clearAdcDmaBuf
 0     42   0    0    138  3.0  initAdcDma
@@ -50,27 +52,10 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     26   0    0    174  2.7  readDmaAdc
 0     76   1    0    842  1.4  initADC
 0    160   1    0   1212  3.9  initPWM
-0     96   1    3    385  4.6  testPoAdc
-0     74   1    2             @SITOF
-0    196   2    8             @MULFF
-0    202   2    8             @DIVFF
-0     44   0    4             @SFTOI
-0     16   0    1     69  2.3  onOffPWMCanal
-0      6   0    0     17  0.8  setEnableSD
-0      6   0    0     17  0.8  setDisableSD
-0     42   0    5    158  2.4  setAllPwm
-0     10   0    1     37  1.7  setUstr
-0     10   0    1     37  1.7  setUind
-0     10   0    1     37  1.7  setPstr
-0     10   0    1     37  1.7  setPind
-0     10   0    1     37  1.7  setUPbln
-0      2   0    0      3  0.0  updateUstr
-0      2   0    0      3  0.0  updateUind
-0      2   0    0      3  0.0  updatePstr
-0      2   0    0      3  0.0  updatePind
-0     42   0    0    178  2.3  updateBlenker
+0    112   1    2    478  7.0  rotate
+0     16   0    1     80  2.4  onOffPWMCanal
 0      4   0    0     17  0.8  initRS
-0     64   1    3    127  3.4  interruptRS
+0     64   0    3    127  3.4  interruptRS
 0     20   0    0    110  2.1  pause3_5RS
 0     40   0    0     74  1.6  __timer4_isr__
 0     26   0    1    104  2.5  sendRS
@@ -80,7 +65,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     26   0    2    104  2.6  sendInRsDma
 0     38   0    0     33  1.3  DMAInterrupts
 0     32   0    0      3  0.0  DmaErrorInterrupt
-0     64   1    5    303  3.2  ansComSetAllUi
+0     64   0    5    303  3.2  ansComSetAllUi
 0     32   0    1     96  2.1  ansComSetUgolStr
 0     32   0    1     96  2.1  ansComSetUgolInd
 0     32   0    1     96  2.1  ansComSetPrgStr
@@ -93,11 +78,11 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     22   0    1     76  2.4  ansErrorCom
 0     40   0    8    244  3.5  getChecksum
 0     46   0    0             @READ_PROGRAM_MEMORY
-0     58   0    0    536  2.9  initAvtomat
+0     60   0    0    564  2.9  initAvtomat
 0      8   0    0     50  1.5  resetCountZikl
-0      6   0    0     32  1.0  stopTimer7
+0     40   0    0    195  2.3  stopTimer7
 0     18   0    0     90  2.1  startTimer7
-0     14   0    0     31  1.1  startAvtomatCalibr
+0     16   0    0     52  1.4  startAvtomatCalibr
 0     10   0    0     32  1.6  updateState
 0    120   1    2   1360  6.8  testPWM
 0    252   2    0   1286  6.8  timer7_isr
@@ -110,30 +95,43 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    106   1    0    547  3.4  sravnData
 0     96   1    1    297  2.8  setRotatePwm
 0     92   1   13    282  4.5  getFullMasCalibr
-0     52   0   13    233  3.6  initMotor
-0    164   1   11    568  6.4  setLimitAdcMotor
-0    712   6   28   5210 11.3  setRotate
-0    282   2    0    290  2.8  MAIN
-0    904   7   13   5625  8.9  obmenRS
+0    222   2   15    875  5.1  initMotor
+0    172   1   11    597  6.4  setLimitAdcMotor
+0     74   1    2             @SITOF
+0     56   0    9    199  4.0  setMinSpeed
+0    138   1   11    242  4.6  setK
+0    104   1    8             @FLT
+0    202   1    8             @DIVFF
+0     48   0    7    218  5.0  setMaxSpeed
+0     42   0   13    175  5.2  difSost
+0    216   2   22    804  8.2  intSost
+0     44   0    4             @SFTOI
+0    196   1    8             @MULFF
+0     44   0   14    156  4.9  proSost
+0    848   6   22   5917 10.5  setRotate
+0     16   0    7     57  2.5  setMaxAccel
+0     18   0    1     86  2.8  getStateOutError
+0    274   2    0    327  2.8  MAIN
+0   1126   8   20   7881  9.5  obmenRS
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               70
-    Statements              907
-    Comments                370
-    Volume (V)              45919
-    Difficulty (D)          194.6
-    Effort to implement (E) 8934551
-    Time to implement (T)   137 hours, 53 minutes
-    Est Delivered Bugs (B)  14
-    Cyclomatic Complexity   108
-    Maintainability (MI)    75
+    Functions               65
+    Statements              967
+    Comments                469
+    Volume (V)              54274
+    Difficulty (D)          218.3
+    Effort to implement (E) 11850200
+    Time to implement (T)   182 hours, 52 minutes
+    Est Delivered Bugs (B)  17
+    Cyclomatic Complexity   133
+    Maintainability (MI)    49
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-001FE   508  0  
-00200-0ABFC  5574  37944  
+00200-0ABFC  6668  36850  
 0ABFE-0ABFE     2  0  
 
 

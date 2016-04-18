@@ -28,7 +28,18 @@ void initAvtomat()
 	oldStateAvt = 0; 
 	newStateAvt = 0; 
 	enabSendCalibrData = 0; 
+	endCalibrMotor = 0; 
 //	resetCountZikl(); 
+}
+
+
+void setPositionEndCalibr() // smotri stopTimer7(), primenenie dannoi f() vyzyvaet 
+{				//Interrupts disabled during call to prevent re-entrancy:  (stopTimer7)
+	newValueM3  = (maxAdc1&0xFFC0);
+	newValueM4  = (maxAdc2&0xFFC0);
+	newValueM5  = (maxAdc3&0xFFC0);
+	newValueM6  = (maxAdc4&0xFFC0);
+
 }
 
 void resetCountZikl()
@@ -36,12 +47,19 @@ void resetCountZikl()
 	ziklReadCalibr = 0; 
 	indexDataRead = 0;
 	enabSendCalibrData = 0;  
+	
 }
 
 void stopTimer7()
 {
 	disable_interrupts(int_TIMER7); 
-	set_timer7(0); 
+	set_timer7(0);
+	endCalibrMotor = 1; 
+	//setPositionEndCalibr(); -  Interrupts disabled during call to prevent re-entrancy:  (stopTimer7)
+	newValueM3  = (maxAdc1&0xFFC0);
+	newValueM4  = (maxAdc2&0xFFC0);
+	newValueM5  = (maxAdc3&0xFFC0);
+	newValueM6  = (maxAdc4&0xFFC0);
 }
 
 void startTimer7()
@@ -58,6 +76,7 @@ void startAvtomatCalibr()
 	stopTimer7(); 
 	initAvtomat();
 	startTimer7(); 
+	endCalibrMotor = 0; 
 		
 }
 
@@ -160,8 +179,8 @@ void sendState( )
 void sendDataCalibr()
 {
 	setLimitAdcMotor(&m3, minAdc1, maxAdc1);
-	setLimitAdcMotor(&m4, minAdc2, maxAdc2);
-	setLimitAdcMotor(&m5, minAdc3, maxAdc3);
+	setLimitAdcMotor(&m4, maxAdc2, minAdc2); // перевернута шкала АЦП
+	setLimitAdcMotor(&m5, maxAdc3, minAdc3); // перевернута шкала АЦП
 	setLimitAdcMotor(&m6, minAdc4, maxAdc4);
 
 	if(enabSendCalibrData)

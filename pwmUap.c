@@ -16,7 +16,7 @@ void initPWM()
 	set_compare_time(4, 0,POL_PERIOD);//3125, 9375);
 	set_compare_time(5, 0,POL_PERIOD); //9375, 3125);
 	set_compare_time(6, 0,POL_PERIOD);//3125, 9375);
-	enabRegul = 0; 
+	
 
 	initMotor(&m3, 3, TIME_PWM, 0, 0); 
 	initMotor(&m4, 4, TIME_PWM, 0, 0); 
@@ -49,27 +49,30 @@ void rotate()
 
 void onOffPWMCanal(int1 b)
 {
+	
 	if(b==0)
 	{
 		OFF_PWR_PWM;
+		setAndError(&m3, ERR_PWR_ANALOG_ON);
+		setAndError(&m4, ERR_PWR_ANALOG_ON);
+		setAndError(&m5, ERR_PWR_ANALOG_ON);
+		setAndError(&m6, ERR_PWR_ANALOG_ON);
 	}
 	else
 	{
+		
 		ON_PWR_PWM;
+		setOrError(&m3, ERR_PWR_ANALOG_ON);
+		setOrError(&m4, ERR_PWR_ANALOG_ON);
+		setOrError(&m5, ERR_PWR_ANALOG_ON);
+		setOrError(&m6, ERR_PWR_ANALOG_ON);
+		setAndError(&m3, ERR_PWR_KZ);
+		setAndError(&m4, ERR_PWR_KZ);
+		setAndError(&m5, ERR_PWR_KZ);
+		setAndError(&m6, ERR_PWR_KZ);
 	} 
 	
 }
-
-/*void setEnableSD()
-{
-	output_high(SD_PIN); 
-}
-
-void setDisableSD()
-{
-	output_low(SD_PIN);
-}*/
-
  
 void setPwm3456(int16 pwm3, int16 pwm4, int16 pwm5, int16 pwm6, int8 rk)
 {
@@ -99,6 +102,7 @@ void setPwm6(int16 data)
 void setRk(int8 data)
 {
 	newValueRk = data; 
+	updateRk(); 
 }
 
 

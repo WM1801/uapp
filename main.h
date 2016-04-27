@@ -37,18 +37,31 @@ int8 adress = 0;
 #define ADRES2    0x85
 
 //commands 
-#define COM_SET_ALL_UI       0x40 //устанавливает значения всех стрелок, бленкеров, индексов
-#define COM_SET_UGOL_STR	 0x31 //только стрелка угла атаки 	
-#define COM_SET_UGOL_IND     0x3A //индекс угла атаки 		
-#define COM_SET_PRG_STR      0x32 //стрелка перегрузки  
-#define COM_SET_PRG_IND      0x41 //индекс перегрузки 
-#define COM_SET_UP_BLN       0x42 //бленкер угла атаки & блекнкер перегрузки
+//PWM
+#define COM_SET_PWM_RK       0x31 //устанавливает значения всех стрелок, бленкеров, индексов
+#define COM_SET_SPEED		 0x33 //максим и мин скорости	
+	//parameters PWM
+	#define SEL_SET_PWM_RK		 0x10 //значения всех стрелок, бленкеров, индексов
+	#define SEL_SET_PWM5	     0x05 //только стрелка угла атаки 	
+	#define SEL_SET_PWM3         0x03 //индекс угла атаки 		
+	#define SEL_SET_PWM4         0x04 //стрелка перегрузки  
+	#define SEL_SET_PWM6         0x06 //индекс перегрузки 
+	#define SEL_SET_RK           0x07 //бленкер угла атаки & блекнкер перегрузки
+#define COM_READ_SPEED       0x43  // чтение установленых макс и мин скорости
+//ADC
+#define COM_RUN_CALIBR       0x32 //запуск калибровки АЦП
+#define COM_READ_ADC         0x40 //текущее значение АЦП
+#define COM_LIMIT_ADC		 0x41 //измеренные минимум и максимум АЦП
+#define COM_READ_ERROR		 0x42 //текущее состояние мотора ()
+//PWM_POWER
+#define COM_ONOFF_PWM		 0x35 // включение и отключение Шим
 
+//
 #define COM_READ_CRC	     0x47 //чтение контрольной суммы
 #define COM_INFO			 0x48 //поддерживаемы команды 
-#define COM_READ_ID		     0x46 //идентивикатор
+#define COM_READ_ID		     0x46 //идентификатор
 #define COM_RESET_MK		 0x55 //программный перезапуск МК	
-#define RESET_MK_WORD_2      0xAA //2 е -слово используемое в команде перезапуска МК
+	#define RESET_MK_WORD_2      0xAA //2 е -слово используемое в команде перезапуска МК
 
 
 //add modul 

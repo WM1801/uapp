@@ -1,9 +1,9 @@
 // used timer5 
 
-#define LED_GREEN_ON {output_high(PIN_G7);}// output_low(PIN_G0);}
-#define LED_GREEN_OFF {output_low(PIN_G7);}// output_high(PIN_G0);}
-#define LED_RED_ON {output_high(PIN_G8);} //output_low(PIN_G1);}
-#define LED_RED_OFF {output_low(PIN_G8);}// output_high(PIN_G1);}
+#define LED_GREEN_ON {output_high(PIN_G7); output_low(PIN_G0);}
+#define LED_GREEN_OFF {output_low(PIN_G7); output_high(PIN_G0);}
+#define LED_RED_ON {output_high(PIN_G8); output_low(PIN_G1);}
+#define LED_RED_OFF {output_low(PIN_G8); output_high(PIN_G1);}
 
 // color vd
 #define LED_RED   0x5555

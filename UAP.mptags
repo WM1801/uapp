@@ -53,16 +53,18 @@ COMPARE_SINGLE_PULSE::0x0004	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	3
 COMPARE_TIMER2::0x0000	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	349;"	d	line:349
 COMPARE_TIMER3::0x0008	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	350;"	d	line:350
 COMPARE_TOGGEL::0x0003	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	342;"	d	line:342
-COM_INFO::0x48	F:\work\UAPP\main.h	48;"	d	line:48
-COM_READ_CRC::0x47	F:\work\UAPP\main.h	47;"	d	line:47
-COM_READ_ID::0x46	F:\work\UAPP\main.h	49;"	d	line:49
-COM_RESET_MK::0x55	F:\work\UAPP\main.h	50;"	d	line:50
-COM_SET_ALL_UI::0x40	F:\work\UAPP\main.h	40;"	d	line:40
-COM_SET_PRG_IND::0x41	F:\work\UAPP\main.h	44;"	d	line:44
-COM_SET_PRG_STR::0x32	F:\work\UAPP\main.h	43;"	d	line:43
-COM_SET_UGOL_IND::0x3A	F:\work\UAPP\main.h	42;"	d	line:42
-COM_SET_UGOL_STR::0x31	F:\work\UAPP\main.h	41;"	d	line:41
-COM_SET_UP_BLN::0x42	F:\work\UAPP\main.h	45;"	d	line:45
+COM_INFO::0x48	F:\work\UAPP\main.h	61;"	d	line:61
+COM_LIMIT_ADC::0x41	F:\work\UAPP\main.h	54;"	d	line:54
+COM_ONOFF_PWM::0x35	F:\work\UAPP\main.h	57;"	d	line:57
+COM_READ_ADC::0x40	F:\work\UAPP\main.h	53;"	d	line:53
+COM_READ_CRC::0x47	F:\work\UAPP\main.h	60;"	d	line:60
+COM_READ_ERROR::0x42	F:\work\UAPP\main.h	55;"	d	line:55
+COM_READ_ID::0x46	F:\work\UAPP\main.h	62;"	d	line:62
+COM_READ_SPEED::0x43	F:\work\UAPP\main.h	50;"	d	line:50
+COM_RESET_MK::0x55	F:\work\UAPP\main.h	63;"	d	line:63
+COM_RUN_CALIBR::0x32	F:\work\UAPP\main.h	52;"	d	line:52
+COM_SET_PWM_RK::0x31	F:\work\UAPP\main.h	41;"	d	line:41
+COM_SET_SPEED::0x33	F:\work\UAPP\main.h	42;"	d	line:42
 DMA_BYTE::0x40	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	536;"	d	line:536
 DMA_B_SELECT::0x04	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	550;"	d	line:550
 DMA_CONTINOUS::0x00	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	541;"	d	line:541
@@ -239,7 +241,7 @@ PIN_G6::5942	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	135;"	d	line:135
 PIN_G7::5943	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	136;"	d	line:136
 PIN_G8::5944	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	137;"	d	line:137
 PIN_G9::5945	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	138;"	d	line:138
-RESET_MK_WORD_2::0xAA	F:\work\UAPP\main.h	51;"	d	line:51
+RESET_MK_WORD_2::0xAA	F:\work\UAPP\main.h	64;"	d	line:64
 RESTART_BROWNOUT::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	214;"	d	line:214
 RESTART_ILLEGAL_OP::14	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	218;"	d	line:218
 RESTART_MCLR::7	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	217;"	d	line:217
@@ -247,6 +249,12 @@ RESTART_POWER_UP::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	213;"	d	li
 RESTART_SOFTWARE::6	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	216;"	d	line:216
 RESTART_TRAP_CONFLICT::15	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	219;"	d	line:219
 RESTART_WATCHDOG::4	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	215;"	d	line:215
+SEL_SET_PWM3::0x03	F:\work\UAPP\main.h	46;"	d	line:46
+SEL_SET_PWM4::0x04	F:\work\UAPP\main.h	47;"	d	line:47
+SEL_SET_PWM5::0x05	F:\work\UAPP\main.h	45;"	d	line:45
+SEL_SET_PWM6::0x06	F:\work\UAPP\main.h	48;"	d	line:48
+SEL_SET_PWM_RK::0x10	F:\work\UAPP\main.h	44;"	d	line:44
+SEL_SET_RK::0x07	F:\work\UAPP\main.h	49;"	d	line:49
 SLEEP_FULL::0	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	222;"	d	line:222
 SLEEP_IDLE::1	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	223;"	d	line:223
 SPI_CLK_DIV_112::0x0005	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	418;"	d	line:418
@@ -354,6 +362,8 @@ abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	566;"	p	line:566	signature
 abs	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	567;"	p	line:567	signature:(float64 x)
 adc_done	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	442;"	p	line:442	signature:(void)
 adress	F:\work\UAPP\main.h	26;"	v	line:26
+b	F:\work\UAPP\main.c	189;"	l	line:189
+b	F:\work\UAPP\main.c	76;"	l	line:76
 bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	601;"	p	line:601	signature:(unsigned int8 var, unsigned int8 bit)
 bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	602;"	p	line:602	signature:(unsigned int16 var, unsigned int8 bit)
 bit_clear	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	603;"	p	line:603	signature:(unsigned int32 var, unsigned int8 bit)
@@ -372,11 +382,25 @@ bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	605;"	p	line:605	sign
 bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	606;"	p	line:606	signature:(unsigned int32 var, unsigned int8 bit)
 bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	611;"	p	line:611	signature:(unsigned int48 var, unsigned int8 bit)
 bit_test	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	612;"	p	line:612	signature:(unsigned int64 var, unsigned int8 bit)
+canal	F:\work\UAPP\main.c	188;"	l	line:188
+canal	F:\work\UAPP\main.c	75;"	l	line:75
 clear_interrupt	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	774;"	p	line:774	signature:(unsigned int16 interrupt)
-d	F:\work\UAPP\main.c	286;"	l	line:286
-data	F:\work\UAPP\main.c	104;"	l	line:104
-data	F:\work\UAPP\main.c	69;"	l	line:69
-data	F:\work\UAPP\main.c	83;"	l	line:83
+d	F:\work\UAPP\main.c	283;"	l	line:283
+d3	F:\work\UAPP\main.c	56;"	l	line:56
+d4	F:\work\UAPP\main.c	57;"	l	line:57
+d5	F:\work\UAPP\main.c	58;"	l	line:58
+d6	F:\work\UAPP\main.c	59;"	l	line:59
+dPwm	F:\work\UAPP\main.c	195;"	l	line:195
+dPwm	F:\work\UAPP\main.c	202;"	l	line:202
+dPwm	F:\work\UAPP\main.c	209;"	l	line:209
+dPwm	F:\work\UAPP\main.c	216;"	l	line:216
+dPwm3	F:\work\UAPP\main.c	230;"	l	line:230
+dPwm4	F:\work\UAPP\main.c	231;"	l	line:231
+dPwm5	F:\work\UAPP\main.c	232;"	l	line:232
+dPwm6	F:\work\UAPP\main.c	233;"	l	line:233
+dRk	F:\work\UAPP\main.c	223;"	l	line:223
+dRk	F:\work\UAPP\main.c	234;"	l	line:234
+data	F:\work\UAPP\main.c	172;"	l	line:172
 delay_cycles	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	618;"	p	line:618	signature:(unsigned int16 count)
 delay_ms	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	619;"	p	line:619	signature:(unsigned int16 time)
 delay_us	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	620;"	p	line:620	signature:(unsigned int16 time)
@@ -496,8 +520,7 @@ make8	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	585;"	p	line:585	signatu
 memcpy	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	576;"	p	line:576	signature:(unsigned int8* destination, unsigned int8* source, unsigned int16 num)
 memset	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	575;"	p	line:575	signature:(unsigned int8* destination, unsigned int8 value, unsigned int16 num)
 obmenRS	F:\work\UAPP\main.c	46;"	f	line:46
-obmenRS	F:\work\UAPP\main.h	68;"	p	line:68	signature:()
-outData	F:\work\UAPP\main.c	56;"	l	line:56
+obmenRS	F:\work\UAPP\main.h	81;"	p	line:81	signature:()
 output_b	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	57;"	p	line:57	signature:(unsigned int16 value)
 output_bit	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	81;"	p	line:81	signature:(unsigned int16 pin, int1 level)
 output_c	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	58;"	p	line:58	signature:(unsigned int16 value)
@@ -644,6 +667,22 @@ shift_left	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	579;"	p	line:579	si
 shift_right	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	580;"	p	line:580	signature:(unsigned int8* address, unsigned int8 bytes, int1 value)
 sleep	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	210;"	p	line:210	signature:(void)
 sleep	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	211;"	p	line:211	signature:(unsigned int8 mode)
+speedMax	F:\work\UAPP\main.c	101;"	l	line:101
+speedMax	F:\work\UAPP\main.c	110;"	l	line:110
+speedMax	F:\work\UAPP\main.c	83;"	l	line:83
+speedMax	F:\work\UAPP\main.c	92;"	l	line:92
+speedMax3	F:\work\UAPP\main.c	119;"	l	line:119
+speedMax4	F:\work\UAPP\main.c	121;"	l	line:121
+speedMax5	F:\work\UAPP\main.c	123;"	l	line:123
+speedMax6	F:\work\UAPP\main.c	125;"	l	line:125
+speedMin	F:\work\UAPP\main.c	100;"	l	line:100
+speedMin	F:\work\UAPP\main.c	109;"	l	line:109
+speedMin	F:\work\UAPP\main.c	82;"	l	line:82
+speedMin	F:\work\UAPP\main.c	91;"	l	line:91
+speedMin3	F:\work\UAPP\main.c	118;"	l	line:118
+speedMin4	F:\work\UAPP\main.c	120;"	l	line:120
+speedMin5	F:\work\UAPP\main.c	122;"	l	line:122
+speedMin6	F:\work\UAPP\main.c	124;"	l	line:124
 spi_data_in	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	368;"	p	line:368	signature:(void)
 spi_data_in2	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	378;"	p	line:378	signature:(void)
 spi_init	C:\Program Files (x86)\PICC\Devices\24HJ64GP206.h	678;"	p	line:678	signature:(unsigned int32 baud)

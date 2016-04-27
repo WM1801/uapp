@@ -18,6 +18,7 @@ void initMotor(Motor * m, int cPwm,  int16 tPwm, int16 vAdc1, int16 vAdc2)
 	m->integrError = 0;
 	m->maxIEr = (m->minSpeed<<3); 
 	m->minIEr = ((m->minSpeed<<3)*(-1));  
+
 }
 
 void updateError(Motor *m)
@@ -25,12 +26,36 @@ void updateError(Motor *m)
 	int16 dAdc  = (m->maxValAdc - m->minValAdc);
 	if(dAdc < MIN_DADC)
 	{
-		m->error |= ERR_DADC;
+		setOrError(m, ERR_DADC); 
 		m->enabRotate = 0; 
 	}
 	
 
 }
+
+
+int8 getError(Motor *m)
+{
+	int8 dataError = m->Error; 
+	return dataError; 
+}
+
+
+void setOrError(Motor *m, int8 data)
+{
+	m->Error |= (data&0xFF);  
+}
+
+void setAndError(Motor *m, int8 data)
+{
+	m->Error &= (~(data&0xFF));  
+}
+
+/*void setError(Motor *m, int8 data)
+{
+	m->Error = data;
+}*/
+
 void setLimitAdcMotor(Motor *m, int16 vAdc1, int16 vAdc2)
 {
 	if(vAdc1>vAdc2)
@@ -38,7 +63,7 @@ void setLimitAdcMotor(Motor *m, int16 vAdc1, int16 vAdc2)
 		m->upValue = 0; 
 		m->minValAdc = vAdc2; 
 		m->maxValAdc = vAdc1; 
-		m->Error |= ERR_VADC1_B; 
+		setOrError(m, ERR_VADC1_B);
 	}
 	else
 	{	
@@ -47,11 +72,12 @@ void setLimitAdcMotor(Motor *m, int16 vAdc1, int16 vAdc2)
 			m->upValue = 1; 
 			m->minValAdc = vAdc1; 
 			m->maxValAdc = vAdc2;
-			m->Error |= ERR_VADC2_B;
+			setOrError(m, ERR_VADC2_B);
+		
 		}
 		else
 		{
-			m->Error |= ERR_VADC_RAVN; 
+			setOrError(m, ERR_VADC_RAVN);
 		}
 	} 
 	m->dAdc = ((float)(m->maxValAdc - m->minValAdc));
@@ -64,6 +90,7 @@ void setMinSpeed(Motor *m, int16 data)
 	m->minSpeed = data; 
 	m->maxIEr = (m->minSpeed<<3); 
 	m->minIEr = ((m->minSpeed<<3)*(-1));
+	m->kI = m->minSpeed; 
 }
 
 void setK(Motor *m)
@@ -171,7 +198,7 @@ int16 proSost(Motor *m, int16 data, float eData)
 	{
 		Vtek = (m->oldValAdc - data); 
 	}
-
+// speed ограничивается в kP
 	if(Vtek>m->oldSpeed)
 	{
 		Atek = (Vtek - m->oldSpeed); 		
@@ -309,4 +336,32 @@ void setMaxAccel(Motor *m, int16 data)
 {
 	m->maxAccel = data; 
 }
+
+int16 getMinSpeed(Motor *m)
+{
+    return m->minSpeed;  
+} 
+int16 getMaxSpeed(Motor *m)
+{
+    return m->maxSpeed; 
+} 
+int16 getMinAccel(Motor *m)
+{
+    return m->minAccel; 
+} 
+int16 getMaxAccel(Motor *m)
+{
+    return m->maxAccel; 
+} 
+
+
+
+void setIntError(Motor *m,signed int minE, signed int maxE)
+{
+	m->minIEr = minE; 
+	m->maxIEr = maxE; 
+}
+
+
+
 

@@ -1,18 +1,22 @@
 #ifndef MOTOR_H
 #define MOTOR_H
 
-#define MIN_ERROR  2.0f // минимальная ошибка для доворота 
+//#define MIN_ERROR  2.0f // минимальная ошибка для доворота 
 
-#define MIN_DADC 0x0008 
+#define MIN_DADC 0x00FF //минимальная разница между граничными значениями АЦП
 
 // Error
 // bits
-#define ERR_DADC 0x08 //(dADC<MIN_ADC)
-#define ERR_VADC2_B   0x04 //vAdc1<vAdc2
-#define ERR_VADC1_B   0x02 //vAdc1>vAdc2
-#define ERR_VADC_RAVN 0x01 //vAdc1=vAdc2
-#define MAX_INT_ERROR 50    
-#define MIN_INT_ERROR (-50) 
+#define END_CALIBR    0x80 // флаг окончания калибровки
+#define ERROR_CLBR   0x40 // вышло время калибровки, значения не прочитались
+#define ERR_PWR_ANALOG_ON (0x20) // силовая часть включена
+#define ERR_PWR_KZ    	   (0x10) // замыкание силовой части 
+#define ERR_DADC      0x08 //(dADC<MIN_ADC) // мотор не крутится положение макс и мин ацп менее MIN_DADC 
+#define ERR_VADC2_B   0x04 //vAdc1<vAdc2 // определяет верх и низ
+#define ERR_VADC1_B   0x02 //vAdc1>vAdc2 // определяет верх и низ
+#define ERR_VADC_RAVN 0x01 //vAdc1=vAdc2 // калибровки не было 
+//#define MAX_INT_ERROR 50    
+//#define MIN_INT_ERROR (-50) 
 
 
 typedef struct MotorAs
@@ -24,7 +28,7 @@ typedef struct MotorAs
 	int16 oldValAdc; // прошлое значение используемое для установки 
 	int16 newValue; // новое значение в которое необходимо перейти стрелке
 	float dAdc; 	// разность макс и мин значения АЦП
-	float kP;  // 	(POL_POL_PERIOD/m->dAdc) где (POL_POL_PERIOD) знач ШИМ для макс 
+	float kP;  // 	(m->maxSpeed/m->dAdc) где (m->maxSpeed = POL_POL_PERIOD(default)) знач ШИМ для макс 
 				//скорости(1/4Шим(90градусов сдвиг между каналами ШИМ)))) 
 				// и m->dAdc диапазон шкалы в значениях АЦП
 	float kD; 
@@ -54,6 +58,23 @@ int16 proSost(Motor *m, int16 data, float eData);
 void setNewValueMotor (Motor *m, int16 data); 
 void setK(Motor *m);
 void setMaxAccel(Motor *m, int16 data);  
+
+void setIntError(Motor *m,signed int minE, signed int maxE);
+void setOrError(Motor *m, int8 data); 
+void setAndError(Motor *m, int8 data); 
+//void setError(Motor *m, int8 data); 
+void updateError(Motor *m);
+//void setMinRotate(int16 min_error);  
+
+//get setting motor
+int16 getMinSpeed(Motor *m); 
+int16 getMaxSpeed(Motor *m); 
+int16 getMinAccel(Motor *m); 
+int16 getMaxAccel(Motor *m); 
+int8  getError(Motor *m); 
+
+
+
 
 
 #endif

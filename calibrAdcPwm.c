@@ -74,9 +74,15 @@ void startTimer7()
 void startAvtomatCalibr()
 {
 	stopTimer7(); 
+	setAndError(&m3, END_CALIBR|ERROR_CLBR|ERR_DADC|ERR_VADC2_B|ERR_VADC1_B|ERR_VADC_RAVN);
+	setAndError(&m4, END_CALIBR|ERROR_CLBR|ERR_DADC|ERR_VADC2_B|ERR_VADC1_B|ERR_VADC_RAVN);
+	setAndError(&m5, END_CALIBR|ERROR_CLBR|ERR_DADC|ERR_VADC2_B|ERR_VADC1_B|ERR_VADC_RAVN);
+	setAndError(&m6, END_CALIBR|ERROR_CLBR|ERR_DADC|ERR_VADC2_B|ERR_VADC1_B|ERR_VADC_RAVN);
 	initAvtomat();
 	startTimer7(); 
 	endCalibrMotor = 0; 
+	errorRotate = 0; 
+
 		
 }
 
@@ -178,15 +184,31 @@ void sendState( )
 //****************
 void sendDataCalibr()
 {
+	if(enabSendCalibrData)
+	{
 	setLimitAdcMotor(&m3, minAdc1, maxAdc1);
 	setLimitAdcMotor(&m4, maxAdc2, minAdc2); // перевернута шкала АЦП
 	setLimitAdcMotor(&m5, maxAdc3, minAdc3); // перевернута шкала АЦП
 	setLimitAdcMotor(&m6, minAdc4, maxAdc4);
-
-	if(enabSendCalibrData)
+	setOrError(&m3, END_CALIBR);
+	setOrError(&m4, END_CALIBR);
+	setOrError(&m5, END_CALIBR);
+	setOrError(&m6, END_CALIBR);
+	updateError(&m3);
+	updateError(&m4);
+	updateError(&m5);
+	updateError(&m6);
+	if(errorRotate&ERROR_WAIT)
 	{
-		sendRS(adress); 
-		sendRS(0x13);
+		setOrError(&m3, ERROR_CLBR);
+		setOrError(&m4, ERROR_CLBR);
+		setOrError(&m5, ERROR_CLBR);
+		setOrError(&m6, ERROR_CLBR);
+
+	}
+	
+	/*	sendRS(adress); 
+		sendRS(COM_RUN_CALIBR);
 		sendRS16(minADC1);
 		sendRS16(minADC2);
 		sendRS16(minADC3);
@@ -195,7 +217,7 @@ void sendDataCalibr()
 		sendRS16(maxADC2);
 		sendRS16(maxADC3);
 		sendRS16(maxADC4);
-		sendRS(errorRotate); 
+		sendRS(errorRotate); */
 		enabSendCalibrData = 0; 
 	}
 	
@@ -205,6 +227,7 @@ void sendDataCalibr()
 void setEnableSendData()
 {
 	enabSendCalibrData = 1; 
+	
 }
 //****************
 void readData1Adc()

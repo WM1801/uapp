@@ -49,9 +49,6 @@ void initPWM();
 void rotate(); 
 // включение, отключение силовой части  
 void onOffPWMCanal(int1 b); 
-// вкл
-void setEnableSD();
-void setDisableSD();
 // установка нового значения с АЦП до которого будет осуществлен поворот  
 void setPwm3456(int16 pwm3, int16 pwm4, int16 pwm5, int16 pwm6, int8 blenk);
 void setPwm3(int16 data); 
@@ -60,18 +57,13 @@ void setPwm5(int16 data);
 void setPwm6(int16 data); 
 // управление бленкерами 
 void setRk(int8 data);
-
-// вулючение и отключение силов
-
-/*void updatePwm3(); 
-void updatePwm4(); 
-void updatePwm5();
-void updatePwm6(); */
+// установить выводы согласно нового значения 
 void updateRk(); 
 
-int8 canalPwm = 0; 
-int16 dataCanal3 = 0; 
-int1 enabRegul = 0; 
+// test
+//int8 canalPwm = 0; 
+//int16 dataCanal3 = 0; 
+//int1 enabRegul = 0; 
 
 
 

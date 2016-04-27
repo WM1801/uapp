@@ -5,7 +5,7 @@
 #include "AZP.h"
 
 #define TIME_TEST_ADC_PWM 31250  //200ms
-#define MAX_COUNT_ZIKL_WAIT 800
+#define MAX_COUNT_ZIKL_WAIT 200
 
 #define ERROR_WAIT (1<<4)
 #define ACCURACY_ADC 0xFFF0

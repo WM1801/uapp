@@ -1,4 +1,4 @@
 >>> Warning 202 "F:\work\UAPP\AZP.h" Line 16(6,16): Variable never used:   dmaAdcFlag
-      Memory usage:   ROM=16%      RAM=6% - 7%
+      Memory usage:   ROM=21%      RAM=6% - 7%
       0 Errors,  1 Warnings.
 Build Successful.

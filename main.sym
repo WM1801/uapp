@@ -1,31 +1,31 @@
 W0      @SCRATCH
 W0L     _RETURN_
-W0 -W1  @MULFF.P1
+W0 -W1  @DIV3232B.P1
 W0 -W1  @READ_ROM_MEMORY.P2
-W0 -W1  @FLT.P3
-W0      @delay_ms1.P4
-W0      @SITOF.P5
-W0 -W1  @DIV3232B.P6
+W0 -W1  @DIVFF.P3
+W0 -W1  @SFTOI.P4
+W0      @delay_ms1.P5
+W0      @SITOF.P6
 W0      @delay_us1.P7
-W0 -W1  @READ_PROGRAM_MEMORY.P8
-W0L     @PUTCHAR_BIU_1.P9
-W0 -W1  @DIVFF.P10
-W0 -W1  @SFTOI.P11
+W0L     @PUTCHAR_BIU_1.P8
+W0 -W1  @FLT.P9
+W0 -W1  @MULFF.P10
+W0 -W1  @READ_PROGRAM_MEMORY.P11
 W1      @SCRATCH
 W1      @WRITE_PACKED_MEMORY.P1
 W1      @READ_PACKED_MEMORY.P2
-W2      @READ_ROM_MEMORY.P1
-W2 -W3  @MULFF.P2
-W2      @WRITE_PACKED_MEMORY.P3
-W2 -W3  @DIVFF.P4
-W2      @READ_PROGRAM_MEMORY.P5
-W2      @READ_PACKED_MEMORY.P6
-W2 -W3  @FLT.P7
-W2 -W3  @DIV3232B.P8
-W3      @READ_ROM_MEMORY.P1
-W3      @WRITE_PACKED_MEMORY.P2
-W3      @READ_PACKED_MEMORY.P3
-W3      @READ_PROGRAM_MEMORY.P4
+W2 -W3  @DIVFF.P1
+W2      @READ_PACKED_MEMORY.P2
+W2 -W3  @FLT.P3
+W2 -W3  @DIV3232B.P4
+W2      @WRITE_PACKED_MEMORY.P5
+W2      @READ_ROM_MEMORY.P6
+W2 -W3  @MULFF.P7
+W2      @READ_PROGRAM_MEMORY.P8
+W3      @READ_PROGRAM_MEMORY.P1
+W3      @READ_ROM_MEMORY.P2
+W3      @WRITE_PACKED_MEMORY.P3
+W3      @READ_PACKED_MEMORY.P4
 220.0   MCU_STSEL
 220     MCU_U1MODE
 220.1   MCU_PDSEL0
@@ -107,8 +107,8 @@ W3      @READ_PROGRAM_MEMORY.P4
 323.5   MCU_VCFG0
 323.6   MCU_VCFG1
 323.7   MCU_VCFG2
-324     MCU_AD1CON3
 324.0   MCU_ADCS0
+324     MCU_AD1CON3
 324.1   MCU_ADCS1
 324.2   MCU_ADCS2
 324.3   MCU_ADCS3
@@ -142,8 +142,8 @@ W3      @READ_PROGRAM_MEMORY.P4
 329.3   MCU_CH0SB3
 329.4   MCU_CH0SB4
 329.7   MCU_CH0NB
-32A.0   MCU_PCFG16
 32A     MCU_AD1PCFGH
+32A.0   MCU_PCFG16
 32A.1   MCU_PCFG17
 32C.0   MCU_PCFG0
 32C     MCU_AD1PCFGL
@@ -165,8 +165,8 @@ W3      @READ_PROGRAM_MEMORY.P4
 32E     MCU_AD1CSSH
 32E.0   MCU_CSS16
 32E.1   MCU_CSS17
-330.0   MCU_CSS0
 330     MCU_AD1CSSL
+330.0   MCU_CSS0
 330.1   MCU_CSS1
 330.2   MCU_CSS2
 330.3   MCU_CSS3
@@ -268,204 +268,306 @@ W3      @READ_PROGRAM_MEMORY.P4
 91A-91B newValueM4
 91C-91D newValueM5
 91E-91F newValueM6
-920     canalPwm
-921.0   enabRegul
-921.1   flag
-921.2   dmaBusy
-922-923 dataCanal3
-924-925 indW
-926-92F buffer
-930-931 pause
-932-933 crc
-934-935 getChecksum.chSum
-934.0   getStateOutError.b
-934-935 initMotor.m
-934-935 setLimitAdcMotor.m
-934-935 rotate.i
-934     obmenRS.outData
-936-937 setRotate.m
-936-937 obmenRS.data
-936-937 getChecksum.temp
-936-937 initMotor.cPwm
-936-937 setLimitAdcMotor.vAdc1
-938-939 setLimitAdcMotor.vAdc2
-938-939 setRotate.currentDataS
-938-93B getChecksum.adr
-938-939 initMotor.tPwm
-938-939 obmenRS.data
-93A-93B obmenRS.data
-93A-93B setRotate.newData
-93A-93B initMotor.vAdc1
-93C-93D initMotor.vAdc2
-93C-93D obmenRS.d
-93C-93D setRotate.currentData
-93E-93F runVD.color
-93E     sendRS.msg
-93E-93F ansReadCrc.crc
-93E-93F setMaxSpeed.m
-93E-93F sendRS16.msg
-93E-93F setMaxAccel.m
-93E-93F setMinSpeed.m
-93E-93F setRotate.n
-940-943 setRotate.Error
-940-941 setMinSpeed.data
-940-941 setMaxAccel.data
-940-941 setMaxSpeed.data
-942     ansComRst.com
-942     ansComSetPrgStr.Pstr
-942     ansComSetPrgInd.Pind
-942     ansComSetUPBln.Pbln
-942     ansComSetUgolStr.Ustr
-942     onOffPWMCanal.b
-942     ansComSetUgolInd.Uind
-942     ansErrorCom.com
-943     ansComRst.data
-946-947 setK.m
-94A     ansComSetAllUi.Ustr
-94A-94B proSost.m
-94B     ansComSetAllUi.Uind
-94C-94D proSost.data
-94C     ansComSetAllUi.Pstr
-94D     ansComSetAllUi.Pind
-94E-94F intSost.m
-94E     ansComSetAllUi.UPbln
-94E-951 proSost.eData
-950     intSost.dir
-952-953 difSost.m
-952-955 intSost.data
-952-955 proSost.ps
-954-955 sendInRsDma.len
-954-957 difSost.data
-956-957 proSost.newSpeed
-956-957 intSost.result
-958-95B intSost.d
-958-959 difSost.result
-95A-95B difSost.d
-95C-95F intSost.d
-97C     setRotatePwm.b
-97C.0   waitStop.boll
-97C.1   waitStop.a
-97C.2   waitStop.b
-97C.3   waitStop.c
-97C.4   waitStop.d
-97E     testPWM.n
-97E-97F getFullMasCalibr.a
-97F     testPWM.b
-980-981 getFullMasCalibr.b
-982-983 getFullMasCalibr.c
-984-985 getFullMasCalibr.d
+920-921 indW
+922-939 buffer
+93A.0   flag
+93A.1   dmaBusy
+93C-93D pause
+93E-93F crc
+940-941 getChecksum.chSum
+940-941 setLimitAdcMotor.m
+940.0   getStateOutError.b
+940-941 initMotor.m
+940-941 updateError.m
+940     obmenRS.d3
+940-941 rotate.i
+941     obmenRS.d4
+942-943 getChecksum.temp
+942     obmenRS.d5
+942-943 setLimitAdcMotor.vAdc1
+942-943 initMotor.cPwm
+942-943 updateError.dAdc
+942-943 setRotate.m
+943     obmenRS.d6
+944-945 setLimitAdcMotor.vAdc2
+944     obmenRS.canal
+944-947 getChecksum.adr
+944-945 initMotor.tPwm
+944-945 setRotate.currentDataS
+945.0   obmenRS.b
+945.1   obmenRS.b
+946-947 initMotor.vAdc1
+946-947 obmenRS.speedMin
+946-947 setRotate.newData
+948-949 initMotor.vAdc2
+948-949 obmenRS.speedMax
+948-949 setRotate.currentData
+94A-94B obmenRS.speedMin
+94A-94B setRotate.n
+94C-94F setRotate.Error
+94C-94D obmenRS.speedMax
+94E-94F obmenRS.speedMin
+950-951 obmenRS.speedMax
+952-953 obmenRS.speedMin
+954-955 obmenRS.speedMax
+956-957 proSost.m
+956-957 obmenRS.speedMin3
+958-959 proSost.data
+958-959 obmenRS.speedMax3
+95A-95B obmenRS.speedMin4
+95A-95D proSost.eData
+95A-95B intSost.m
+95C     intSost.dir
+95C-95D obmenRS.speedMax4
+95E-95F obmenRS.speedMin5
+95E-95F difSost.m
+95E-961 proSost.ps
+95E-961 intSost.data
+960-961 obmenRS.speedMax5
+960-963 difSost.data
+962-963 proSost.newSpeed
+962-963 obmenRS.speedMin6
+962-963 intSost.result
+964-965 difSost.result
+964-965 obmenRS.speedMax6
+964-967 intSost.d
+966     obmenRS.data
+966-967 difSost.d
+967     obmenRS.canal
+968-969 obmenRS.dPwm
+968-96B intSost.d
+96A-96B obmenRS.dPwm
+96C-96D obmenRS.dPwm
+96E-96F obmenRS.dPwm
+970     obmenRS.dRk
+971     obmenRS.dRk
+972-973 obmenRS.dPwm3
+974-975 obmenRS.dPwm4
+976-977 obmenRS.dPwm5
+978-979 obmenRS.dPwm6
+97A-97B obmenRS.d
+97E-97F ansComSetSpeedAllPwm.can
+97E-97F ansComLimitAdc.a1
+97E-97F runVD.color
+97E-97F setMaxSpeed.m
+97E     ansComSetPwmRk.canal
+97E     ansComSetPwm4.canal
+97E     ansComSetPwm6.canal
+97E-97F ansComSetSpeedPwm.canal
+97E     sendRS.msg
+97E     ansComOnOffPwm.data
+97E     ansErrorComCanal.com
+97E     ansComSetPwm5.canal
+97E-97F getError.m
+97E-97F setMinSpeed.m
+97E-97F setPwm3456.pwm3
+97E     ansComSetPwm3.canal
+97E-97F ansReadCrc.crc
+97E     ansComSetRk.canal
+97E     ansComReadError.d1
+97E-97F ansComReadCurAdc.a1
+97E-97F ansComReadSpeed.data
+97F     ansComReadError.d2
+97F     ansComSetPwmRk.rk
+97F     ansComSetRk.rk
+980-981 getMinSpeed.m
+980-981 ansComSetSpeedAllPwm.sMn3
+980-981 ansComReadCurAdc.a2
+980-981 setMinSpeed.data
+980     onOffPWMCanal.b
+980-981 ansComLimitAdc.a2
+980-981 ansComSetPwm3.p3
+980-981 setMaxSpeed.data
+980-981 ansComSetPwm5.p5
+980     ansComReadError.d3
+980     getError.dataError
+980-981 ansComSetSpeedPwm.speedMin
+980-981 ansComSetPwm4.p4
+980     ansErrorCom.com
+980-981 ansComSetPwmRk.p3
+980-981 setPwm3456.pwm4
+980-981 getMaxSpeed.m
+980     ansComRst.com
+980-981 ansComSetPwm6.p6
+981     ansComRst.data
+981     ansComReadError.d4
+982-983 setAndError.m
+982-983 setPwm3456.pwm5
+982-983 ansComReadCurAdc.a3
+982-983 setOrError.m
+982-983 ansComLimitAdc.a3
+982-983 ansComSetSpeedAllPwm.sMx3
+982-983 ansComSetSpeedPwm.speedMax
+982-983 ansComSetPwmRk.p4
+984-985 setPwm3456.pwm6
+984     setAndError.data
+984-985 ansComReadCurAdc.a4
+984-985 ansComLimitAdc.a4
+984-985 ansComSetPwmRk.p5
+984-985 ansComSetSpeedAllPwm.sMn4
+984     setOrError.data
+986-987 ansComSetPwmRk.p6
+986-987 ansComSetSpeedAllPwm.sMx4
+986-987 ansComLimitAdc.b1
+986     setPwm3456.rk
+986-987 setK.m
+988-989 ansComSetSpeedAllPwm.sMn5
+988-989 ansComLimitAdc.b2
+98A-98B ansComLimitAdc.b3
+98A-98B ansComSetSpeedAllPwm.sMx5
+98C-98D ansComLimitAdc.b4
+98C-98D ansComSetSpeedAllPwm.sMn6
+98E-98F ansComSetSpeedAllPwm.sMx6
+990-991 setPwm6.data
+990     setRk.data
+990-991 setPwm4.data
+990-991 setPwm5.data
+990-991 setPwm3.data
+9A2-9A3 sendInRsDma.len
+9BA.0   waitStop.boll
+9BA     setRotatePwm.b
+9BA.1   waitStop.a
+9BA.2   waitStop.b
+9BA.3   waitStop.c
+9BA.4   waitStop.d
+9BC     testPWM.n
+9BC-9BD getFullMasCalibr.a
+9BD     testPWM.b
+9BE-9BF getFullMasCalibr.b
+9C0-9C1 getFullMasCalibr.c
+9C2-9C3 getFullMasCalibr.d
 2000-2007 dmaAdcBuf
-2008-2016 dmaBuffer
+2008-201F dmaBuffer
 2780-27FF Stack
 
 ROM Allocation:
 000200  timer5_isr
-00024C  readDmaAdc
-000266  DMA2Interrupts
-00028A  @GETCH_BIU_1
-000298  pause3_5RS
-0002AC  interruptRS
-0002EC  __timer4_isr__
-000314  DMAInterrupts
-00033A  DmaErrorInterrupt
-00035A  initAvtomat
-000396  resetCountZikl
-00039E  testPWM
-000416  setRotatePwm
-000476  getFullMasCalibr
-0004D2  waitStop
-0005B6  readData1Adc
-0005C8  readData2Adc
-0005DA  sravnData
-000644  stopTimer7
-00066C  setEnableSendData
-000670  setDebugRS
-000674  updateState
-00067E  timer7_isr
-00077A  init_PLL
-00079C  initRS
-0007A0  clearDmaBuf
-0007B4  initDma
-0007CC  @READ_PROGRAM_MEMORY
-0007FA  getChecksum
-000822  runVD
-000844  initLed
-000864  clearAdcDmaBuf
-00086E  initAdcDma
-000898  initADC
-0008E4  onOffPWMCanal
-0008F4  initMotor
-0009D2  initPWM
-000A72  startTimer7
-000A84  startAvtomatCalibr
-000A94  getStateOutError
-000AA6  sendRS
-000AC0  setMaxAccel
-000AD0  setMinSpeed
-000B08  @FLT
-000B70  @SITOF
-000BBA  @DIVFF
-000C84  setK
-000D0E  setMaxSpeed
-000D3E  sendRS16
-000D72  sendInRsDma
-000D8C  ansComSetAllUi
-000DCC  ansComSetUgolStr
-000DEC  ansComSetUgolInd
-000E0C  ansComSetPrgStr
-000E2C  ansComSetPrgInd
-000E4C  ansComSetUPBln
-000E6C  ansReadCrc
-000EA0  ansComInfo
-000EFE  ansComId
-000F36  ansComRst
-000F54  ansErrorCom
-000F6A  obmenRS
-0013D0  setLimitAdcMotor
-00147C  sendDataCalibr
-00151C  @MULFF
-0015E0  @SFTOI
-00160C  proSost
-001638  intSost
-001710  difSost
-00173A  setRotate
-001A8A  rotate
-001AFA  @cinit1
-001AFA  MAIN
-001B8C  @cinit2
+00025C  readDmaAdc
+000276  DMA2Interrupts
+00029A  @GETCH_BIU_1
+0002A8  pause3_5RS
+0002BC  interruptRS
+0002FC  __timer4_isr__
+000324  DMAInterrupts
+00034A  DmaErrorInterrupt
+00036A  initAvtomat
+0003A6  resetCountZikl
+0003AE  testPWM
+000426  setRotatePwm
+000486  getFullMasCalibr
+0004E2  waitStop
+0005C6  readData1Adc
+0005D8  readData2Adc
+0005EA  sravnData
+000654  stopTimer7
+00067C  setEnableSendData
+000680  setDebugRS
+000684  updateState
+00068E  timer7_isr
+00078A  init_PLL
+0007AC  initRS
+0007B0  clearDmaBuf
+0007C4  initDma
+0007DC  @READ_PROGRAM_MEMORY
+00080A  getChecksum
+000832  runVD
+000854  initLed
+000874  clearAdcDmaBuf
+00087E  initAdcDma
+0008A8  initADC
+0008F4  setAndError
+000914  setOrError
+000932  onOffPWMCanal
+0009D2  initMotor
+000AB0  initPWM
+000B4E  startTimer7
+000B60  startAvtomatCalibr
+000BA2  getStateOutError
+000BB4  getError
+000BC4  sendInRsDma
+000BDE  ansComReadError
+000C16  getMinSpeed
+000C26  getMaxSpeed
+000C36  ansComReadSpeed
+000D2E  @SITOF
+000D78  setMinSpeed
+000DC8  @FLT
+000E30  @DIVFF
+000EFA  setK
+000F84  setMaxSpeed
+000FB4  ansComSetSpeedPwm
+000FF8  ansComSetSpeedAllPwm
+0010A8  ansErrorComCanal
+0010C8  ansComLimitAdc
+001170  ansComRunCalibr
+001188  ansComOnOffPwm
+0011A8  ansComReadCurAdc
+001208  setPwm3
+00120E  ansComSetPwm3
+001240  setPwm4
+001246  ansComSetPwm4
+001278  setPwm5
+00127E  ansComSetPwm5
+0012B0  setPwm6
+0012B6  ansComSetPwm6
+0012E8  updateRk
+001312  setRk
+00131C  ansComSetRk
+001344  setPwm3456
+00136E  ansComSetPwmRk
+0013DE  ansReadCrc
+001412  ansComInfo
+001480  ansComId
+0014B8  sendRS
+0014D2  ansComRst
+0014F0  ansErrorCom
+001506  obmenRS
+001AB8  setLimitAdcMotor
+001B5E  updateError
+001B94  sendDataCalibr
+001C66  @MULFF
+001D2A  @SFTOI
+001D56  proSost
+001D82  intSost
+001E5A  difSost
+001E84  setRotate
+0021D4  rotate
+002244  @cinit1
+002244  MAIN
+0022D0  @cinit2
 
 Project Directory:
     F:\work\UAPP\
 
 Project Files:
-    main.c                                                  [15-апр-16 11:06  CRC=2E26F3F6]
-    main.h                                                  [14-апр-16 15:54  CRC=993AD441]
+    main.c                                                  [26-апр-16 11:27  CRC=C3C29436]
+    main.h                                                  [25-апр-16 16:00  CRC=97EC6CC2]
     C:\Program Files (x86)\PICC\devices\24HJ64GP206.h       [22-окт-15 09:32  CRC=ED27F0E7]
     uart.h                                                  [18-фев-16 13:48  CRC=D89FFA36]
-    Led.c                                                   [07-апр-16 14:15  CRC=0E1C0250]
+    Led.c                                                   [25-апр-16 14:07  CRC=335E06A6]
     PLL.c                                                   [22-мар-16 11:34  CRC=992C063A]
     PLL.h                                                   [18-фев-16 13:24  CRC=BED6B537]
     AZP.c                                                   [07-апр-16 16:57  CRC=7E4F32DD]
     AZP.h                                                   [07-апр-16 16:57  CRC=86A46CF7]
     ADC.h                                                   [22-мар-16 15:06  CRC=64362828]
-    pwmUap.c                                                [18-апр-16 11:01  CRC=5AEE080A]
-    pwmUap.h                                                [18-апр-16 11:01  CRC=C55908D4]
-    CalibrAdcPwm.h                                          [06-апр-16 11:29  CRC=C9D4FE05]
-    motor.h                                                 [12-апр-16 14:22  CRC=F94CAC8B]
+    pwmUap.c                                                [26-апр-16 11:35  CRC=86A517C3]
+    pwmUap.h                                                [18-апр-16 11:18  CRC=6AEDEBD5]
+    CalibrAdcPwm.h                                          [22-апр-16 16:40  CRC=C9D4FE05]
+    motor.h                                                 [26-апр-16 11:33  CRC=23B8A387]
     RS485.c                                                 [24-мар-15 10:31  CRC=830CDC04]
-    RS485.h                                                 [18-мар-16 16:26  CRC=AA63C3CD]
-    DMA_RS.c                                                [22-мар-16 17:25  CRC=72E48C4A]
+    RS485.h                                                 [20-апр-16 16:09  CRC=1E478C0A]
+    DMA_RS.c                                                [25-апр-16 15:56  CRC=8E97EE0A]
     CRC.c                                                   [18-фев-16 14:18  CRC=0EC0FCB1]
-    calibrAdcPwm.c                                          [06-апр-16 14:52  CRC=FE8FDFFD]
-    calibrAdcPwm.h                                          [06-апр-16 11:29  CRC=C9D4FE05]
-    motor.c                                                 [14-апр-16 15:06  CRC=3A0C8246]
+    calibrAdcPwm.c                                          [26-апр-16 11:34  CRC=8523026C]
+    calibrAdcPwm.h                                          [22-апр-16 16:40  CRC=C9D4FE05]
+    motor.c                                                 [26-апр-16 11:32  CRC=19596979]
     ioPin.c                                                 [14-апр-16 15:54  CRC=00000000]
     ioPin.h                                                 [14-апр-16 15:54  CRC=00000000]
 
-Source signature=F1627D93
-Program memory checksum=A631
-Program memory CRC=FC0A
-Hex file CRC=D8CF
+Source signature=9C20D7FF
+Program memory checksum=53AB
+Program memory CRC=C108
+Hex file CRC=9CAA
 
 Units:
     main (main)

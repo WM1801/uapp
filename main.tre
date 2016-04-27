@@ -1,5 +1,5 @@
 ÀÄmain
-   ÃÄMAIN  0/274  Ram=0
+   ÃÄMAIN  0/330  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄinit_PLL  0/34  Ram=0
    ³  ÃÄinitRS  0/4  Ram=0
@@ -13,94 +13,176 @@
    ³  ÃÄinitADC  0/76  Ram=0
    ³  ³  ÀÄinitAdcDma  0/42  Ram=0
    ³  ³     ÀÄclearAdcDmaBuf  0/10  Ram=0
-   ³  ÃÄinitPWM  0/160  Ram=0
-   ³  ³  ÃÄonOffPWMCanal  0/16  Ram=1
+   ³  ÃÄinitPWM  0/158  Ram=0
+   ³  ³  ÃÄonOffPWMCanal  0/160  Ram=1
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ³  ÀÄsetAndError  0/32  Ram=6
    ³  ³  ÃÄinitMotor  0/222  Ram=15
    ³  ³  ÃÄinitMotor  0/222  Ram=15
    ³  ³  ÃÄinitMotor  0/222  Ram=15
    ³  ³  ÀÄinitMotor  0/222  Ram=15
-   ³  ÃÄonOffPWMCanal  0/16  Ram=1
-   ³  ÃÄstartAvtomatCalibr  0/16  Ram=0
+   ³  ÃÄonOffPWMCanal  0/160  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄstartAvtomatCalibr  0/66  Ram=0
    ³  ³  ÃÄstopTimer7  0/40  Ram=0
+   ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ÃÄsetAndError  0/32  Ram=6
+   ³  ³  ÃÄsetAndError  0/32  Ram=6
    ³  ³  ÃÄinitAvtomat  0/60  Ram=0
    ³  ³  ÀÄstartTimer7  0/18  Ram=0
    ³  ÃÄgetStateOutError  0/18  Ram=1
-   ³  ÃÄonOffPWMCanal  0/16  Ram=1
+   ³  ÃÄonOffPWMCanal  0/160  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ÃÄsetOrError  0/30  Ram=6
    ³  ÃÄreadDmaAdc  0/26  Ram=0
-   ³  ÃÄobmenRS  0/1126  Ram=20
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsetMaxAccel  0/16  Ram=7
-   ³  ³  ÃÄsetMaxAccel  0/16  Ram=7
-   ³  ³  ÃÄsetMaxAccel  0/16  Ram=7
-   ³  ³  ÃÄsetMaxAccel  0/16  Ram=7
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsetMinSpeed  0/56  Ram=9
-   ³  ³  ÃÄsetMinSpeed  0/56  Ram=9
-   ³  ³  ÃÄsetMinSpeed  0/56  Ram=9
-   ³  ³  ÃÄsetMinSpeed  0/56  Ram=9
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
+   ³  ÃÄobmenRS  0/1458  Ram=63
+   ³  ³  ÃÄgetError  0/16  Ram=3
+   ³  ³  ÃÄgetError  0/16  Ram=3
+   ³  ³  ÃÄgetError  0/16  Ram=3
+   ³  ³  ÃÄgetError  0/16  Ram=3
+   ³  ³  ÃÄansComReadError  0/56  Ram=4
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄrunVD  0/34  Ram=2
+   ³  ³  ÃÄansComReadSpeed  0/248  Ram=2
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÃÄgetMinSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMinSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMinSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMinSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMaxSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMaxSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMaxSpeed  0/16  Ram=5
+   ³  ³  ³  ÃÄgetMaxSpeed  0/16  Ram=5
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄrunVD  0/34  Ram=2
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ@SITOF  0/74  Ram=2
    ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
    ³  ³  ³  ÀÄsetK  0/138  Ram=11
    ³  ³  ³     ÃÄ@FLT  0/104  Ram=8
    ³  ³  ³     ÃÄ@SITOF  0/74  Ram=2
    ³  ³  ³     ÃÄ@DIVFF  0/202  Ram=8
    ³  ³  ³     ÀÄ@SITOF  0/74  Ram=2
-   ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
+   ³  ³  ÃÄansComSetSpeedPwm  0/68  Ram=6
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
    ³  ³  ³  ÀÄ*
    ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
    ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄansComSetSpeedPwm  0/68  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ*
    ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄstartAvtomatCalibr  0/16  Ram=0
+   ³  ³  ÃÄansComSetSpeedPwm  0/68  Ram=6
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄonOffPWMCanal  0/16  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄansComSetAllUi  0/64  Ram=5
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄansComSetSpeedPwm  0/68  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMinSpeed  0/80  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetMaxSpeed  0/48  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄansComSetSpeedAllPwm  0/176  Ram=18
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
-   ³  ³  ÃÄansComSetUgolStr  0/32  Ram=1
+   ³  ³  ÃÄansErrorComCanal  0/32  Ram=1
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
-   ³  ³  ÃÄansComSetUgolInd  0/32  Ram=1
+   ³  ³  ÃÄansComLimitAdc  0/168  Ram=16
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
-   ³  ³  ÃÄansComSetPrgStr  0/32  Ram=1
+   ³  ³  ÃÄstartAvtomatCalibr  0/66  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄansComRunCalibr  0/24  Ram=0
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
-   ³  ³  ÃÄansComSetPrgInd  0/32  Ram=1
+   ³  ³  ÃÄonOffPWMCanal  0/160  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄansComOnOffPwm  0/32  Ram=1
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
-   ³  ³  ÃÄansComSetUPBln  0/32  Ram=1
+   ³  ³  ÃÄansComReadCurAdc  0/96  Ram=8
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄrunVD  0/34  Ram=2
+   ³  ³  ÃÄsetPwm3  0/6  Ram=2
+   ³  ³  ÃÄansComSetPwm3  0/50  Ram=3
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄsetPwm4  0/6  Ram=2
+   ³  ³  ÃÄansComSetPwm4  0/50  Ram=3
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄsetPwm5  0/6  Ram=2
+   ³  ³  ÃÄansComSetPwm5  0/50  Ram=3
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄsetPwm6  0/6  Ram=2
+   ³  ³  ÃÄansComSetPwm6  0/50  Ram=3
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄsetRk  0/10  Ram=1
+   ³  ³  ³  ÀÄupdateRk  0/42  Ram=0
+   ³  ³  ÃÄansComSetRk  0/40  Ram=2
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄsetPwm3456  0/42  Ram=9
+   ³  ³  ³  ÃÄsetPwm3  0/6  Ram=2
+   ³  ³  ³  ÃÄsetPwm4  0/6  Ram=2
+   ³  ³  ³  ÃÄsetPwm5  0/6  Ram=2
+   ³  ³  ³  ÃÄsetPwm6  0/6  Ram=2
+   ³  ³  ³  ÀÄsetRk  0/10  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄansComSetPwmRk  0/112  Ram=10
+   ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
+   ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
+   ³  ³  ÃÄrunVD  0/34  Ram=2
+   ³  ³  ÃÄansErrorComCanal  0/32  Ram=1
+   ³  ³  ³  ÀÄ*
    ³  ³  ÃÄrunVD  0/34  Ram=2
    ³  ³  ÃÄansReadCrc  0/52  Ram=5
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
-   ³  ³  ÃÄansComInfo  0/94  Ram=0
+   ³  ³  ÃÄansComInfo  0/110  Ram=0
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÃÄrunVD  0/34  Ram=2
@@ -120,28 +202,36 @@
    ³  ³  ³  ÃÄclearDmaBuf  0/20  Ram=0
    ³  ³  ³  ÀÄsendInRsDma  0/26  Ram=2
    ³  ³  ÀÄrunVD  0/34  Ram=2
-   ³  ÃÄsendDataCalibr  0/160  Ram=0
-   ³  ³  ÃÄsetLimitAdcMotor  0/172  Ram=11
+   ³  ÃÄsendDataCalibr  0/210  Ram=0
+   ³  ³  ÃÄsetLimitAdcMotor  0/166  Ram=11
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ³  ÃÄsetOrError  0/30  Ram=6
    ³  ³  ³  ÃÄ@SITOF  0/74  Ram=2
    ³  ³  ³  ÀÄsetK  0/138  Ram=11
    ³  ³  ³     ÀÄ*
-   ³  ³  ÃÄsetLimitAdcMotor  0/172  Ram=11
+   ³  ³  ÃÄsetLimitAdcMotor  0/166  Ram=11
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄsetLimitAdcMotor  0/172  Ram=11
+   ³  ³  ÃÄsetLimitAdcMotor  0/166  Ram=11
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄsetLimitAdcMotor  0/172  Ram=11
+   ³  ³  ÃÄsetLimitAdcMotor  0/166  Ram=11
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS  0/26  Ram=1
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÃÄsendRS16  0/52  Ram=5
-   ³  ³  ÀÄsendRS  0/26  Ram=1
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄupdateError  0/54  Ram=7
+   ³  ³  ³  ÀÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄupdateError  0/54  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄupdateError  0/54  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄupdateError  0/54  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÃÄsetOrError  0/30  Ram=6
+   ³  ³  ÀÄsetOrError  0/30  Ram=6
    ³  ÀÄrotate  0/112  Ram=2
    ³     ÃÄsetRotate  0/848  Ram=22
    ³     ³  ÃÄ@SITOF  0/74  Ram=2
@@ -174,7 +264,7 @@
    ³     ³  ÀÄ*
    ³     ÀÄsetRotate  0/848  Ram=22
    ³        ÀÄ*
-   ÃÄtimer5_isr  0/76  Ram=0
+   ÃÄtimer5_isr  0/92  Ram=0
    ÃÄDMA2Interrupts  0/36  Ram=0
    ³  ÀÄreadDmaAdc  0/26  Ram=0
    ÃÄinterruptRS  0/64  Ram=3

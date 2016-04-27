@@ -13,6 +13,7 @@ void main()
 	
 	enable_interrupts(INTR_GLOBAL); 		
 	onOffPWMCanal(0x01); 
+		
 	startAvtomatCalibr(); 
 	
 
@@ -23,19 +24,18 @@ void main()
 		// отключение силовой части в случае замыкания
 		if(getStateOutError())
 		{
-			onOffPWMCanal(0x00); 
+			onOffPWMCanal(0x00);
+			setOrError(&m3, ERR_PWR_KZ);
+			setOrError(&m4, ERR_PWR_KZ);
+			setOrError(&m5, ERR_PWR_KZ);
+			setOrError(&m6, ERR_PWR_KZ);	 	
 		}
+	
 		readDmaAdc(); 
 		obmenRS(); 
 		sendDataCalibr(); 
-	//	sendState();
-	//	testPoAdc(canalPwm, dataCanal3); 
-	//	if(dmaAdcFlag)
-		{
-			rotate();
-	//		dmaAdcFlag = 0; 	 
-		}	
-			//rotate(); 	
+		rotate();
+	
 		
 
 	}
@@ -51,210 +51,207 @@ void obmenRS()
 		{			 	
 			switch(buffer[1])
 			{	
-					case 0x19: 
+					case COM_READ_ERROR: 
 					{
-						int8 outData = 0; 
-						if(input(PIN_D8))
-						{outData |= 0x01; }
-						 
-						sendRS(adress); 
-						sendRS(0x19); 
-						sendRS(outData); 
-						indW = 0; 
-						break; 
-						
-					}	
-					case 0x16: 
-					{
-						int16 data = make16(buffer[2], buffer[3]); 
-						setMaxAccel(&m3, data); 
-						setMaxAccel(&m4, data);
-						setMaxAccel(&m5, data);
-						setMaxAccel(&m6, data);
-						indW = 0; 
-					
-						sendRS(adress); 
-						sendRS(0x16); 
+						int8 d3 = getError(&m3);
+						int8 d4 = getError(&m4);
+						int8 d5 = getError(&m5);
+						int8 d6 = getError(&m6);
+						ansComReadError(d3,d4,d5,d6); 
+						runVD(LED_GREEN);
+						indW = 0;
 						break; 
 	
 					} 
-					case 0x17: 
+					case COM_READ_SPEED:
 					{
-						int16 data = make16(buffer[3], buffer[4]);
-						switch(buffer[2]&0xFF) 
-						{
-							case 3: {setMinSpeed(&m3, data);  break;}
-							case 4: {setMinSpeed(&m4, data); break;}
-							case 5: {setMinSpeed(&m5, data); break;}
-							case 6: {setMinSpeed(&m6, data); break;}
-						}				
-						
-						
-					
-					
+						ansComReadSpeed(); 
+						runVD(LED_GREEN); 
 						indW = 0; 
-					
-						sendRS(adress); 
-						sendRS(0x17); 
-						break; 
-	
-					} 
-					case 0x15: 
-					{
-						int16 data = make16(buffer[2], buffer[3]); 
-						setMaxSpeed(&m3, data); 
-						setMaxSpeed(&m4, data);
-						setMaxSpeed(&m5, data);
-						setMaxSpeed(&m6, data);
-						indW = 0; 
-					
-						sendRS(adress); 
-						sendRS(0x15); 
-						break; 
-	
-					} 
-					case 0x14: 
-					{
-						enabRegul = buffer[2]&0x01; 
-						canalPwm = (buffer[3]&0xFF); 
-						dataCanal3 = make16(buffer[4], buffer[5]); 
-						switch(canalPwm)
-						{
-							case 3: {newValueM3 = dataCanal3; break; }
-							case 4: {newValueM4 = dataCanal3; break; }
-							case 5: {newValueM5 = dataCanal3; break; }
-							case 6: {newValueM6 = dataCanal3; break; }
-							default: {newValueM3 = dataCanal3; 
-									  newValueM4 = dataCanal3; 
-									  newValueM5 = dataCanal3; 
-									  newValueM6 = dataCanal3; } 
-						}
-						sendRS(adress); 
-						sendRS(0x14);
-						indW = 0;  
 						break; 
 					}
-					case 0x13: 
+					case COM_SET_SPEED: 
 					{
-						//setLimitAdcMotor(&m3, minAdc1, maxAdc1);
-						sendRS(adress); 
-						sendRS(0x13); 
-						startAvtomatCalibr(); 
-					//	sendRS16(m3->newValue);
-					
-							
-						//startAvtomatCalibr(); 
-					/*	sendRS(adress); 
-						sendRS(0x13);
-						sendRS16(minADC1);
-						sendRS16(minADC2);
-						sendRS16(minADC3);
-						sendRS16(minADC4);
-						sendRS16(maxADC1);
-						sendRS16(maxADC2);
-						sendRS16(maxADC3);
-						sendRS16(maxADC4);*/	
-						indW = 0;  
-						break;
+						int8 canal = (buffer[2]&0xFF);
+						int1 b = 0; 
 
-					}
-					case 0x12: 
-					{
-						onOffPWMCanal(buffer[2]&0x01); 
-						sendRS(adress); 
-						sendRS(0x12);
-						indW = 0;  
-						break; 
-					}
-					case 0x11:
-					{
-						sendRS(adress); 
-						sendRS(0x11); 
-						sendRS16(valAdc1); 
-						sendRS16(valAdc2); 
-						sendRS16(valAdc3); 
-						sendRS16(valAdc4); 
-						indW = 0; 
-						break;
-					}
-					case COM_SET_ALL_UI: 
-					{
-						if(indW>=6)
+						switch(canal)
 						{
-							//change   uStr	uInd	Pstr		Pind	UPblenk
-						//	setPwm((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF)); 
-											//uStr	uInd	Pstr		Pind	UPblenk
-							ansComSetAllUi((buffer[2]&0xFF), (buffer[3]&0xFF), (buffer[4]&0xFF),(buffer[5]&0xFF), (buffer[6]&0xFF)); 
+							case SEL_SET_PWM3: {  if(indW>=7)
+									   {
+									   		int16 speedMin = make16(buffer[3], buffer[4]);
+											int16 speedMax = make16(buffer[5], buffer[6]); 
+									   		setMinSpeed(&m3, speedMin);
+											setMaxSpeed(&m3, speedMax);
+									   		ansComSetSpeedPwm(canal, speedMin, speedMax);
+											b = 1;  
+									   } break;}
+							case SEL_SET_PWM4: {   if(indW>=7)
+									   {
+									   		int16 speedMin = make16(buffer[3], buffer[4]);
+											int16 speedMax = make16(buffer[5], buffer[6]); 
+									   		setMinSpeed(&m4, speedMin);
+											setMaxSpeed(&m4, speedMax);
+									   		ansComSetSpeedPwm(canal, speedMin, speedMax);
+											b = 1; 
+									   } break;}
+							case SEL_SET_PWM5: {    if(indW>=7)
+									   {
+									   		int16 speedMin = make16(buffer[3], buffer[4]);
+											int16 speedMax = make16(buffer[5], buffer[6]); 
+									   		setMinSpeed(&m5, speedMin);
+											setMaxSpeed(&m5, speedMax);
+									   		ansComSetSpeedPwm(canal, speedMin, speedMax);
+											b = 1;
+									   } break;}
+							case SEL_SET_PWM6: {  if(indW>=7)
+									   {
+									   		int16 speedMin = make16(buffer[3], buffer[4]);
+											int16 speedMax = make16(buffer[5], buffer[6]); 
+									   		setMinSpeed(&m6, speedMin);
+											setMaxSpeed(&m6, speedMax);
+									   		ansComSetSpeedPwm(canal, speedMin, speedMax);
+											b = 1; 
+									   } break;}
+							case SEL_SET_PWM_RK: {  if(indW>=19)
+										{
+											int16 speedMin3 = make16(buffer[3], buffer[4]);
+											int16 speedMax3 = make16(buffer[5], buffer[6]);
+											int16 speedMin4 = make16(buffer[7], buffer[8]);
+											int16 speedMax4 = make16(buffer[9], buffer[10]);
+											int16 speedMin5 = make16(buffer[11], buffer[12]);
+											int16 speedMax5 = make16(buffer[13], buffer[14]);
+											int16 speedMin6 = make16(buffer[15], buffer[16]);
+											int16 speedMax6 = make16(buffer[17], buffer[18]); 
+									   		setMinSpeed(&m3, speedMin3);
+											setMaxSpeed(&m3, speedMax3);
+											setMinSpeed(&m4, speedMin4);
+											setMaxSpeed(&m4, speedMax4);
+											setMinSpeed(&m5, speedMin5);
+											setMaxSpeed(&m5, speedMax5);
+											setMinSpeed(&m6, speedMin6);
+											setMaxSpeed(&m6, speedMax6);
+									   		ansComSetSpeedAllPwm(canal, speedMin3, speedMax3,speedMin4, speedMax4,
+														speedMin5, speedMax5,speedMin6, speedMax6 ); 
+											b = 1;
+										} break;}
+		
+							default: {  runVD(LED_RED); 
+										ansErrorComCanal(canal); 
+										   break;}
+			
+						}	
+						if(b)
+						{				 
 							runVD(LED_GREEN);  
-							indW = 0;
+							b = 0; 
+						
 						}
+						indW = 0;	
+						break; 
+	
+					} 
+					case COM_LIMIT_ADC:
+					{
+						ansComLimitAdc(minAdc1, minAdc2, minAdc3, minAdc4, maxAdc1,
+										maxAdc2, maxAdc3, maxAdc4); 			
+						runVD(LED_GREEN); 
+						indW = 0; 
+						break; 
+					}
+					case COM_RUN_CALIBR: 
+					{
+						startAvtomatCalibr(); 
+						ansComRunCalibr();
+						runVD(LED_GREEN); 
+						indW = 0;  
+						break;
+					}
+					case COM_ONOFF_PWM: 
+					{
+						int8 data = (buffer[2]&0xFF); 
+						onOffPWMCanal(data&0x01); 
+						ansComOnOffPwm(data); 
+						runVD(LED_GREEN);
+						indW = 0;  
+						break; 
+					}
+					case COM_READ_ADC:
+					{
+						ansComReadCurAdc(valAdc1, valAdc2, valAdc3, valAdc4);
+						runVD(LED_GREEN); 
+						indW = 0; 
+						break;
+					}
+					case COM_SET_PWM_RK: 
+					{
+						int8 canal = (buffer[2]&0xFF);
+						int1 b = 0; 
+
+						switch(canal)
+						{
+							case SEL_SET_PWM3: {  if(indW>=5)
+									   {
+									   		int16 dPwm = make16(buffer[3], buffer[4]); 
+									   		setPwm3(dPwm);
+									   		ansComSetPwm3(canal, dPwm);
+											b = 1;  
+									   } break;}
+							case SEL_SET_PWM4: {  if(indW>=5)
+									   {
+									   		int16 dPwm = make16(buffer[3], buffer[4]); 
+									   		setPwm4(dPwm);
+									   		ansComSetPwm4(canal, dPwm);
+											b = 1;  
+									   } break;}
+							case SEL_SET_PWM5: {  if(indW>=5)
+									   {
+									   		int16 dPwm = make16(buffer[3], buffer[4]); 
+									   		setPwm5(dPwm);
+									   		ansComSetPwm5(canal, dPwm);
+											b = 1;  
+									   } break;}
+							case SEL_SET_PWM6: {  if(indW>=5)
+									   {
+									   		int16 dPwm = make16(buffer[3], buffer[4]); 
+									   		setPwm6(dPwm);
+									   		ansComSetPwm6(canal, dPwm);
+											b = 1;  
+									   } break;}
+							case SEL_SET_RK: {  if(indW>=4)
+									   {
+									   		int8 dRk = (buffer[3]&0xFF);  
+									   		setRk(dRk); 
+									   		ansComSetRk(canal, dRk);
+											b = 1;  
+									   } break;}
+							case SEL_SET_PWM_RK: {  if(indW>=12)
+										{
+											int16 dPwm3 = make16(buffer[3], buffer[4]); 
+											int16 dPwm4 = make16(buffer[5], buffer[6]);
+											int16 dPwm5 = make16(buffer[7], buffer[8]);
+											int16 dPwm6 = make16(buffer[9], buffer[10]);
+											int8 dRk = (buffer[11]&0xFF);   
+											setPwm3456(dPwm3, dPwm4, dPwm5, dPwm6, dRk);
+									 		ansComSetPwmRk(canal, dPwm3, dPwm4, dPwm5, dPwm6, dRk); 
+											b = 1;
+										} break;}
+		
+							default: {  runVD(LED_RED); 
+										ansErrorComCanal(canal); 
+										   break;}
+			
+						}	
+						if(b)
+						{				 
+							runVD(LED_GREEN);  
+							b = 0; 
+						
+						}
+						indW = 0;	
 						break; 
 					} 
-					case COM_SET_UGOL_STR:
-					{
-						if(indW>=3)// проверка на полный буффер
-						{
-							//change
-						//	setUstr(buffer[2]&0xFF); 
-							ansComSetUgolStr(buffer[2]&0xFF);
-							runVD(LED_GREEN);
-							indW = 0; 
-						}
-						break; 
-					}
-				
-				
-					case COM_SET_UGOL_IND:
-					{
-						if(indW>=3)// проверка на полный буффер
-						{
-							//change
-					//		setUind(buffer[2]&0xFF); 
-							ansComSetUgolInd(buffer[2]&0xFF);
-							runVD(LED_GREEN);
-							indW = 0; 
-						}
-						break;
-					}
 
-					case COM_SET_PRG_STR:
-					{
-						if(indW>=3)// проверка на полный буффер
-						{
-							//change
-						//	setPstr(buffer[2]&0xFF); 
-							ansComSetPrgStr(buffer[2]&0xFF);
-							runVD(LED_GREEN);
-							indW = 0; 
-						}
-						break;
-					}
-
-					case COM_SET_PRG_IND:
-					{
-						if(indW>=3)// проверка на полный буффер
-						{
-							//change
-						//	setPind(buffer[2]&0xFF); 
-							ansComSetPrgInd(buffer[2]&0xFF);
-							runVD(LED_GREEN);
-							indW = 0; 
-						}
-						break;
-					}
-
-					case COM_SET_UP_BLN:
-					{
-						if(indW>=3)// проверка на полный буффер
-						{
-							//change
-						//	setUPbln(buffer[2]&0xFF); 
-							ansComSetUPbln(buffer[2]&0xFF);
-							runVD(LED_GREEN);
-							indW = 0; 
-						}
-						break;
-					}
 				//****************************************
 				// CRC
 				case COM_READ_CRC:
